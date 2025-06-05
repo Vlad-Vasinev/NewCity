@@ -1,0 +1,104 @@
+[
+  {
+    "role": "parking",
+    "coordLongitude": "36.57016087965393",
+    "coordLatitude": "55.12755157353171",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "parking",
+    "coordLongitude": "36.5711372037354",
+    "coordLatitude": "55.127643789640075",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "parking",
+    "coordLongitude": "36.57434866913599",
+    "coordLatitude": "55.12999594031981",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "parking",
+    "coordLongitude": "36.57535454732279",
+    "coordLatitude": "55.13063543224237",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "parking",
+    "coordLongitude": "36.57582445160606",
+    "coordLatitude": "55.13275014261076",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "parking",
+    "coordLongitude": "36.57536502268665",
+    "coordLatitude": "55.13320523692682",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "med",
+    "coordLongitude": "36.57525154190012",
+    "coordLatitude": "55.128082421316265",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "med",
+    "coordLongitude": "36.57512279586739",
+    "coordLatitude": "55.12739387745975",
+    "iconSrc": "../img/parking-icon.svg"
+  },
+  {
+    "role": "school",
+    "coordLongitude": "36.57115312652536",
+    "coordLatitude": "55.13041231608821",
+    "iconSrc": "../img/school-icon.svg"
+  },
+  {
+    "role": "cafe",
+    "coordLongitude": "36.56797739105172",
+    "coordLatitude": "55.12713567043899",
+    "iconSrc": "../img/caffe-icon.svg"
+  },
+  {
+    "role": "cafe",
+    "coordLongitude": "36.576214125524594",
+    "coordLatitude": "55.13069520176835",
+    "iconSrc": "../img/caffe-icon.svg"
+  },
+  {
+    "role": "kids",
+    "coordLongitude": "36.57255715322342",
+    "coordLatitude": "55.131442860112756",
+    "iconSrc": "../img/children-icon.svg"
+  },
+  {
+    "role": "kids",
+    "coordLongitude": "36.57479947995986",
+    "coordLatitude": "55.131565802724275",
+    "iconSrc": "../img/children-icon.svg"
+  },
+  {
+    "role": "kids",
+    "coordLongitude": "36.57203144025651",
+    "coordLatitude": "55.13254318295758",
+    "iconSrc": "../img/children-icon.svg"
+  },
+  {
+    "role": "playground",
+    "coordLongitude": "36.573857985201236",
+    "coordLatitude": "55.134384115251095",
+    "iconSrc": "../img/playground-icon.svg"
+  },
+  {
+    "role": "shop",
+    "coordLongitude": "36.57322830943986",
+    "coordLatitude": "55.12947739001044",
+    "iconSrc": "../img/playground-icon.svg"
+  },
+  {
+    "role": "shop",
+    "coordLongitude": "36.573504245856064",
+    "coordLatitude": "55.13102316709128",
+    "iconSrc": "../img/playground-icon.svg"
+  }
+]

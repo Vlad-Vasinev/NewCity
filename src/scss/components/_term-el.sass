@@ -1,0 +1,137 @@
+/*! .term-el style block*/
+.term-el 
+  width: aCalc(424)
+  border-radius: aCalc(8)
+  +r($sm)
+    width: 100%
+    border-radius: 8px
+  &__result 
+    display: flex
+    &-price.h1 
+      margin-right: aCalc(16)
+      margin-bottom: 0 !important
+      +r($sm)
+        margin-right: 16px
+    &-info 
+      border-radius: aCalc(37)
+      background-color: $White 
+      padding: aCalc(4) aCalc(12)
+      align-self: center
+      +r($sm)
+        border-radius: 37px 
+        padding: 2px 12px
+  .h1 
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 32px
+  .p2
+    color: $IndustrialRevolution
+  .term-el__text
+    margin-bottom: aCalc(32)
+    +r($sm)
+      margin-bottom: 24px
+  &__text-difference 
+    margin-top: aCalc(13)
+    position: relative
+    padding-left: aCalc(32)
+    +r($sm)
+      margin-top: 10px
+      padding-left: 32px
+    .term-el__text-icon
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      img, svg
+        object-fit: cover
+        width: aCalc(24)
+        height: aCalc(24)
+        +r($sm)
+          width: 24px
+          height: 24px
+  &.term-el_standart
+    padding: aCalc(50) aCalc(40)
+    background-color: $DownFeatures
+    +r($sm)
+      padding: 40px 32px
+      margin-top: 32px
+  &.term-el_filter
+    background-color: transparent
+    .filter__form
+      display: block
+      background-color: transparent
+      margin-bottom: aCalc(24)
+      padding: 0
+      +r($sm)
+        margin-bottom: 24px
+      .filter__form-controls div
+        border-left: none
+      .filter__form-field + .filter__form-field
+        margin-top: aCalc(32)
+        +r($sm)
+          margin-top: 24px
+      .filter__form-label
+        margin-bottom: aCalc(6)
+        +r($sm)
+          margin-bottom: 6px
+      .input-ion-to.prom-h3
+        max-width: unset
+        text-align: left
+        background-color: $DownFeatures
+      .from-control
+        display: none
+      .irs-handle.from
+        display: none
+      .irs-handle.from, .irs-handle.to
+        background-color: $PaleGold
+        border: none
+      .filter__form-controls
+        height: aCalc(60)
+        +r($sm)
+          height: 60px
+        .filter__form-bage 
+          position: absolute
+      .filter__form-range .input-ion-to
+        max-width: 100%
+        text-align: left
+        padding: aCalc(21) aCalc(24)
+        height: aCalc(60)
+        background-color: $DownFeatures
+        border-radius: aCalc(4)
+        color: $DireWolf
+        +r($sm)
+          padding: 21px 24px
+          border-radius: 4px
+          height: 60px
+    .prom-btn
+      text-align: center
+      margin-bottom: aCalc(16)
+      +r($sm)
+        margin-bottom: 16px
+  &.term-el_filled
+    padding: aCalc(50) aCalc(40)
+    position: relative
+    +r($sm)
+      padding: 40px 32px
+    div 
+      position: relative
+    img.term-el__bg
+      border-radius: aCalc(8)
+      left: 0
+      top: 0
+      position: absolute
+      width: 100% 
+      height: 100%
+      +r($sm)
+        border-radius: 8px
+  .filter__form .filter__form-range .irs-bar, .filter__form .filter__form-range .irs-line 
+    display: initial
+    top: 0
+    height: 1px
+    background-color: $PaleGold
+
+.profit-block 
+  iframe
+    width: 100%
+    height: 100vh
+/*! .term-el style block*/

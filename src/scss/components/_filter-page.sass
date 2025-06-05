@@ -1,0 +1,694 @@
+/*! .filter style page*/
+.filter
+	+r($sm) 
+		position: relative
+	h1.blog__title.h1.content-hide
+		+r($sm)
+			max-height: 32px
+	.solution-block 
+		background-color: transparent
+		border: aCalc(2) solid $Porcelain
+		+r($sm)
+			border: 2px solid $Porcelain
+		.h3 
+			font-weight: 400
+	.filter__block-count
+		display: none
+		+r($sm)
+			display: block 
+			position: fixed
+			opacity: 1
+			transition: transform 0.5s, -webkit-transform 0.5s, opacity 0.3s
+			top: unset
+			bottom: 0
+			transform: translateY(0) translateX(-100%)
+	h1
+		margin: aCalc(16) 0
+		+r($sm)
+			margin: 10px 0
+			margin: 0
+	&__open 
+		display: none
+		+r($sm)
+			display: block
+			margin-bottom: 20px
+	&__title 
+		font-size: aCalc(20)
+		font-style: normal
+		font-weight: 700
+		line-height: aCalc(28)
+		margin-bottom: aCalc(24)
+		+r($sm)
+			font-size: 18px
+			line-height: 24px
+			margin-bottom: 16px
+			position: sticky
+			top: 0
+			left: 0
+			right: 0
+			width: 100vw
+			background-color: #ffffff
+			padding: 20px 0
+			z-index: 201
+	&__subtitle
+		font-size: aCalc(14)
+		font-style: normal
+		font-weight: 700
+		line-height: aCalc(20)
+		margin-bottom: aCalc(16)
+		+r($sm)
+			font-size: 12px
+			line-height: 18px
+			margin-bottom: 16px
+	&__presets 
+		display: flex 
+		flex-wrap: wrap
+		margin-bottom: aCalc(30)     
+	&__block 
+		position: relative
+		.filtered
+			display: none
+			+r($sm)
+				display: none
+		.close-btn.first-popup
+			position: absolute
+			display: none 
+			+r($sm)
+				margin-left: auto 
+				position: sticky
+				z-index: 199
+				right: 8px
+				top: 8px
+				display: grid
+		&-title 
+			font-size: aCalc(18)
+			line-height: aCalc(24)
+			+r($sm)
+				font-size: 12px
+				line-height: 18px
+				margin-bottom: 8px
+		&-wrapper 
+			margin-top: aCalc(20)
+			+r($sm)
+		&-el:last-child
+			+r($sm)
+				border-top: 1px solid #CDCDCD
+				position: static
+				z-index: 200
+				background-color: #ffffff
+				display: grid
+				justify-content: center
+				align-items: center
+				bottom: 0
+				right: 0
+				left: 0
+				margin-bottom: 0
+				height: 66px
+				display: none
+		&-el
+			display: flex
+			justify-content: space-between
+			margin-bottom: aCalc(20)
+			.filter__block-count 
+				display: block 
+				+r($sm)
+					display: none
+			.select__wrapper 
+				input 
+					position: absolute
+				select 
+					background-color: #F2F2F2
+					border: none
+					color: #282828
+			.filter__form-field
+				+r($sm)
+					max-width: 200px
+			div 
+				+r($sm)
+					flex-shrink: 0
+			.filter__presets
+				+r($sm)
+					flex-direction: row
+					flex-wrap: wrap
+					max-width: 100%
+			+r($sm)
+				max-width: 100%
+				margin-bottom: 16px
+				flex-direction: column
+			div:last-child
+				max-width: aCalc(500)
+				flex-shrink: 0
+				width: 100%
+				+r($sm)
+					max-width: 100%
+			.irs-bar 
+				border: 1px solid #ffef96
+			.filter__form-controls
+				border-bottom: none
+				border-radius: aCalc(2)
+			.filter__form-field .filter__form-range .from-control
+				max-width: 50%
+				border: none
+			.filter__form-field .filter__form-range .to-control
+				border: none
+				max-width: 50%
+				border-left: 1px solid #FD6
+		position: relative
+		&-null 
+			+r($sm)
+				display: none
+		&-moredetail
+			position: fixed
+			max-width: aCalc(864)
+			width: 100%
+			padding: aCalc(32)
+			max-height: aCalc(600)
+			height: 100%
+			border-radius: aCalc(8)
+			z-index: 200
+			-webkit-box-shadow: 4px 4px 8px 2px rgba(34, 60, 80, 0.4)
+			-moz-box-shadow: 4px 4px 8px 2px rgba(34, 60, 80, 0.4)
+			box-shadow: 4px 4px 8px 2px rgba(34, 60, 80, 0.4)
+			background-color: #ffffff
+			top: -100%
+			overflow-y: scroll
+			left: 0
+			right: 0
+			margin: 0 auto
+			width: 100vw
+			opacity: 0
+			transition: opacity 0.5s, -webkit-opacity 0.5s 1s,  top 0.7s
+			+r($sm)
+				transform: scale(1) translateX(-100%)
+				transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.8s cubic-bezier(0.22, 1, 0.36, 1), -webkit-visibility 0.8s cubic-bezier(0.22, 1, 0.36, 1)
+				padding: 16px
+				padding-top: 0
+				padding-bottom: 58px
+				top: 0
+				box-shadow: none
+				opacity: 1
+				max-height: 100%
+				height: var(--app-height)
+				position: fixed
+				max-width: 100vw
+			.filter__form-range 
+				position: relative
+				.input-ion-from, .input-ion-to
+					position: absolute
+					z-index: 0
+					top: 0
+					max-width: 50%
+					border-left: 1px solid #CDCDCD
+					border-top: 1px solid #CDCDCD
+					border-radius: aCalc(2)
+					width: 100%
+					height: aCalc(40)
+					+r($sm)
+						border-radius: 2px
+						height: 36px
+				.input-ion-to
+					right: 0
+					border-right: 1px solid #CDCDCD
+					margin-left: auto   
+					text-align: center
+			.input-ion-from
+				left: 0
+				margin-right: auto   
+				text-align: center
+			.filter__block-wrapper 
+				.filter__block-el 
+					.irs-line, .irs-bar
+						height: aCalc(4)
+						background-color: transparent
+						border: 1px solid #CDCDCD
+						top: 0px
+						+r($sm)
+							height: 4px
+							top: 0px
+							background-color: transparent
+					.irs-handle.from, .irs-handle.to
+						top: aCalc(-6)
+						+r($sm)
+							top: -3px
+							width: 12px 
+							height: 12px
+		.select-fields__wrapper
+			border-radius: aCalc(2)
+			background-color: $White
+			+r($sm)
+				border-radius: 2px
+			label
+				background-color: $Porcelain
+		.filter__block-moredetail.filter__block-hidden
+			.select-fields__wrapper
+				background-color: $Porcelain
+		.close-btn
+			cursor: pointer
+			top: aCalc(20)
+			box-shadow: none
+			&:hover
+				svg
+					transform: rotate(90deg)
+			svg 
+				width: aCalc(24)
+				height: aCalc(24) 
+				transition: .3s 
+			+r($sm)
+				z-index: 201
+				svg 
+					width: 24px
+					height: 24px 
+				display: grid
+				top: 6px
+		+r($sm)
+			padding: 0 0 20px
+			position: fixed
+			z-index: 2001
+			border: 2px solid #F2F2
+			width: 100vw
+			top: 0
+			left: 0
+			-webkit-transform: translateX(-100%)
+			-ms-transform: translateX(-100%)
+			transform: translateX(-100%)
+			transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 1.3s cubic-bezier(0.22, 1, 0.36, 1)
+			height: 100%
+			background-color: #ffffff
+			overflow: scroll
+		&-count 
+			color: #282828
+			padding: aCalc(8) aCalc(16)
+			background-color: #FD6
+			max-width: aCalc(607)
+			width: 100%
+			border-radius: aCalc(4)
+			font-size: aCalc(14)
+			font-style: normal
+			font-weight: 500
+			line-height: aCalc(20)
+			margin-right: aCalc(16)
+			+r($sm)
+				border-radius: 4px
+				min-width: 288px
+				width: 100%
+				margin-right: 0
+				padding: 8px 16px
+				font-size: 12px
+				line-height: 18px
+				position: sticky
+				transform: translateY(-100%) translateX(-100%)
+				top: 64px 
+				overflow: visible
+				z-index: 2000
+				min-width: 100%
+				left: 0 
+				right: 0 
+				height: 0
+				margin: 0 auto
+			span 
+		&-null 
+			color: #282828
+			font-size: aClac(14)
+			line-height: aCalc(20)
+			border-radius: none !important
+			border-bottom: aCalc(2) solid transparent
+			&:hover 
+				border-bottom: aCalc(2) solid #FD6
+				+r($sm)
+					border-bottom: aCalc(2) solid transparent
+			+r($sm)
+				display: none
+	&__wrapper 
+		margin-bottom: aCalc(40)
+	&__more 
+		color: #000000
+		margin: 0 auto aCalc(20)
+		+r($sm)
+			margin: 0 auto 20px
+	&__form 
+		position: relative
+		background-color: #FD6
+		padding: aCalc(30) aCalc(16)
+		border-radius: aCalc(8)
+		display: none
+		grid-template-columns: repeat(4, aCalc(294))
+		grid-gap: aCalc(24)
+		margin-bottom: aCalc(40)
+		+r($sm)
+			border-radius: 8px
+			padding: 16px
+			grid-gap: 0 24px
+			justify-content: center
+			grid-template-columns: repeat(auto-fit, 294px)
+			+r($sm)
+				margin-bottom: 16px
+		&-field
+			+r($sm)
+				margin-bottom: 16px
+		.from-control, .to-control 
+			input 
+				max-width: aCalc(147)
+				width: 100%
+				padding: aCalc(10) 0
+				text-align: center
+				+r($sm)
+					max-width: 147px
+					padding: 10px 0
+					text-align: center
+
+		&-moredetail
+			font-size: aCalc(14)
+			line-height: aCalc(20)
+			color: #000000
+			position: absolute
+			right: aCalc(14)
+			top: aCalc(14)
+			+r($sm)
+				font-size: 14px
+				line-height: 20px
+				right: 14px
+				top: 14px
+		&-label 
+			margin-bottom: aCalc(8)
+			+r($sm)
+				margin-bottom: 6px
+		&-checkbox
+			display: flex
+			justify-content: flex-start
+			+r($sm)
+				margin-bottom: 16px
+			div 
+				cursor: pointer
+				display: grid
+				justify-content: center
+				align-items: center
+				width: aCalc(40)
+				height: aCalc(36)
+				background-color: #E5C03C
+				border-radius: aCalc(2)
+				+r($sm)
+					width: 40px
+					height: 36px
+					border-radius: 2px
+				span 
+					pointer-events: none
+					width: auto
+					height: auto
+					color: #ffffff
+			div + div 
+				margin-left: aCalc(4)
+				+r($sm)
+					margin-left: 4px
+		&-range 
+			position: relative
+			.irs--flat .irs-line, .irs-bar
+				height: aCalc(12)
+				+r($sm)
+					background-color: transparent
+					border: 1px solid #CDCDCD
+					height: 12px
+			.irs-single
+				display: none
+			.irs--flat, .irs-handle
+				top: aCalc(2)
+				cursor: pointer
+				+r($sm)
+					top: 2px
+			.irs-bar, .irs-line
+				top: aCalc(4)
+				+r($sm)
+					top: 4px
+			.irs-min, .irs-max, .irs-from, .irs-to
+				display: none
+			.irs-handle.from, .irs-handle.to
+				height: aCalc(16)
+				width: aCalc(16)
+				border-radius: aCalc(24)
+				border: aCalc(2) solid #ffef96
+				background-color: #ffffff
+				+r($sm)
+					border-radius: 24px
+					width: 16px    
+					height: 16px
+				i 
+					display: none
+			.irs-bar 
+				background-color: #ffffff
+		.filter__form-range 
+			position: relative
+			.input-ion-from, .input-ion-to
+				position: absolute
+				z-index: 0
+				top: 0
+				max-width: aCalc(147)
+				width: 100%
+				height: aCalc(40)
+				+r($sm)
+					max-width: 147px
+					height: 36px
+			.input-ion-to
+				right: 0
+				margin-left: auto   
+				text-align: center
+			.input-ion-from
+				left: 0
+				margin-right: auto   
+				text-align: center
+			.irs-bar, .irs-line 
+				top: aCalc(-4)
+				background-color: #ffffff
+				height: aCalc(2)
+				z-index: 101
+				+r($sm)
+					height: 2px
+					border: none
+					top: -2px
+			.irs-bar, .irs-line
+				display: none
+			.irs-handle.from, .irs-handle.to 
+				top: aCalc(-6)
+				+r($sm)
+					top: -8px
+			.irs--round
+				height: auto
+			.js-range-slider-1:not(.irs-hidden-input)
+				display: none
+		&-controls 
+			height: aCalc(38)
+			position: relative
+			+r($sm)
+				height: 38px
+			div:first-child
+				left: 0
+			div:last-child
+				border-left: 1px solid #000000 
+				text-align: right
+				right: 0
+			div 
+				border-radius: aCalc(2)
+				background-color: #ffffff
+				height: aCalc(36)
+				position: absolute
+				width: 50%
+				display: grid
+				justify-content: center
+				align-items: center
+				+r($sm)
+					border-radius: 2px
+					height: 36px 
+	&__accordion
+		display: flex
+		margin-bottom: aCalc(40)
+		gap: aCalc(36)
+		+r($sm)
+			gap: 0
+		&.filter__accordion-desktop
+			+r($sm)
+				display: none
+		&.filter__accordion-mobile
+			display: none
+			+r($sm)
+				display: flex
+		+r($sm)
+			flex-wrap: wrap
+	&__sort 
+		max-width: max-content
+		&-label
+			font-size: aCalc(18)
+			line-height: aCalc(24)
+			margin-bottom: aCalc(8)
+			+r($sm)
+				margin-bottom: 6px
+				font-size: 14px
+				line-height: 20px
+	&__data 
+	.filtered
+		display: grid 
+		grid-template-columns: repeat(3, aCalc(424))
+		grid-gap: aCalc(32) aCalc(24)
+		margin-bottom: aCalc(32)
+		li + li 
+			+r($sm)
+				margin-top: 24px
+		+r($sm)
+			display: flex
+			flex-direction: column
+			justify-content: center
+			max-width: 100%
+			margin: 0 auto 24px
+	&__done 
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: aCalc(32)
+		+r($sm)
+			flex-direction: column
+			justify-content: flex-start
+			margin-bottom: 24px
+		&-el 
+			font-size: aCalc(14)
+			line-height: aCalc(20)
+			span 
+				margin-left: aCalc(4)
+				+r($sm)
+					margin-left: 4px
+		&-null 
+			&.btn1.button-secondary
+				border: 1px solid #282828
+			border-radius: aCalc(4)
+			padding: aCalc(8) aCalc(16)
+			color: #282828
+			+r($sm)
+				width: 100%
+				align-self: flex-start
+				order: 0
+				padding: 8px 16px
+				border-radius: 4px
+				margin-bottom: 16px
+		.filter__done-el.filter__done-btn 
+			+r($sm)
+				width: 100%
+		.filter__done-el.filter__done-text
+			+r($sm)
+				align-self: flex-start
+				font-size: 12px
+				line-height: 18px
+				order: 1
+
+.checkbox_active 
+	background-color: #E5C03C !important
+	color: #000000 !important
+
+.ui-container .filter__form_active
+	grid-template-columns: repeat(auto-fit, aCalc(224))
+	p, div 
+		margin-bottom: initial
+
+.ui-container .filter__form-field
+	p, div 
+		margin-bottom: initial
+
+
+.filter__form .filter__form-range .input-ion-from, .filter__form .filter__form-range .input-ion-to
+	max-width: 50%
+
+.filter__form_active
+	display: grid
+	grid-template-columns: repeat(auto-fit, aCalc(294))
+	grid-gap: aCalc(24)
+	margin-bottom: aCalc(40)
+	+r($sm)
+		grid-template-columns: repeat(auto-fit, 294px)
+
+.filter__block_active
+	transform: translateX(0)
+
+.filter__accordion_active 
+	border-bottom: 2px solid #FD6
+
+.moredetail_active
+	top: 25%
+	opacity: 1
+	transition: transform 0.7s, -webkit-transform 0.7s, top 0.7s
+	+r($sm)
+		top: 0
+		overflow-x: hidden
+		transform: translateX(0) 
+
+.block_visible
+	display: block
+
+.wrapper
+	display: grid 
+	grid-template-columns: 1fr
+	height: 100%
+	.filter__title 
+		position: fixed
+	.filter__block-count
+		bottom: 0
+		top: initial 
+		position: fixed
+
+.container-grid
+	overflow: auto
+
+.count_active.first-filter
+	transform: translateX(0) translateY(-199%) !important
+	height: auto
+	position: sticky
+	z-index: 20000
+
+.count_active.second-filter
+	transform: translateX(0) translateY(-100%) !important
+	height: auto
+	position: sticky
+	z-index: 20000
+
+.count_active 
+	transform: translateX(0) translateY(-100%) !important
+	height: auto
+	z-index: 20000
+	opacity: 1 !important
+	transform: translateX(0) translateY(0) !important
+
+._checked
+	svg 
+		fill: #FF6666
+		path
+			stroke: transparent
+
+.from-control, .to-control 
+	input 
+		max-width: aCalc(147)
+		width: 100%
+		padding: aCalc(10) 0
+		text-align: center
+		+r($sm)
+			width: 147px
+			padding: 10px 0
+			text-align: center
+
+.filter__block-moredetail
+	.from-control, .to-control 
+		input 
+			min-width: aCalc(249)
+			width: 100%
+			padding: aCalc(10) 0
+			text-align: center
+			+r($sm)
+				width: 147px
+				padding: 10px 0
+				text-align: center
+
+.filter__form-field.filter__form-checkboxes
+	input[type='checkbox']:checked + .checkmark 
+		background-color: $BrassBalls
+	+r($sm)
+		margin-bottom: 16px
+.filter__form-field
+	.checkboxes 
+		display: flex
+		gap: aCalc(8)
+		+r($sm)
+			gap: 8px
+/*! .filter style page*/

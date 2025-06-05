@@ -1,0 +1,74 @@
+.block-discount.swiper-container
+  .discount-wrapper.swiper-wrapper
+    a(href="#").discount-el.swiper-slide.discount-el_ordinary
+      .discount-el__img(js-lazy)
+        //-img(src="img/living-facility/discount-el-desktop-1.jpg" alt="")
+        <picture>
+          <source media="(min-width:768px)" srcset="img/living-facility/discount-el-desktop-1.jpg">
+          <source media="(max-width:768px)" srcset="img/living-facility/discount-el-mobile-2.jpg">
+          <img data-src="img/living-facility/discount-el-desktop-1.jpg" alt="main image 1">
+        </picture>
+      .discount-el__info
+        .title-xl own apartment
+        .title-m
+          |The discount is provided upon receipt of documents.
+      .discount-el__user
+        button.slider-navigation-next.slide-button.slide-button_horizontal
+          span
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+            </svg>
+    a(href="#").discount-el.swiper-slide.discount-el_ordinary 
+      .discount-el__img(js-lazy)
+        //-img(src="img/living-facility/discount-el-desktop.jpg" alt="")
+        <picture>
+          <source media="(min-width:768px)" srcset="img/living-facility/discount-el-desktop.jpg">
+          <source media="(max-width:768px)" srcset="img/living-facility/discount-el-mobile.jpg">
+          <img data-src="img/living-facility/discount-el-desktop.jpg" alt="main image 1">
+        </picture>
+      .discount-el__info
+        .title-xl Hot prices for apartments in the residential complex "Neighbors"
+        .title-m
+          |The discount is provided upon receipt of documents
+      .discount-el__user 
+        button.slider-navigation-next.slide-button.slide-button_horizontal
+          span
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+            </svg>
+    .discount-el.discount-el_little.swiper-slide
+      a(href="#").discount-el.discount-el_small.discount-el_bg
+        .discount-el__info
+          .title-xl Hot prices for apartments in the residential complex "Neighbors"
+          .title-m
+            |The discount is provided upon receipt of documents
+        .discount-el__user 
+          button.slider-navigation-next.slide-button.slide-button_horizontal
+            span
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+              </svg>
+      a(href="#").discount-el.discount-el_small
+        .discount-el__info
+          .title-xl Hot prices for apartments in the residential complex "Neighbors"
+          .title-m
+            |The discount is provided upon receipt of documents
+        .discount-el__user 
+          include ../links-lf/_links-lf.pug
+    .discount-el.swiper-slide.discount-el_mob.discount-el_bg
+      .discount-el__info
+        .title-xl Hot prices for apartments in the residential complex "Neighbors"
+        .title-m
+          |The discount is provided upon receipt of documents
+      .discount-el__user 
+        .discount-el__user-link.button-arrow.button-arrow_right
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+          </svg>
+    .discount-el.swiper-slide.discount-el_mob
+      .discount-el__info
+        .title-xl Hot prices for apartments in the residential complex "Neighbors"
+        .title-m
+          |The discount is provided upon receipt of documents
+      .discount-el__user 
+        include ../links-lf/_links-lf.pug

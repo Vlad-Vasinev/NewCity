@@ -1,0 +1,44 @@
+.any-info 
+  .any-info__item(accord-basic)
+    .any-info__top 
+      .h1.block-page__title Finishing  
+      .any-info__top-tags 
+        .tag-text.p1(accord-basic-checker) Ceiling
+        .tag-text.p1(accord-basic-checker) Floor screed with sound insulation
+        .tag-text.p1(accord-basic-checker) Internet
+        .tag-text.p1(accord-basic-checker) Electricity
+        .tag-text.p1(accord-basic-checker) Horizontal piping
+        .tag-text.p1(accord-basic-checker) Radiators
+        .tag-text.p1(accord-basic-checker) Windows
+    .any-info__content 
+      .any-info__middle.any-info__middle_active(accord-basic-el)
+        .any-info__middle-img 
+          img(src="img/any-info.jpg" alt="")
+        .any-info__middle-content 
+          .h2 Ceiling
+          .p1 
+          //-   |Межэтажные перекрытия выполнены из монолитного железобетона. Их fromделка не предусмfromрена.
+          //-   |Плита fromливается разом на весь этаж, что исключает стыки внутри apartments и обеспечивает герметичность.
+          //-   |Такое решение исключает прfromекание крыши и риск растрескивания штукатурки в месте, где проходит шов.
+          //- .p1 В toмах 9 и 11 высfromа пfromолка — 2,7 метра.
+          //- .p1 В toмах 5, 6, 7 и 8 высfromа пfromолка — 2,9 метра. 
+          //- .p1 В квартирах на первых и последних этажах — from 3 to 3,3 метра.
+          .button-primary.btn1 Get a consultation
+      - var imgSrc = ["img/any-info.jpg", "img/any-info-1.jpg", "img/any-info-2.jpg", "img/any-info-3.jpg", "img/any-info-4.jpg", "img/any-info-5.jpg"]; 
+      - var titles = ["Floor screed with sound insulation", "Internet", "Electricity", "Horizontal piping", "Radiators", "Windows"]; 
+      - var c = 0;  
+      while c < 6
+        .any-info__middle(accord-basic-el)
+          .any-info__middle-img 
+            img(src= imgSrc[c] alt="")
+          .any-info__middle-content 
+            .h2= titles[c]
+            .p1 
+              |The floors between floors are made of monolithic reinforced concrete. Their finishing is not provided.
+              |The slab is cast at once for the entire floor, which eliminates joints inside the apartment and ensures tightness.
+              |This solution eliminates roof leaks and the risk of plaster cracking at the seam.
+            .p1 In houses 9 and 11 the ceiling height is 2.7 meters.
+            .p1 In houses 5, 6, 7 and 8 the ceiling height is 2.9 meters.
+            .p1 In apartments on the first and last floors - from 3 to 3.3 meters.
+            .button-primary.btn1 Get a consultation
+        - c++

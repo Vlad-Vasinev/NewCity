@@ -1,0 +1,28 @@
+
+.sliderLf-bg.swiper-container
+  .sliderLf-bg__wrapper.swiper-wrapper
+    //- include ../blured-text/_blured-text.pug
+    .sliderLf-bg__el.swiper-slide 
+      include ../blured-text/_blured-text.pug
+      .info-img(js-lazy)
+        img(src="img/living-facility/info-img-1.jpg" alt="")
+    .sliderLf-bg__el.swiper-slide 
+      include ../blured-text/_blured-text.pug
+      .info-img(js-lazy)
+        img(src="img/living-facility/info-img.jpg" alt="")
+    .sliderLf-bg__el.swiper-slide 
+      include ../blured-text/_blured-text.pug
+      .info-img(js-lazy) 
+        img(src="img/living-facility/info-img-2.jpg" alt="")
+  .control-inner
+    .swiper-pagination.pag-tab
+    button.slider-navigation-prev.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>
+    button.slider-navigation-next.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>

@@ -1,0 +1,303 @@
+
+/*! .product style page*/
+.product
+  margin-top: aCalc(40)
+  +r($sm)
+    margin-top: 63px
+  &-block 
+    max-width: max-content
+  &__wrapper 
+    +r($sm)
+      margin-bottom: 48px
+  .terms 
+    padding: 0 0 aCalc(50)
+    +r($sm)
+      padding: 0 0 64px
+  &-showMobile, &-hideMobile
+    display: none
+    transition: visibility .3s
+    +r($sm)
+      display: block
+      margin-bottom: 24px
+  &-showMobile_hide
+    visibility: 0
+  &-hideMobile
+    +r($sm)
+      margin-top: 16px
+  &-calcMobile
+    padding: 40px 12px 20px
+    margin-top: 0
+    position: fixed
+    z-index: 2001
+    width: 100vw
+    left: 0
+    transform: translateY(-200%)
+    transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 1.3s cubic-bezier(0.22, 1, 0.36, 1)
+    height: var(--app-height)
+    background-color: #ffffff
+    overflow: scroll
+    +r($sm)
+      top: 0
+      transform: translateY(0) translateX(-100%)
+    .before-calc
+      +r($sm)
+        margin-top: 0
+        flex-direction: column
+  &-calcMobile-active
+    +r($sm)
+      transform: translateY(0) translateX(0)
+  &__title
+    position: relative
+    margin-bottom: aCalc(32)
+    +r($sm)
+      margin-bottom: 16px
+  &__subtitle
+    display: block
+    margin-bottom: aCalc(8)
+  &__inner 
+    display: flex
+    margin-bottom: aCalc(72)
+    +r($sm)
+      flex-direction: column
+    &-el 
+      +r($sm)
+        margin-bottom: 8px
+      .calc 
+        +r($sm)
+          display: none
+    &-el:first-child
+      max-width: aCalc(710)
+      width: 100%
+      margin-right: aCalc(136)
+      +r($sm)
+        max-width: 100%
+        margin-right: 0
+  &__accordeon 
+    display: flex
+    margin-bottom: aCalc(25)
+    background-color: #c5e0e3
+    max-width: max-content
+    padding: aCalc(10)
+    border-radius: aCalc(4)
+    +r($sm)
+      padding: 8px
+      border-radius: 4px
+      margin-bottom: 17px
+    &-btn 
+      color: #000000
+      padding: aCalc(6)
+      font-weight: 400
+      +r($sm)
+        padding: 6px
+      &.el_active
+        background-color: #ffffff
+        border-radius: aCalc(2)
+        +r($sm)
+          border-radius: 2px
+  .product__accordeon-el + .product__accordeon-el
+    padding-left: aCalc(24)
+    +r($sm)
+      padding-left: 16px
+  &__price
+    display: flex
+    align-items: top
+    margin-bottom: aCalc(32)
+    +r($sm)
+      flex-wrap: wrap
+      margin-bottom: 24px
+      align-items: center
+    .product__about-el
+      max-width: aCalc(400)
+      width: 100%
+      +r($sm)
+        margin-top: 24px
+        max-width: 100%
+      span
+        max-width: max-content
+  &__info-current
+    flex-shrink: 0
+    margin-right: aCalc(24)
+    +r($sm)
+      margin-right: 16px
+  &__info-initial
+    flex-shrink: 0
+    align-self: baseline
+    padding: aCalc(10) aCalc(16)
+    border-radius: aCalc(4)
+    background-color: #6CE4AA
+    margin-right: aCalc(24)
+    +r($sm)
+      padding: 8px 16px
+      border-radius: 4px
+  &__about
+    display: grid 
+    grid-gap: 0 aCalc(11)
+    grid-template-columns: repeat(2, aCalc(298))
+    margin-bottom: aCalc(24)
+    +r($sm)
+      grid-gap: 20px
+      grid-template-columns: repeat(1, 1fr)
+      margin-bottom: 24px
+    &-el:first-child .product__about-item span:last-child 
+      max-width: aCalc(110)
+      width: 100%
+      +r($sm)
+        max-width: 123px
+    &-el .product__about-item span:last-child 
+      +r($sm)
+        max-width: 123px
+    &-item span:first-child
+      +r($sm)
+        max-width: 204px
+        width: 100%
+    &-item span:last-child 
+      +r($sm)
+        margin-left: auto
+    &-item 
+      display: flex
+      justify-content: space-between
+      color: #737373
+      +r($sm)
+        justify-content: flex-start
+      span:first-child 
+        color:#737373
+      span:last-child 
+        color:#282828
+      span 
+        max-width: aCalc(148)
+        +r($sm)
+          max-width: 100%
+          width: 100%
+    &-item span
+      color:#282828
+  .product__about-item + .product__about-item 
+    margin-top: aCalc(8)
+    +r($sm)
+      margin-top: 10px
+  &__social 
+    display: flex
+    margin-bottom: aCalc(24)
+    +r($sm)
+      margin-bottom: 24px
+    &-link svg 
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px
+  .product__social-el + .product__social-el 
+    padding-left: aCalc(16)
+    +r($sm)
+      padding-left: 24px
+  &__btns 
+    display: flex
+    +r($sm)
+      flex-direction: column
+  &__inner-el
+    .form-order
+      margin-top: aCalc(20)
+    .form-order__el 
+      display: grid 
+      grid-gap: aCalc(16) aCalc(10)
+      grid-template-columns: repeat(2, aCalc(296))
+      +r($sm)
+        display: flex
+        flex-direction: column
+    .form-order__bottom
+      +r($sm)
+        padding: 12px
+    .popup__login-wrap-btn
+      grid-column-start: 1
+      grid-column-end: 3
+    .g-recaptcha
+      grid-column-start: 3
+  &__btns-el.product__btns-order
+    max-width: aCalc(264)
+    width: 100%
+    background-color: transparent
+    border: 1px solid #FD6
+    margin-right: aCalc(24)
+    +r($sm)
+      max-width: unset 
+      width: 100%
+      margin-bottom: 8px
+    &:hover
+      background-color: #FD6
+  &__btns-el.product__btns-buy
+    max-width: aCalc(264)
+    width: 100%
+    +r($sm)
+      max-width: unset 
+      width: 100%
+      margin-bottom: 0
+
+.forms-wrapper 
+  position: relative
+  .form-order
+    position: absolute
+    background-color: #ffffff
+    top: aCalc(-330)
+    z-index: 100
+    min-height: aCalc(264)
+    transform: scale(0)
+    opacity: 0
+    transition: scale 0.3s ease, transform 0.3s ease, opacity 0.2s ease
+    +r($sm)
+      top: -390px
+  .form-order.form-order_active 
+    transform: scale(1)
+    opacity: 1
+
+.before-calc
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin-bottom: 0
+    display: flex
+    justify-content: space-between
+    gap: 8px
+.show-map
+  max-width: aCalc(224)
+  width: 100%
+  background-color: #FD6
+  border: 1px solid #FD6
+  margin-right: aCalc(24)
+  +r($sm)
+    max-width: unset
+
+.show-map.button-primary
+  +r($sm)
+    min-width: unset
+    margin-right: 0
+
+.close-btn
+  position: absolute
+  top: -24px
+  width: 48px
+  height: 48px
+  border-radius: 40px
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15)
+  background-color: #ffffff
+  right: 16px
+  display: grid
+  justify-content: center
+  align-items: center
+  transition: .3s
+  &:hover 
+    svg 
+      transform: rotate(90deg)
+  +r($sm)
+    top: 24px
+  svg
+    pointer-events: none
+
+.form-el_active 
+  display: block !important
+
+.form-el_hidden 
+  display: none !important
+
+.form-primary-scroll
+  margin: aCalc(20) 0
+  +r($sm)
+    margin: 20px 0
+/*! .product style page*/

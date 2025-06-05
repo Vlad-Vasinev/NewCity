@@ -1,0 +1,34 @@
+.main-form 
+  .form-order.form-primary
+    .modal__top
+      .form-order__top
+        h2.h2.form-order__title
+          |Tired of choosing a place to live?
+          span.form-order__subtitle.h3-primary
+            |CHECKLIST
+            |ERROR-FREE <br> SELECTING AN APARTMENT
+      span.h2.form-response Thank you for your application.
+    .modal__body
+      h2.h2.form-order__title
+        |We will tell you everything about the features of our apartments - just call
+        a(href="tel:88005116382") 8 800 511-63-82
+        span.form-order__subtitle.h3-primary Or leave your contact information and we will call you back.
+      .modal__body-text 
+        |Leave your contact details and receive a checklist for your selection
+        |apartments. You can always get the necessary information
+        |by contacting us by phone
+        a(href="tel:+74842218491") +7 (4842) 21-84-91
+        span Or leave your contact information and we will call you back.
+      form#form-modal.form-request.form-order__el(action="/local/ajax/forms.php" data-redirect='/thanks.html' data-form-pdf="./pdf/list.pdf")
+        .ui-input.required(js-input-focus)
+          label.ui-input__float-label.h4(for="form-modal-name-p") Your name
+          input.form-order__input.h4(type="text" name="name" value="Arkady" id="name-gt" required placeholder="Arkady")
+        .ui-input(js-input-focus)
+          label.ui-input__float-label.h4(for="form-modal-phoneNumber") Phone
+          input.form-order__input.h4(type="tel" name="phone" value="+7" id="phone-gt" required placeholder="+7")
+        .g-recaptcha(id="recaptcha3" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+        .popup__login-wrap-btn
+          button.form__bottom-btn.btn.button-primary(type="submit" id="form-order-call")
+            |Request a call
+          p.policy.p2 By clicking the button you agree <br>with the terms of the privacy policy
+      .form-response Thank you for your application.. We will review all the information and contact you.

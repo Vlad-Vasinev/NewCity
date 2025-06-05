@@ -1,0 +1,83 @@
+.mortgage-block
+  <picture>
+    <source media="(min-width:768px)" srcset="img/mortgage-bg-block.jpg">
+    <source media="(max-width:768px)" srcset="img/mortgage-bg-block-mobile.png">
+    <img data-src="img/mortgage-bg-block.jpg" alt="main image 1">
+  </picture>
+  .filter-plan
+    .prom-h1
+      |Plan 
+      |housewarming right now!
+    .filter__form
+      .filter__form-field 
+        .filter__form-label.prom-p3 Please indicate the number of rooms
+          .checkboxes.room-count
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 Studio
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 1
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 2
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 3
+              </span>
+            </label>
+      .filter__form-field 
+        .filter__form-label.prom-p3 
+          | Set the price, million ₽
+        .filter__form-range.appartment-price  
+          .filter__form-controls.filter__form-rangeFirst 
+            div.from-control 
+            div.to-control 
+          input.input-ion-from.prom-h3(placeholder="0")
+          input.input-ion-to.prom-h3(placeholder="300")
+          <input type="text" data-step = "1" data-min="0" data-max="45"  data-from="4"  data-to="40" class="js-range-slider-1" name="my_range" value="Range slider" /> 
+              .filter__form-field.filter__form-checkboxes
+      .filter__form-field 
+        .filter__form-label.prom-p3 Please indicate the check-in date
+          .checkboxes.data-entry
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 Populated
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 2024
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 2025
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 2026
+              </span>
+            </label>
+            <label class="chess-cell chess-cell_extended">
+              <input type="checkbox">
+              <span class="checkmark">
+                p.prom-h3 2027
+              </span>
+            </label>
+    .prom-h3.prom-btn.find-appartment(js-modal-open data-modal-name="form-modal") Find an apartment

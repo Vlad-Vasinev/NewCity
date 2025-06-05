@@ -1,0 +1,34 @@
+
+.form-lf 
+  position: relative
+  img 
+    border-radius: aCalc(12)
+    width: 100%
+    height: aCalc(700)
+    +r($sm)
+      display: none
+  &__el 
+    padding: aCalc(40)
+    width: aCalc(507)
+    min-height: aCalc(500)
+    border-radius: aCalc(12)
+    background-color: $White
+    position: absolute
+    z-index: 100
+    top: aCalc(100)
+    left: aCalc(100)
+    +r($sm)
+      padding: 64px 16px
+      position: initial
+      width: 100%
+      min-height: unset
+      top: unset 
+      left: unset
+  .title-xxl
+    margin-bottom: aCalc(24)
+    +r($sm)
+      margin-bottom: 24px
+  .title-l
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px

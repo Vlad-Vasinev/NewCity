@@ -1,0 +1,11 @@
+ul.blog-list 
+  - var n = 0
+  while n < 5
+    li.blog-list__el 
+      a.blog-card(href="#")
+        .blog-card__img(js-lazy)
+          img(src="img/blog-list-1.jpg")
+        h2.blog-card__title.h3
+          |Start of sales of underground parking in the residential complex "New City"
+          span.blog-card__subtitle.p2 April 22, 2023
+    - n++

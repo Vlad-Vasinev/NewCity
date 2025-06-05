@@ -1,0 +1,19 @@
+.slide-button
+  cursor: pointer
+  .slide-button-inner
+    position: relative
+    overflow: hidden
+    span
+      display: block
+      position: relative
+      transform: translateY(0)
+      transition: transform 0.4s 0.05s, color 0.3s
+      &:nth-child(2)
+        position: absolute
+  &:hover
+    +rmin($sm1)
+      .slide-button-inner
+        span
+          transform: translateY(-100%)
+          &:nth-child(2)
+            position: absolute

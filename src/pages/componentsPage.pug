@@ -1,0 +1,22 @@
+include ./utilities/_mixins
+doctype html
+html(lang="en")
+  head()
+    include ./shared/_head
+
+  body    
+    .body-wrapper
+      include ./../components/header/_header
+
+      .page
+        include ../components/components-page/_components
+
+      include ./../components/footer/_footer
+      include ./../components/modals/_modals
+
+    //- a(href="#section-body").scroll-top
+    //-   +svgMono('arrow-top')
+
+    block scripts
+      include ./shared/_scripts
+    include ./shared/_pages-list

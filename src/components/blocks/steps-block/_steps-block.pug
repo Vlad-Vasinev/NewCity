@@ -1,0 +1,17 @@
+.steps-block 
+	.prom-h-x.steps-block__title «Oh! High five!»
+	.steps-block__mesh  
+		- var h3items = ["Select an apartment", "Book now", "Come on in", "Make payments", "Apply for a mortgage"];
+		- var p1items = ["In the Samoleta complex from the list of affordable housing", "Book an apartment on the website and we will contact you", "You can move in immediately after signing the contract", "All money goes towards the down payment", "Save up the required amount and apply for an impfromeka at any bank"];
+		- var items = ["1", "2", "3", "4", "5"];
+		- var n = 0;
+		while n < 5
+			.steps-el
+				.steps-el__step
+					span= items[n]
+				.steps-el__wrapper
+					h3.h3= h3items[n]
+					.p1= p1items[n]
+				- n++
+	a(href="#").h3.prom-btn Watch House
+	hr.prom-hr

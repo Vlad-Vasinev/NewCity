@@ -1,0 +1,70 @@
+/*! .blog-slider style block*/
+.blog-slider 
+  margin-top: aCalc(24)
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin: 16px auto
+  &:not(.swiper-initialized)
+    .slider__el:nth-child(n + 2)
+      display: none
+  .slider__el.swiper-slide 
+    background-color: #ffffff
+    +r($ms + 100)
+      display: grid 
+      justify-content: center
+      align-content: center
+  .slider__el.swiper-slide img 
+    border-radius: aCalc(4)
+    width: 100%
+    object-fit: cover
+    height: aCalc(324)
+    +r($sm)
+      max-height: 195px
+      height: 100%
+      border-radius: 4px
+  .control-inner
+    margin-top: aCalc(16)
+    display: flex
+    align-items: center
+    +r($sm)
+      margin-top: 16px
+    .slide-button span
+      display: grid 
+      justify-content: center
+      align-items: center
+      padding: 0
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px 
+      svg 
+        width: aCalc(20)
+        height: aCalc(20)
+        +r($sm)
+          width: 20px
+          height: 20px
+    .slider-navigation-next
+      margin-left: aCalc(8)
+      +r($sm)
+        margin-left: 8px
+    .swiper-pagination
+      margin-left: aCalc(16)
+      height: aCalc(4)
+      border-radius: aCalc(2)
+      position: static
+      +r($sm)
+        height: 4px
+        border-radius: 2px
+        margin-left: 16px
+      &:not(.swiper-pagination-progressbar)
+        background-color: $Gray
+        width: 100%
+        height: aCalc(4)
+    .swiper-pagination-progressbar-fill
+      border-radius: aCalc(2)
+      +r($sm)
+        border-radius: 2px
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+      background-color: #FD6
+/*! .blog-slider style block*/

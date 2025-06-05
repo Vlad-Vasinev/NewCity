@@ -1,0 +1,303 @@
+/*! .header style */
+.header
+  position: relative
+  background-color: #ffffff
+  padding: 0 aCalc(60)
+  transition: height 1s
+  flex-grow: 3
+  &::before
+    //display: none
+    position: absolute
+    content: ""
+    left: 0
+    right: 0
+    margin: 0 auto
+    //bottom: aCalc(-4)
+    bottom: 0
+    z-index: 101
+    width: 100%
+    height: 1px
+    border-bottom: 1px solid #F2F2F2
+  +r($sm)
+    padding: 0
+    bottom: 0
+  +r($ms + 100)
+    padding: 0
+  &-favourite
+    display: flex
+    padding: 0
+    width: aCalc(24)
+    height: aCalc(24)
+    margin-right: aCalc(32)
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: aCalc(8)
+      height: aCalc(8)
+      background-color: #FF6666
+      border-radius: aCalc(4)
+      +r($sm)
+        border-radius: 4px
+        width: 6px
+        height: 6px
+    +r($sm)
+      width: 16px
+      height: 16px
+    &:hover 
+      svg 
+        path 
+          stroke: $Pompelmo
+    svg
+      width: aCalc(24)
+      height: aCalc(24)
+      path 
+        transition: all .3s
+      +r($sm)
+        width: 16px
+        height: 16px
+  &__logo svg
+    max-width: aCalc(175)
+    width: 100%
+    height: aCalc(50)
+    +r($sm)
+      max-width: 168px
+      width: 100%
+      height: 48px
+  &__inner
+    position: relative
+    z-index: 1003
+    background-color: #ffffff
+    display: grid
+    grid-template-columns: auto auto auto
+    gap: aCalc(62)
+    padding: aCalc(5) 0
+    justify-content: center
+    transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 1.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 1.3s cubic-bezier(0.22, 1, 0.36, 1)
+    +r($sm)
+      padding: 9px 12px
+      max-width: 100%
+      top: 0
+      position: fixed
+      z-index: 1050
+      background-color: #ffffff
+      width: 100%
+      left: 0
+      right: 0
+      margin: 0 auto
+      display: flex 
+      justify-content: space-between
+  &__social
+    margin-left: auto
+    margin-right: aCalc(32)
+    display: flex
+    align-items: center
+    +r($sm)
+      margin-right: 0
+  &__inner-scrolled
+    border-bottom: 1px solid #F2F2F2
+    top: 0
+    position: fixed
+    z-index: 1050
+    background-color: #ffffff
+    display: grid
+    grid-template-columns: auto auto auto
+    gap: aCalc(62)
+    justify-content: center
+    width: 100%
+    left: 0
+    right: 0
+    padding: aCalc(9) aCalc(12)
+    margin: 0 auto
+    animation-name: header__inner-animate
+    animation-duration: 1.2s
+    +r($sm)
+      padding: 9px 12px
+      max-width: 100%
+      width: auto
+      display: flex 
+      justify-content: space-between
+  &__menu 
+    display: flex
+    align-items: center
+  &__social-phone
+    margin-right: aCalc(16)
+    +r($sm)
+      margin-right: 16px
+    +r($sm - 100)
+      display: none
+  &__social-order
+    color: #282828
+    border: 1px solid #FD6
+    border-radius: aCalc(4)
+    margin-right: aCalc(16)
+  &__social-order.order-primary 
+    background-color: transparent
+    &:hover
+      background-color: #FFEBA4
+    +r($sm)
+      display: none
+  &__social-order.order-secondary 
+    background-color: #FD6
+    &:hover
+      background-color: #FFEBA4
+    +r($sm)
+      padding: 8px 16px
+      border-radius: 4px
+      margin-right: 16px
+      font-size: 12px
+      font-weight: 500
+      line-height: 18px
+    +r($sm - 100)
+      display: none
+  &__menu-el
+    font-size: aCalc(14)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(20)
+    +r($sm)
+      display: none
+  .menu-popup__btn-el
+    height: aCalc(8)
+    width: aCalc(8)
+    background-color: #FD6
+    border-radius: aCalc(4)
+    margin-right: aCalc(2)
+    transition: .3s
+    +r($sm)
+      margin-right: 2px
+      border-radius: 4px
+      width: 4px
+      height: 4px
+  &__menu-el:last-child
+    .menu-popup__btn
+      .menu-popup__btn-el
+      +r($sm)
+        right: 0
+        max-width: 16px
+        max-height: 16px
+        width: 100%
+        height: 100%
+    .header__menu-link
+      +r($sm)
+        padding-bottom: 0
+    +r($sm)
+      display: block
+  &__menu-link
+    transition-duration: .3s
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background-color: transparent
+    &:hover
+      &::after
+        background-color: #FD6
+  &__menu-el:first-child
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: aCalc(4)
+      background-color: #6CE4AA
+      top: 50%
+      transform: translateY(-50%)
+      left: aCalc(-16)
+  .header__menu-el + .header__menu-el
+    padding-left: aCalc(32)
+    +r($sm)
+      padding-left: 0
+  &__menu-el.menu-popup
+    cursor: pointer
+    position: relative
+    height: aCalc(28)
+    display: flex
+    align-items: center
+    gap: aCalc(3)
+    +r($sm)
+      gap: 3px
+      height: 28px
+
+.header-active
+  height: aCalc(60)
+  +r($sm)
+    height: 66px
+
+.header-menu
+  position: absolute
+  width: 100%
+  z-index: 1001
+  //z-index: 2001
+  left: 0
+  right: 0
+  margin: 0 auto
+  top: aCalc(58)
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), -webkit-transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+  visibility: hidden
+  transform: translateY(-120%)
+  background-color: #ffffff
+  padding: aCalc(32) aCalc(60) aCalc(40)
+  +r($sm)
+    position: fixed
+    z-index: 1050
+    padding: 24px 12px 32px
+    top: 58px
+  &.menu-animate
+    transform: translateY(0%)
+    visibility: visible
+    +r($sm)
+      position: fixed
+      top: 0
+      max-height: 100%
+      padding-top: 86px
+      height: var(--app-height)
+      overflow-y: scroll
+  &__scrolled
+    top: aCalc(65)
+    position: fixed
+    +r($sm)
+      top: 0
+      max-height: 100%
+      padding-top: 86px
+      height: var(--app-height)
+      overflow-y: scroll
+  &__inner
+    display: grid
+    justify-content: center
+    grid-gap: 0 aCalc(120)
+    grid-template-columns: repeat(4, aCalc(224))
+    position: relative
+    .footer__list-counted
+      background-color: #F2F2F2
+      &:hover
+        background-color: #FD6 !important
+    +r($sm)
+      grid-gap: 16px 40px
+      grid-template-columns: repeat(auto-fill, 224px)
+    +r($ms + 100)
+      grid-template-columns: repeat(auto-fill, 100%)
+      justify-content: flex-start
+
+@keyframes header__inner-animate
+  0%
+    transform: translateY(-120%)
+  100%
+    transform: translateY(0)
+
+.header__menu-el.menu-popup:hover .menu-popup__btn
+  div
+    background-color: #282828
+
+.menu-popup__btn
+  align-items: center
+  display: flex
+/*! .header style */

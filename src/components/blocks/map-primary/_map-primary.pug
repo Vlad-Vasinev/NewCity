@@ -1,0 +1,30 @@
+.map-primary 
+  .maps-block.maps-block-footer
+    .maps-block__container
+      .maps-block__item
+        .maps-block__map
+          .maps-block__field(href="#")
+            .maps-block__links 
+              a.btn1.button-primary(href="#") Contacts
+              a.btn1.button-primary(href="#") How to get there?
+            .maps-block__info 
+              .p2 Kaluga region, Obninsk, Polenova st., 9
+              .btn1 Mon-Fri from 9:00 to 19:00
+              .btn1 Sat–Sun from 10:00 to 18:00
+              a(href="#").p1 Request a call
+            .maps-block__tags 
+              a.tag-text.p1(href="#") 8 800 550-68-31
+              a.tag-text.p1(href="#") pro@novyigorod.ru
+            .users-links
+              a(href="#").user-link 
+                +svgIcon('svg-insta')
+              a(href="#").user-link 
+                +svgIcon('svg-face')
+              a(href="#").user-link 
+                +svgIcon('svg-vk')
+              a(href="#").user-link 
+                +svgIcon('svg-vk')
+              a(href="#").user-link 
+                +svgIcon('svg-youtube')
+            button.button-primary.btn1(js-modal-open data-modal-name="form-modal") Book a meeting
+          <div data-longitude="36.574691" data-latitude="55.130940" data-marker-longitude="36.574691" data-marker-latitude="55.542871" data-icon-src="img/map-icon.svg" data-icon-src-mobile="img/map-icon-mobile.svg" data-action="api/customization.json" class="js-ymap" data-placeholder-caption="Новый город" data-placeholder-balloon="249034, Kaluga region, Obninsk, Polenova st., 9"></div>

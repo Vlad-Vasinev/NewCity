@@ -1,0 +1,27 @@
+/*! .projects-blocks style block*/
+.projects-blocks
+  padding: aCalc(0) aCalc(60)
+  margin-bottom: aCalc(100)
+  +r($sm)
+    margin-bottom: 64px
+  &__title
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 32px
+  &__inner
+    display: grid 
+    gap: aCalc(24)
+    grid-template-columns: repeat(3, aCalc(424))
+    margin-bottom: aCalc(40)
+    +r($sm)
+      display: flex
+      flex-direction: column
+      gap: 32px
+      margin-bottom: 32px
+  .h3.prom-btn 
+    margin: 0 auto
+    span 
+      margin: 0 aCalc(3)
+      +r($sm)
+        margin: 0 3px
+/*! .projects-blocks style block*/

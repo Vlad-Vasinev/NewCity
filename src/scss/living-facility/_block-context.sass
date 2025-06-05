@@ -1,0 +1,85 @@
+
+.block-context
+  display: flex
+  justify-content: space-between
+  +r($sm)
+    flex-direction: column
+  .title-xxxl
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px
+  &__info 
+    width: aCalc(853)
+    +r($sm)
+      width: 100%
+      padding: 0 16px
+      margin-bottom: 24px
+  &__img 
+    position: relative
+    cursor: pointer
+    height: aCalc(320)
+    +r($sm)
+      height: auto
+      margin: 0 16px
+    .slider-navigation-next.slide-button.slide-button_horizontal
+      display: grid
+      justify-content: center
+      align-items: center
+      border-radius: aCalc(48)
+      background-color: $PaleGold
+      +r($sm) 
+        border-radius: 48px
+    &:hover 
+      .slide-button-inner
+        & > span
+          transform: translateX(-100%)
+    img, video 
+      width: aCalc(478)
+      height: aCalc(320)
+      object-fit: cover
+      border-radius: aCalc(12)
+      +r($sm)
+        border-radius: 12px
+        width: 100%
+        height: 230px
+    &-title 
+      max-width: aCalc(151)
+      position: absolute
+      left: aCalc(24)
+      bottom: aCalc(24)
+      display: flex
+      flex-direction: column
+      gap: aCalc(16)
+      z-index: 1
+      +r($sm)
+        max-width: 138px
+        gap: 16px
+        left: 16px
+        bottom: 16px
+      div.slide-button.slide-button_horizontal 
+        width: aCalc(48)
+        height: aCalc(48)
+        background-color: $PaleGold
+        border-radius: aCalc(48)
+        display: grid 
+        align-items: center
+        +r($sm)
+          border-radius: 48px
+          width: 48px
+          height: 48px
+        .slide-button-inner
+          max-width: unset
+      span
+        svg 
+          margin: 0 auto
+          width: aCalc(24)
+          height: aCalc(24)
+          +r($sm)
+            width: 24px
+            height: 24px
+      .title-l
+        color: $White
+        position: relative
+        z-index: 1
+      .slide-button-inner
+        max-width: max-content

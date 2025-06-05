@@ -1,0 +1,63 @@
+
+/*! .mirror-block style block*/
+.mirror-block 
+  display: flex
+  justify-content: space-between
+  gap: aCalc(24)
+  +r($sm)
+    flex-direction: column
+  &__img 
+    +r($sm)
+      order: 0
+    img 
+      width: aCalc(984)
+      height: aCalc(324)
+      object-fit: cover
+      border-radius: aCalc(8)
+      +r($sm)
+        width: 100%
+        height: 228px
+        border-radius: 8px
+        margin-bottom: 16px
+  &__info 
+    +r($sm)
+      order: 1
+    width: aCalc(321)
+    +r($sm)
+      width: 100%
+    a.h2
+      display: block
+      margin-bottom: aCalc(16)
+      +r($sm)
+        margin-bottom: 8px
+    .tag-text.p1
+      display: block
+  &__price
+    border-bottom: 1px solid $PaleGold
+    max-width: max-content
+    span.p1
+      margin: 0 aCalc(2)
+    span, .p1 
+      display: inline
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 8px
+  &__tags
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 8px
+    .p1.tag-text + .p1.tag-text
+      margin-top: aCalc(8)
+      +r($sm)
+        margin-top: 8px
+  &__paragraphs
+    margin-top: aCalc(16)
+    +r($sm) 
+      margin-top: 8px
+    .p1 
+      display: block
+    .p1 + .p1
+      margin-top: aCalc(8)
+      +r($sm)
+        margin-top: 8px
+/*! .mirror-block style block*/

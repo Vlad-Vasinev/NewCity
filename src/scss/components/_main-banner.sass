@@ -1,0 +1,31 @@
+
+/*! .main-banner style block*/
+.main-banner 
+  padding: aCalc(36) aCalc(56)
+  background-image: url('../../img/banner-main.png')
+  border-radius: aCalc(8)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +r($sm)
+    padding: 24px
+    flex-direction: column
+    border-radius: 8px
+  &__text 
+    span 
+      margin-top: aCalc(16)
+      display: block
+      +r($sm)
+        margin-top: 8px
+    +r($sm)
+      margin-bottom: 16px
+  button.btn1.button-secondary 
+    border: 1px solid $DireWolf
+    height: aCalc(36)
+    +r($sm)
+      height: auto
+      width: 100%
+/*! .main-banner style block*/

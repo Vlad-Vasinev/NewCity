@@ -1,0 +1,72 @@
+.block-terms 
+  .term-el.term-el_filter
+    .filter__form
+      .filter__form-field 
+        .filter__form-label.prom-p3 
+          |Cost of the apartment
+        .filter__form-range 
+          .filter__form-controls.filter__form-rangeFirst 
+            div.from-control
+          input.input-ion-to.prom-h3.price-input(placeholder="3000000")
+          <input type="text" data-step = "1" data-min="0" data-max="15000000"  data-from="0"  data-to="3000000" class="js-range-slider-1" name="my_range" value="Стоимость apartments" />
+      .filter__form-field 
+        .filter__form-label.prom-p3 
+          |Initial payment
+        .filter__form-range 
+          .filter__form-controls.filter__form-rangeFirst 
+            div.from-control
+          input.input-ion-to.prom-h3.first-pay-input(placeholder="")
+          <input type="text" data-step = "1" data-min="0" data-max="3000000"  data-from="0"  data-to="1500000" class="js-range-slider-1" name="my_range" value="Initial payment" />
+      .filter__form-field 
+        .filter__form-label.prom-p3 
+          |Loan term
+        .filter__form-range 
+          .filter__form-controls.filter__form-rangeFirst 
+            div.from-control
+          input.input-ion-to.prom-h3.time-pay-input(placeholder="")
+          <input type="text" data-step = "1" data-min="0" data-max="30"  data-from="0"  data-to="20" class="js-range-slider-1" name="my_range" value="Loan term" />
+    .prom-h3.prom-btn Get approval online
+    .prom-p3
+      |The calculations made are approximate.
+      |More precise information can be provided by bank representatives.
+  .term-el.term-el_standart 
+    .h1 Standard Mortgage
+    .term-el__text 
+      .p2 Interest rate
+      .h2 16,7%
+    .term-el__text 
+      .p2 Monthly payment
+      .h2.term-el__permounthStandart <span>66 286</span> ₽
+      .term-el__text-difference.p2.mortgage-upper More on <span>37 550</span> ₽
+        .term-el__text-icon  
+          img(src="img/arrow-up-mortgage.svg" alt="")
+    .term-el__text 
+      .p2 Overpayment
+      .h2.standart-overPay <span>20 363 042</span> ₽
+      .term-el__text-difference.p2.diff-upper More on <span>13 937 992</span> ₽
+        .term-el__text-icon  
+          img(src="img/arrow-up-mortgage.svg" alt="")
+    .term-el__result 
+      .term-el__result-price.h1.last-res-standart <span>0</span> ₽
+      .term-el__result-info.p3 No savings
+  .term-el.term-el_filled
+    img.term-el__bg(src="img/fon.svg" alt="") 
+    .h1 Mortgage 6%
+    .term-el__text 
+      .p2 Interest rate
+      .h2 6%
+    .term-el__text 
+      .p2 Monthly payment
+      .h2.term-el__permounthFamily <span>66 286</span> ₽
+      .term-el__text-difference.p2.mortgage-lower Less on <span>37 550</span> ₽
+        span.term-el__text-icon   
+          img(src="img/arrow-down-mortgage.svg" alt="")
+    .term-el__text 
+      .p2 Overpayment
+      .h2.family-overPay <span>20 363 042</span> ₽
+      .term-el__text-difference.diff-lower Less on <span>13 937 992</span> ₽
+        span.term-el__text-icon   
+          img(src="img/arrow-down-mortgage.svg" alt="")
+    .term-el__result 
+      .term-el__result-price.h1.last-res <span>13 337 992</span> ₽
+      .term-el__result-info.p3 Saving

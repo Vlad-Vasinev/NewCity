@@ -1,0 +1,107 @@
+/*! .layers style block*/
+.layers
+  position: relative 
+  text-align: center
+  img 
+    width: 100%
+  svg  
+    position: absolute
+    left: 0
+    top: 0
+    width: 100% 
+    height: 100%
+    z-index: 101
+  &__info 
+    position: absolute
+    top: 60%
+    left: var(--data-text-left)
+    right: auto
+    margin: 0 auto
+    transform: translateY(-50%) translateX(-25%)
+    width: aCalc(232)
+    background-color: $White 
+    border-radius: aCalc(8)
+    padding: aCalc(16)
+    z-index: 0
+    text-align: left
+    opacity: 0
+    transition: opacity .3s, top .3s, width .3s, padding .3s
+    +r($sm)
+      top: 100% 
+      padding: 12px
+      border-radius: 8px
+      width: 200px
+      height: 170px
+      overflow-y: scroll
+      min-height: unset
+    svg 
+        cursor: pointer
+        position: absolute
+        left: auto
+        right: aCalc(10)
+        top: aCalc(10)
+        width: aCalc(20)
+        height: aCalc(20)
+        transition: transform .3s
+        +r($sm)
+          right: 10px
+          top: 10px
+          width: 20px
+          height: 20px
+        &:hover 
+          transform: rotate(90deg)
+    .h2, .p2, .p1
+      margin-bottom: aCalc(8)
+      +r($sm)
+        margin-bottom: 8px
+    a 
+      display: block
+      cursor: pointer
+      transition: all .3s 
+      position: relative
+      max-width: max-content
+      border-bottom: 1px solid transparent
+      &::after 
+        position: absolute
+        content: "→"
+        z-index: 100
+        right: aCalc(-20)
+        top: 0
+        +r($sm)
+          right: -20px
+      &:hover 
+        border-color: $PaleGold
+    &.layers__info_active 
+        top: 50%
+        opacity: 1
+        z-index: 100
+  &__text
+    position: absolute
+    min-width: aCalc(100)
+    max-width: max-content
+    padding: aCalc(6) aCalc(12)
+    background-color: $White
+    top: var(--data-text-top)
+    left: var(--data-text-left)
+    border-radius: aCalc(16)
+    right: 0
+    z-index: 10
+    +r($sm)
+      display: none
+      padding: 6px 12px
+      border-radius: 12px
+
+.layer-link 
+  cursor: pointer
+  position: relative
+  z-index: 1002
+
+.house-path 
+  transition: all .3s
+  &:hover 
+    fill: #FFDD6660
+    // fill: #c5f19e8
+  &.house-path_active
+    fill: #FFDD6610
+    // fill: #8ad94668
+/*! .layers style block*/

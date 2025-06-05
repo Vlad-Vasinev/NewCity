@@ -1,0 +1,260 @@
+/*! .footer style */
+.footer
+  padding: aCalc(32) aCalc(60)
+  background-color: #F2F2F2
+  +r($sm)
+    padding: 24px 36px
+  +r($ms + 100)
+    padding: 17px 12px 14px
+  .btn1.footer__top-btn.button-secondary
+    border: 1px solid #282828
+    &:hover
+      background-color: #282828
+      color: #ffffff
+
+.footer__top
+  display: flex
+  align-items: center
+  margin-bottom: aCalc(36)
+  +r($sm)
+    flex-direction: column
+    align-items: initial
+    margin-bottom: 24px
+  .btn1
+    +r($sm)
+      margin-top: 16px
+      min-width: 100%
+.footer__top-title
+  margin-right: aCalc(24)
+
+.footer__top-btn
+  border: 1px solid #282828
+  background-color: transparent 
+  &:hover
+    background-color: #282828
+    color: #ffffff
+  +r($sm)
+    max-width: 163px
+    width: 100%
+    padding: 8px 16px
+    border-radius: 4px
+    font-size: 12px
+    line-height: 18px
+
+.footer__top-hr
+  border: none
+  color: #CDCDCD
+  background-color: #CDCDCD
+  height: aCalc(2)
+  +r($sm)
+    height: 2px
+    margin-top: 0
+    margin-bottom: 24px
+
+.footer__bottom
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  margin-top: aCalc(30)
+  padding-bottom: aCalc(24)
+  +r($sm)
+    padding-bottom: 24px
+    grid-gap: 16px 48px
+    grid-template-columns: repeat(auto-fill, 192px)
+  +r($ms + 100)
+    grid-template-columns: repeat(auto-fill, 100%)
+.footer__list
+  +r($sm)
+    width: 100%
+
+.footer__list-third
+  +r($sm)
+    order: 2
+
+.footer__list-fourth
+  +r($sm)
+    order: 1
+
+.footer__list-el
+  +r($sm)
+    font-size: 12px
+    line-height: 18px
+
+.footer__list-el + .footer__list-el
+  padding-top: aCalc(16)
+  +r($sm)
+    padding-top: 16px
+
+.footer__list-link
+  transition: .3s
+  padding-bottom: aCalc(4)
+  position: relative
+  box-sizing: border-box
+  padding-right: aCalc(57)
+  cursor: pointer
+  &::after
+    position: absolute
+    content: ""
+    bottom: 0
+    left: 0
+    width: calc(100% - aCalc(57))
+    height: 1px
+    background-color: transparent
+    +r($sm)
+      width: calc(100% - 38px)
+  +r($sm)
+    padding-right: 46px
+    padding-bottom: 4px
+  .footer__list-counted
+    +r($sm)
+      max-width: 38px
+      width: 100%
+      height: 30px
+      background-color: #ffffff
+      padding: 6px 12px
+      border-radius: 16px
+      right: -8px
+      font-size: 12px
+      line-height: 18px
+
+.footer__list-counted
+  transition: .3s
+  right: 0
+  top: 40%
+  transform: translateY(-50%)
+  position: absolute
+  font-size: aCalc(14)
+  font-style: normal
+  font-weight: 400
+  line-height: aCalc(20)
+  justify-content: center
+  align-content: center
+  border-radius: aCalc(16)
+  max-width: aCalc(49)
+  width: 100%
+  height: aCalc(32)
+  background-color: #ffffff
+  display: none
+  +r($sm)
+    font-size: 12px
+    line-height: 18px
+  p
+    display: block
+    max-width: max-content
+
+.footer__list-el.counted .footer__list-link .footer__list-counted
+  display: grid
+
+.footer__list-el.footer__list-elActive .footer__list-link
+  font-weight: 700
+
+.footer__list-el.special-offer .footer__list-link
+  position: relative
+  cursor: pointer
+  padding-right: 0
+  +r($sm)
+    padding-right: 16px
+  &::after
+    width: 100%
+  &::before
+    transition: .3s
+    position: absolute
+    content: ""
+    right: aCalc(-16)
+    top: 45%
+    transform: translateY(-50%)
+    width: aCalc(10)
+    height: aCalc(10)
+    border-radius: aCalc(4)
+    background-color: #6CE4AA
+
+.footer__list-link:hover .footer__list-counted 
+  background-color: #FD6
+
+.footer__list-link:hover
+  &::after
+    background-color: #FD6
+  &::before
+    background-color: #282828
+
+.footer__socials 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: aCalc(16)
+  +r($sm)
+    display: grid
+    grid-gap: 8px
+    justify-content: start
+    grid-template-columns: repeat(auto-fill, 44px)
+
+.footer__societal
+  display: flex
+  +r($sm)
+    gap: 8px
+    margin-top: 16px
+
+.footer__socials-link
+  cursor: pointer
+  width: aCalc(44)
+  height: aCalc(32)
+  border-radius: aCalc(16)
+  display: grid
+  justify-content: center
+  align-content: center
+  background-color: #ffffff
+  transition: .3s
+  svg
+    width: aCalc(20)
+    height: aCalc(20)
+    +r($sm)
+      width: 20px
+      height: 20px
+  &:hover
+    background-color: #FD6
+  +r($sm)
+    border-radius: 16px
+    width: 44px
+    height: 32px
+    padding: 6px 12px
+
+.footer__societal-link
+  cursor: pointer
+
+.footer__societal-link svg
+  width: aCalc(135)
+  height: aCalc(40)
+  +r($sm)
+    width: 135px
+    height: 40px
+  
+.footer__societal-link:nth-child(1)
+  padding-right: aCalc(8)
+  svg
+    +r($sm)
+      width: 120px
+      height: 40px
+  +r($sm)
+    padding-right: 0
+    padding-bottom: 8px
+
+.footer__end
+  display: flex
+  margin-top: aCalc(24)
+  +r($sm)
+    display: flex
+    flex-direction: column
+  .logo-text
+    +r($ms + 100)
+      margin-top: 24px
+      margin-bottom: 10px
+
+.logo-text
+  display: grid
+  align-items: end
+
+.list-hidden
+
+.footer__list.list-hidden 
+  +r($sm)
+    display: none
+/*! .footer style */

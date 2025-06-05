@@ -1,0 +1,24 @@
+.promotion-block 
+	<picture>
+		<source media="(min-width:768px)" srcset="img/prom-bg.jpg">
+		<source media="(max-width:768px)" srcset="img/promotion-mobile.jpg">
+		<img data-src="img/prom-bg.jpg" alt="main image 1">
+	</picture>
+	.promotion-block__info 
+		h1.prom-h-x Oh! Give me 5!
+		h3.prom-h3 
+			span.prom-p1 From 05.04 to 30.09
+			|We reduce the down payment to 5%
+		a(href="#").h3.prom-btn Calculate cost
+	include .././pros-block/_pros-block.pug  
+	//- .pros-block
+	//- 	- var prosbg = ["img/pros-bg.jpg", "img/pros-bg-1.jpg", "img/pros-bg-2.jpg", "img/pros-bg-3.jpg"];
+	//- 	- var h3items = ["Заезжайте сразу", "Никаких лишних расхоtoв", "Живите у себя", "Не бойтесь, что поtoрожает"];
+	//- 	- var p1items = ["Заселяйтесь и обустраивайтесь в квартире с первого дня", "Не нужно платить кредит за первый взнос и снимать квартиру пока копите", "Покрасьте стены в любимый цвет, заведите кошку — вам не нужно чьё‑то разрешение", "Цена apartments не изменится. Накопите на первый взнос раньше срока  - цена уменьшится"];
+	//- 	- var n = 0;
+	//- 	while n < 4
+	//- 		.pros-el
+	//- 			img(src= prosbg[n] alt="")
+	//- 			h3.h3= h3items[n]
+	//- 			.p1= p1items[n]
+	//- 			- n++

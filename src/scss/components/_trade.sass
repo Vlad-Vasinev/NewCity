@@ -1,0 +1,40 @@
+/*! .trade style page*/
+.trade 
+  h1.blog__title.h1.content-hide
+    max-height: aCalc(4)
+    +r($sm)
+      max-height: 0
+  ol 
+    padding-left: aCalc(13)
+    list-style: disc
+    +r($sm)
+      padding-left: 13px
+  ol 
+    +r($sm)
+      margin: 0
+    li.p1 
+      list-style: disc
+      margin-bottom: aCalc(8)
+      +r($sm)
+        margin-bottom: 8px
+  .block-text 
+    padding: aCalc(48)
+    +r($sm)
+      padding: 32px 24px
+    &__lists 
+      display: flex 
+      justify-content: space-between
+      gap: aCalc(32)
+      +r($sm)
+        flex-direction: column
+        gap: 4px
+
+.trade-mesh
+  display: grid 
+  grid-template-columns: repeat(3, aCalc(424))
+  gap: aCalc(32) aCalc(24)
+  +r($sm)
+    display: flex
+    flex-direction: column
+    gap: 24px
+/*! .trade style page*/

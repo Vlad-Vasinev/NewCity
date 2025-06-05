@@ -1,0 +1,47 @@
+/*! .project-block style block*/
+.project-block
+  max-width: max-content
+  height: aCalc(592)
+  overflow: hidden
+  +r($sm)
+    height: 390px
+    max-width: unset
+  &:hover 
+    .project-block__img
+      img
+        height: aCalc(316)
+        +r($sm)
+          height: 156px
+  &__img 
+    img 
+      width: aCalc(424)
+      height: aCalc(500)
+      object-fit: cover
+      border-radius: aCalc(8)
+      transition: height .3s
+      +r($sm)
+        height: 300px
+        width: 100%
+        border-radius: 8px
+  .el-body
+    margin-top: aCalc(24)
+    +r($sm)
+      margin-top: 24px
+    hr.prom-hr
+      margin: aCalc(16) 0
+      +r($sm)
+        margin: 12px 0
+    &__el
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      .prom-p2 + .prom-p2-medium
+        color: $DireWolf
+      .prom-p2-medium:last-child
+        color: $IndustrialRevolution
+    .el-body__el + .el-body__el 
+      margin-top: aCalc(16)
+      +r($sm)
+        margin-top: 12px
+/*! .project-block style block*/
+

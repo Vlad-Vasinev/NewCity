@@ -1,0 +1,860 @@
+.container.ui-wrapper
+  h1.blog__title.h1.content-hide Home
+  .components-containers
+    .ui-container
+      .element-banner.element-banner_start
+        a(href="#").element-banner__block(js-lazy)
+          img(src="img/blog-bimg-1.jpg" alt="")
+      .element-banner 
+        a(href="#").element-banner__block(js-lazy) 
+          img(src="img/blog-bimg-2.jpg" alt="")
+      .element-banner 
+        a(href="#").element-banner__block(js-lazy) 
+          img(src="img/blog-bimg-3.jpg" alt="")
+      .element-banner 
+        a(href="#").element-banner__block(js-lazy) 
+          img(src="img/blog-bimg-4.jpg" alt="")
+    .ui-container
+      h1 Filters:
+      form.filter__form.filter__form_active
+        .filter__form-field 
+          .filter__form-label 
+            |Selected list
+          .select-fields
+            <div class="select-fields__wrapper">
+              p.select-fields__wrapper-text New city» 1
+              .select-fields__wrapper-list
+                label
+                  p New city» 1
+                  input(placeholder="New city» 1" type="checkbox")
+                label
+                  p New city» 2
+                  input(placeholder="New city» 2" type="checkbox")
+                label
+                  p New city» 3
+                  input(placeholder="New city» 3" type="checkbox")
+                label
+                  p New city» 4
+                  input(placeholder="New city» 4" type="checkbox")
+            </div>
+        .filter__form-field 
+          .filter__form-label 
+            |Selected list
+          .select-fields
+            <div class="select-fields__wrapper">
+              p.select-fields__wrapper-text New city» 1
+              .select-fields__wrapper-list
+                label
+                  p New Uninhabited City» 1
+                  input(placeholder="New city» 1" type="checkbox")
+                label
+                  p New Uninhabited City» 2
+                  input(placeholder="New city» 2" type="checkbox")
+                label
+                  p New Uninhabited City» 3
+                  input(placeholder="New city» 3" type="checkbox")
+                label
+                  p New Uninhabited City» 4
+                  input(placeholder="New city» 4" type="checkbox")
+            </div>
+        .filter__form-field.filter__form-checkboxes
+          .filter__form-label Checked list
+          .checkboxes
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark">
+                p St
+              </span>
+            </label>
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark">
+                p 1
+              </span>
+            </label>
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark">
+                p 2
+              </span>
+            </label>
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark">
+                p 3
+              </span>
+            </label>
+        .filter__form-field 
+          .filter__form-label 
+            | Range slider
+          .filter__form-range  
+            .filter__form-controls.filter__form-rangeFirst 
+              div.from-control 
+              div.to-control 
+            input.input-ion-from(placeholder="0")
+            input.input-ion-to(placeholder="300")
+            <input type="text" data-step = "50" data-min="0" data-max="1000"  data-from="0"  data-to="300" class="js-range-slider-1" name="my_range" value="Range slider" /> 
+    .ui-container
+      h2 component Filters-Chess: 
+      .filter__sort 
+        .select-fields
+          <div class="select-fields__wrapper">
+            p.select-fields__wrapper-text.p1 New city / Cascade-18
+            .select-fields__wrapper-list
+              label
+                p new first city / Cascade-18
+                input(placeholder="Cheaper first" type="checkbox")
+              label
+                p First, more expensive / Cascade-18
+                input(placeholder=" First, more expensive" type="checkbox")
+              label
+                p First with a smaller area / Cascade-18
+                input(placeholder="First with a smaller area" type="checkbox")
+              label 
+                p First with  New city / Cascade-18
+                input(placeholder=" First with a larger area" type="checkbox")
+          </div>
+        .select-fields
+          <div class="select-fields__wrapper">
+            p.select-fields__wrapper-text.p1 4th entrance
+            .select-fields__wrapper-list
+              label
+                p.p1 Cheaper first
+                input(placeholder="Cheaper first" type="checkbox")
+              label
+                p.p1 First, more expensive
+                input(placeholder=" First, more expensive" type="checkbox")
+              label
+                p.p1 First with a smaller area
+                input(placeholder="First with a smaller area" type="checkbox")
+              label
+                p.p1 СFirst with a larger area
+                input(placeholder=" First with a larger area" type="checkbox")
+          </div>
+      .filter-chess
+        .filter__form-field
+          .checkboxes 
+            <label class="chess-cell">
+              <span class="checkmark chess-empty">
+                p.p1 St
+              </span>
+            </label>
+            <label class="chess-cell">
+              <span class="checkmark chess-inactive-primary">
+                p.p1 1
+              </span>
+            </label>
+            <label class="chess-cell">
+              <span class="checkmark chess-inactive-secondary">
+                p.p1 2
+              </span>
+            </label>
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark chess-active-primary">
+                p.p1 3
+              </span>
+            </label>
+            <label class="chess-cell">
+              <input type="checkbox">
+              <span class="checkmark chess-active-secondary">
+                p.p1 4
+              </span>
+            </label>
+        .filter-chess__about 
+          p.p2 Этаж
+          p.p2 Цена, million. ₽
+      .chess-block
+        .chess-column 
+          .filter__form-field
+            .chess-grid
+              .checkboxes 
+                - var n = 0
+                while n < 8
+                  <label class="chess-cell container-booked">
+                    <span class="checkmark chess-empty">
+                      p.p1 1
+                    </span>
+                  </label>
+                  - n++
+        .filter-chess
+          .filter__form-field
+            .chess-grid
+              .checkboxes 
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty">
+                    p.p1 St
+                  </span>
+                </label>
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-inactive-primary">
+                    p.p1 1
+                  </span>
+                </label>
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-inactive-secondary">
+                    p.p1 2
+                  </span>
+                </label>
+                - var n = 0
+                while n < 10
+                  <label class="chess-cell cell-booked">
+                    <input type="checkbox">
+                    <span class="checkmark chess-inactive-secondary">
+                      p.p1 6
+                    </span>
+                  </label>
+                  - n++
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary">
+                    p.p1 3
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-secondary">
+                    p.p1 4
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border">
+                    p.p1 5
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-first">
+                    p.p1 6
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-second">
+                    p.p1 7
+                  </span>
+                </label>
+                - var k = 0
+                while k < 10
+                  <label class="chess-cell">
+                    <input type="checkbox">
+                    <span class="checkmark chess-active-primary chess-info-primary-second">
+                      p.p1 6
+                    </span>
+                  </label>
+                  - k++
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-grid">
+                    p.p1 8
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-secondary-grid">
+                    p.p1 9
+                  </span>
+                </label>
+                - var d = 0
+                while d < 10
+                  <label class="chess-cell">
+                    <input type="checkbox">
+                    <span class="checkmark chess-active-primary chess-info-secondary-grid">
+                      p.p1 6
+                    </span>
+                  </label>
+                  - d++
+                - var de = 0
+                while de < 4
+                  <label class="chess-cell cell-booked">
+                    <input type="checkbox">
+                    <span class="checkmark chess-empty-border chess-booked chess-sold">
+                      +svgIcon('svg-lock')
+                    </span>
+                  </label>
+                  - de++
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border">
+                    +svgIcon('svg-male')
+                  </span>
+                </label>
+                - var f = 0
+                while f < 5
+                  <label class="chess-cell cell-booked">
+                    <input type="checkbox">
+                    <span class="checkmark chess-empty-border chess-booked chess-sold">
+                      +svgIcon('svg-male')
+                    </span>
+                  </label>
+                  - f++
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border">
+                    +svgIcon('svg-male')
+                  </span>
+                </label>
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty">
+                    p.p1 St
+                  </span>
+                </label>
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-inactive-primary">
+                    p.p1 1
+                  </span>
+                </label>
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-inactive-secondary">
+                    p.p1 2
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary">
+                    p.p1 3
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-secondary">
+                    p.p1 4
+                  </span>
+                </label>
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border">
+                    p.p1 5
+                  </span>
+                </label>
+                - var i = 0
+                while i < 3
+                  <label class="chess-cell">
+                    <input type="checkbox">
+                    <span class="checkmark chess-empty-border">
+                      p.p1 6
+                    </span>
+                  </label>
+                  - i++
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-first">
+                    p.p1 6
+                  </span>
+                </label>
+                - var ci = 0
+                while ci < 3
+                  <label class="chess-cell">
+                    <input type="checkbox">
+                    <span class="checkmark chess-active-primary chess-info-primary-second">
+                      p.p1 7
+                    </span>
+                  </label>
+                  - ci++
+          .chess-info 
+            .chess-info__el 
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-booked chess-empty-border">
+                  p.p1 12,2
+                </span>
+              </label>
+              p.p1 On sale
+            .chess-info__el 
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-booked chess-inactive-secondary">
+                  p.p1 12,2
+                </span>
+              </label>
+              p.p1 Booked
+            .chess-info__el 
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-empty-border chess-sold chess-booked">
+                  +svgIcon('svg-lock')
+                </span>
+              </label>
+              p.p1 Sold
+  .ui-container
+    h1 component Product-Block:  
+    .filter
+      ul.filtered
+        - var slide = 0
+        while slide < 3
+          li.filtered__item 
+            .card-product
+              .card-product__el(data-apartment-id = "0")  
+                a.card-product__el-title(href="#")
+                  |3-room, 87.73 m2 →
+                  span.card-product__el-subtitle Cascade-22, apt. №228
+                .card-product__el-img 
+                  img(src="img/filtered-img.png" alt="")
+                .card-product__info 
+                  .card-product__info-price 5 329 170 ₽
+                  .card-product__info-title Smart apartment
+                .card-product__about
+                  .card-product__about-icon 
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_5985_1183)">
+                      <path d="M12 5.27273C12.2898 5.27273 12.5089 5.16042 12.6163 5.097C12.7364 5.02605 12.8367 4.94324 12.9097 4.87805C13.0546 4.74868 13.2076 4.5828 13.3427 4.43429C13.3793 4.39403 13.4164 4.35302 13.4542 4.31135C13.7173 4.02069 14.0095 3.69798 14.3634 3.37332C15.17 2.6335 16.1764 2 17.4545 2C19.365 2 20.7244 2.70648 21.6162 3.70982C22.5244 4.73156 23 6.12216 23 7.54545C23 9.59844 21.87 11.7837 19.8031 14.1362C17.8149 16.399 15.073 18.69 12 21.0203C8.92702 18.69 6.18507 16.399 4.19691 14.1362C2.13004 11.7837 1 9.59844 1 7.54545C1 6.12216 1.47556 4.73156 2.38377 3.70982C3.27563 2.70648 4.63499 2 6.54545 2C7.82358 2 8.82995 2.6335 9.63656 3.37332C9.99052 3.69798 10.2827 4.02069 10.5458 4.31135C10.5836 4.35302 10.6207 4.39403 10.6573 4.43429C10.7924 4.5828 10.9454 4.74868 11.0903 4.87805C11.1633 4.94324 11.2636 5.02605 11.3837 5.097C11.4911 5.16042 11.7102 5.27273 12 5.27273Z" stroke="#CDCDCD" stroke-width="2"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_5985_1183">
+                      <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  .card-product__about-primary
+                    |Floor 
+                    span 3 from 16
+                  .card-product__about-secondary
+                    |Completion date
+                    span Q4 2021
+                .card-product__btns 
+                  .card-product__btns-primary Buy with a mortgage
+                  a.card-product__btns-secondary(href="#") from 19 980 ₽/мес
+          - slide++
+  
+  .ui-container
+    a.blog-card(href="#")
+      .blog-card__img 
+        img(src="img/blog-list-1.jpg")
+      h2.blog-card__title.h3
+        |Start of sales of underground parking in the residential complex "New city"
+        span.blog-card__subtitle.p2 April 22, 2023
+
+  .ui-container 
+    .quiz
+      .quiz-card(data-step="0")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2 What do you look for when searching for apartments?
+        .p1 It would be very helpful if you could answer a couple of questions. The survey will take no more than 1 minute.
+        button.btn1.button-primary answer
+      .quiz-card(data-step="1")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2  What architectural solutions are you interested in?*
+        form.quiz-card__form(quiz-form="")
+          - var texts = ["Standard (the house has everything you need, no frills)", "Improved standard (increases the area of ​​the premises, more convenient common areas)", "Individual (improved apartment layout, high-quality facade cladding)", "Author's project (according to the customer's wishes.)"]
+          - var item = 0;
+          while item < 4
+            label 
+              input(type="checkbox")
+              span.p1=texts[item]
+            - item++
+        button.btn1.button-primary answer
+      .quiz-card(data-step="2")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2  What material should the house where your apartment will be located be built from?*
+        form.quiz-card__form(quiz-form="")
+          - var texts = ["Panel or block", "Precast reinforced concrete", "Monolithic concrete", "Brick"]
+          - var item = 0;
+          while item < 4
+            label 
+              input(type="checkbox")
+              span.p1=texts[item]
+            - item++
+        button.btn1.button-primary answer
+      .quiz-card(data-step="3")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2 Is the location of the apartments important to you?*
+        form.quiz-card__form(quiz-form="")
+          - var texts = ["No, I don't care what area", "Yes, preferably in the same area where I work.", "I want to be in the center or in the nearest areas of the center", "In the center or special natural area"]
+          - var item = 0;
+          while item < 4
+            label 
+              input(type="checkbox")
+              span.p1=texts[item]
+            - item++
+        button.btn1.button-primary answer
+      .quiz-card(data-step="4")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2 What stage are you at now?*
+        form.quiz-card__form(quiz-form="")
+          - var texts = ["I'm just starting to search.", "I know what area and project I want, I'm looking for an apartment", "I am choosing from several apartments", "I am making a purchase", "The contract is signed, I'm waiting for the move-in"]
+          - var item = 0;
+          while item < 5
+            label 
+              input(type="checkbox")
+              span.p1=texts[item]
+            - item++
+        button.btn1.button-primary  
+      .quiz-card(data-step="5")
+        .logo 
+          .close-quiz 
+            +svgIcon('svg-close')
+          <svg width="175" height="50" viewBox="0 0 175 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4210_55916)">
+            <path d="M63.9376 20.125V30.875H61.6876V26.5H57.0626V30.875H54.7501V20.125H57.0626V24.4375H61.6876V20.125H63.9376Z" fill="#282828"/>
+            <path d="M67.75 29.5C66.625 28.375 66.0625 27.0625 66.0625 25.5C66.0625 23.9375 66.625 22.625 67.75 21.5625C68.875 20.4375 70.25 19.9375 71.875 19.9375C73.5 19.9375 74.875 20.5 76 21.5625C77.125 22.6875 77.6875 24 77.6875 25.5C77.6875 27.0625 77.125 28.375 76 29.5C74.875 30.625 73.5 31.125 71.875 31.125C70.25 31.125 68.875 30.5625 67.75 29.5ZM69.5 23C68.8125 23.6875 68.5 24.5 68.5 25.5C68.5 26.5 68.8125 27.3125 69.5 28C70.1875 28.6875 71 29 71.9375 29C72.875 29 73.6875 28.6875 74.375 28C75.0625 27.3125 75.375 26.5 75.375 25.5C75.375 24.5 75.0625 23.6875 74.375 23C73.6875 22.3125 72.875 22 71.9375 22C70.9375 21.9375 70.125 22.3125 69.5 23Z" fill="#282828"/>
+            <path d="M84.75 30.875H79.875V20.125H84.5C85.5 20.125 86.25 20.4375 86.9375 21C87.5625 21.5625 87.875 22.25 87.875 23C87.875 23.3125 87.8125 23.5625 87.75 23.8125C87.6875 24.0625 87.5625 24.3125 87.4375 24.4375C87.3125 24.625 87.1875 24.75 87.0625 24.875C86.9375 25 86.8125 25.0625 86.75 25.125L86.625 25.1875C86.6875 25.1875 86.75 25.25 86.8125 25.25C86.875 25.3125 87 25.375 87.25 25.5C87.4375 25.625 87.625 25.8125 87.8125 26C87.9375 26.1875 88.125 26.4375 88.25 26.6875C88.375 27 88.4375 27.3125 88.4375 27.6875C88.4375 28.5625 88.125 29.3125 87.4375 29.9375C86.6875 30.5625 85.8125 30.875 84.75 30.875ZM84.3125 22H82.1875V24.375H84.3125C84.6875 24.375 85 24.25 85.1875 24.0625C85.375 23.875 85.5 23.5625 85.5 23.25C85.5 22.875 85.375 22.625 85.1875 22.4375C85 22.125 84.6875 22 84.3125 22ZM82.1875 28.9375H84.625C85.0625 28.9375 85.375 28.8125 85.6875 28.5625C85.9375 28.3125 86.125 28 86.125 27.5625C86.125 27.1875 86 26.8125 85.6875 26.5625C85.4375 26.3125 85.0625 26.1875 84.625 26.1875H82.1875V28.9375Z" fill="#282828"/>
+            <path d="M94.875 30.875H90.5V20.125H92.8125V23.6875H94.875C96 23.6875 96.875 24.0625 97.625 24.75C98.375 25.4375 98.6875 26.3125 98.6875 27.3125C98.6875 28.3125 98.3125 29.1875 97.625 29.875C96.875 30.5625 96 30.875 94.875 30.875ZM92.8125 28.8125H94.8125C95.25 28.8125 95.625 28.6875 95.9375 28.375C96.25 28.0625 96.375 27.6875 96.375 27.25C96.375 26.8125 96.25 26.4375 95.9375 26.1875C95.625 25.875 95.25 25.75 94.8125 25.75H92.8125V28.8125ZM102.25 30.875H99.9375V20.125H102.25V30.875Z" fill="#282828"/>
+            <path d="M114.562 30.875H112.25V24.0625L107 30.875H105V20.125H107.25V26.9375L112.563 20.125H114.562V30.875Z" fill="#282828"/>
+            <path d="M120.438 30.875V20.125H127.688V22.1875H122.75V30.875H120.438Z" fill="#282828"/>
+            <path d="M130 29.5C128.875 28.375 128.312 27.0625 128.312 25.5C128.312 23.9375 128.875 22.625 130 21.5625C131.125 20.4375 132.5 19.9375 134.125 19.9375C135.75 19.9375 137.125 20.5 138.25 21.5625C139.375 22.6875 139.937 24 139.937 25.5C139.937 27.0625 139.375 28.375 138.25 29.5C137.125 30.625 135.75 31.125 134.125 31.125C132.5 31.125 131.125 30.5625 130 29.5ZM131.687 23C131 23.6875 130.687 24.5 130.687 25.5C130.687 26.5 131 27.3125 131.687 28C132.375 28.6875 133.187 29 134.125 29C135.062 29 135.875 28.6875 136.562 28C137.25 27.3125 137.562 26.5 137.562 25.5C137.562 24.5 137.25 23.6875 136.562 23C135.875 22.3125 135.062 22 134.125 22C133.187 21.9375 132.375 22.3125 131.687 23Z" fill="#282828"/>
+            <path d="M142.062 20.125H146.562C147.688 20.125 148.562 20.5 149.312 21.1875C150.062 21.875 150.375 22.75 150.375 23.75C150.375 24.75 150 25.625 149.312 26.3125C148.562 27 147.688 27.375 146.562 27.375H144.375V30.9375H142.062V20.125ZM146.5 22.1875H144.375V25.25H146.5C146.937 25.25 147.312 25.125 147.625 24.8125C147.937 24.5 148.062 24.125 148.062 23.75C148.062 23.3125 147.937 22.9375 147.625 22.625C147.375 22.3125 147 22.1875 146.5 22.1875Z" fill="#282828"/>
+            <path d="M153.562 29.5C152.437 28.375 151.875 27.0625 151.875 25.5C151.875 23.9375 152.437 22.625 153.562 21.5625C154.687 20.4375 156.063 19.9375 157.688 19.9375C159.313 19.9375 160.688 20.5 161.813 21.5625C162.938 22.6875 163.5 24 163.5 25.5C163.5 27.0625 162.938 28.375 161.813 29.5C160.688 30.625 159.313 31.125 157.688 31.125C156.063 31.125 154.687 30.5625 153.562 29.5ZM155.25 23C154.562 23.6875 154.25 24.5 154.25 25.5C154.25 26.5 154.562 27.3125 155.25 28C155.937 28.6875 156.75 29 157.688 29C158.625 29 159.438 28.6875 160.125 28C160.813 27.3125 161.125 26.5 161.125 25.5C161.125 24.5 160.813 23.6875 160.125 23C159.438 22.3125 158.625 22 157.688 22C156.75 21.9375 155.937 22.3125 155.25 23Z" fill="#282828"/>
+            <path d="M164 28.8125H164.625C164.688 28.75 164.75 28.6875 164.813 28.625C164.875 28.5625 165 28.3125 165.25 28C165.438 27.6875 165.625 27.3125 165.75 26.9375C165.875 26.5625 166.062 26.0625 166.125 25.4375C166.25 24.8125 166.313 24.125 166.313 23.375V20.0625H173.75V28.75H175.063V33.125H172.75V30.875H166.25V33.125H163.938V28.8125H164ZM168.563 23.4375C168.563 24.125 168.5 24.8125 168.375 25.4375C168.25 26.0625 168.125 26.5625 167.938 27C167.75 27.375 167.625 27.75 167.438 28C167.25 28.3125 167.125 28.5 167 28.625L166.813 28.8125H171.313V22.1875H168.5V23.4375H168.563Z" fill="#282828"/>
+            <path d="M111.437 16.875H108.062V18.6875H111.437V16.875Z" fill="#282828"/>
+            <path d="M24.875 0C11.125 0 0 11.1875 0 25C0 38.8125 11.125 50 24.875 50C38.5625 50 49.75 38.8125 49.75 25C49.75 11.1875 38.5625 0 24.875 0Z" fill="#FFDD66"/>
+            <path d="M39.5625 12.5626C39.5 12.5626 39.5 12.5001 39.4375 12.5001L31.5 8.00009C30.5 7.31259 29.125 7.25009 28.125 7.93759L21 11.8126C20.9375 11.8126 20.9375 11.8751 20.875 11.8751C20 12.5001 19.5 13.5001 19.5 14.5626V20.9376C19.25 20.9376 19.0625 20.8751 18.8125 20.8751C16.0625 20.8751 13.625 22.4376 12.4375 24.9376C9.31248 25.1876 7.87498 27.5626 7.68748 29.6251C7.56248 30.6251 7.74998 31.5626 8.06248 32.2501C7.31248 32.8751 6.68748 33.8751 6.99998 35.1876C7.12498 35.7501 7.74998 36.1251 8.31248 36.0001C8.87498 35.8751 9.24998 35.2501 9.12498 34.6876C8.93748 34.0001 10.1875 33.5626 10.1875 33.5626C10.6875 33.3751 10.9375 32.9376 10.9375 32.4376C10.875 31.9376 10.5625 31.5626 10.125 31.4376C9.87498 31.1876 9.62498 30.1876 10.0625 29.0626C10.375 28.2501 11.0625 27.3126 12.6875 27.1876L14.375 28.2501C14.5625 28.3751 14.75 28.3751 14.875 28.3751C15.1875 28.3126 15.4375 28.0626 15.5 27.6876C15.625 27.0626 15.3125 26.2501 14.8125 25.9376L14.5 25.7501C15.3125 24.1876 17 23.1251 18.8125 23.1251C21.5 23.1251 23.6875 25.3126 23.6875 27.9376C23.25 28.3126 22.9375 29.0001 23.0625 29.6251C23.125 30.0626 23.375 30.3126 23.6875 30.3126C23.875 30.3126 24.0625 30.3126 24.1875 30.1876L25.25 29.5001C26.0625 29.6251 27.375 30.4376 28.25 32.0001C28.9375 33.1876 29.75 35.5626 27.875 38.1876C27.125 39.3126 25.5625 40.5001 24 40.4376C23.375 40.4376 22.875 40.9376 22.875 41.5001C22.875 42.1251 23.375 42.6251 23.9375 42.6251H24C26.5 42.6251 28.5625 40.9376 29.5625 39.4376C31.4375 36.7501 31.5625 33.6251 30 30.8751C28.9375 29.0001 27.25 27.6251 25.6875 27.3126C25.4375 24.7501 23.875 22.5626 21.625 21.5001C21.6875 21.3751 21.6875 21.3126 21.6875 21.1876V14.5626C21.6875 14.2501 21.8125 14.0001 22 13.8751L29.3125 10.0001C29.375 10.0001 29.375 9.93759 29.4375 9.93759C29.6875 9.75009 30 9.75009 30.1875 9.93759C30.25 9.93759 30.25 10.0001 30.3125 10.0001L38.25 14.5001C38.4375 14.6876 38.5625 14.9376 38.5625 15.1876V33.8751C38.5625 34.5001 39.0625 35.0626 39.75 35.0626C40.375 35.0626 40.9375 34.5626 40.9375 33.8751V15.1876C40.875 14.1876 40.375 13.1876 39.5625 12.5626Z" fill="#282828"/>
+            <path d="M36 17.9375L31.25 15.3125C31.0625 15.1875 30.8125 15.125 30.625 15.125C30.25 15.1875 30 15.4375 29.875 15.9375C29.6875 16.6875 30.0625 17.625 30.625 18L35.375 20.625C35.9375 21 36.5625 20.75 36.75 20C36.9375 19.25 36.625 18.3125 36 17.9375Z" fill="#282828"/>
+            <path d="M36 23.125L31.25 20.5C31.0625 20.375 30.8125 20.3125 30.625 20.3125C30.25 20.375 30 20.625 29.875 21.125C29.6875 21.875 30.0625 22.8125 30.625 23.1875L35.375 25.8125C35.9375 26.1875 36.5625 25.9375 36.75 25.1875C36.9375 24.4375 36.625 23.5 36 23.125Z" fill="#282828"/>
+            <path d="M19.125 32.6244C18.4375 33.3744 17.875 34.6869 17.6875 35.9369L16.1875 34.7494C15.6875 34.3744 14.9375 34.4369 14.5625 34.9369C14.1875 35.4369 14.25 36.1869 14.75 36.6244L17.5625 38.8119V44.0619C17.5625 44.6869 18.0625 45.2494 18.75 45.2494C19.375 45.2494 19.9375 44.7494 19.9375 44.0619V37.3119C19.9375 36.0619 20.5 34.6869 20.9375 34.2494C21.375 33.7494 21.375 32.9994 20.875 32.5619C20.3125 32.1244 19.5625 32.1244 19.125 32.6244Z" fill="#282828"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4210_55916">
+            <rect width="175" height="50" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        .h2 Thank you for your answers!
+        button.btn1.button-primary Закрыть
+  .ui-container 
+    <div class="layers">
+      <div class="layers__info" data-id="0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+        </svg>
+        .h2 Cascade-20 
+        .p2 Completion date: IV quarter 2021
+        .p2 Readiness 70%
+        a.p1(href="#") All apartments (<span>280</span>)
+        a.p1(href="#") Studios (<span>5</span>)
+        a.p1(href="#") One-room (<span>165</span>)
+        a.p1(href="#") Two-room (<span>32</span>)
+        a.p1(href="#") Three-room (<span>18</span>)
+        a.p1(href="#") All apartments (<span>280</span>)
+        a.p1(href="#") Studios (<span>5</span>)
+        a.p1(href="#") One-room (<span>165</span>)
+        a.p1(href="#") Two-room (<span>32</span>)
+        a.p1(href="#") Three-room (<span>18</span>)
+      </div>
+      <div class="layers__info" data-id="1">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+        </svg>
+        .h2 Cascade-21
+        .p2 Completion date: IV quarter 2022
+        .p2 Readiness 80%
+        a.p1(href="#") All apartments (<span>380</span>)
+        a.p1(href="#") Studios (<span>5</span>)
+        a.p1(href="#") One-room (<span>65</span>)
+        a.p1(href="#") Two-room (<span>232</span>)
+        a.p1(href="#") Three-room (<span>128</span>)
+      </div>
+      <div class="layers__info" data-id="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+        </svg>
+        .h2 Cascade-22
+        .p2 Completion date: IV quarter 2023
+        .p2 Readiness 90%
+        a.p1(href="#") All apartments (<span>180</span>)
+        a.p1(href="#") Studios (<span>5</span>)
+        a.p1(href="#") One-room (<span>165</span>)
+        a.p1(href="#") Two-room (<span>132</span>)
+        a.p1(href="#") Three-room (<span>228</span>)
+        a.p1(href="#") One-room (<span>165</span>)
+        a.p1(href="#") Two-room (<span>132</span>)
+        a.p1(href="#") Three-room (<span>228</span>)
+      </div>
+      <div class="layers__info" data-id="3">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+        </svg>
+        .h2 Cascade-23
+        .p2 Completion date: IV quarter 2024
+        .p2 Readiness 97%
+        a.p1(href="#") All apartments (<span>500</span>)
+        a.p1(href="#") Studios (<span>5</span>)
+        a.p1(href="#") One-room (<span>455</span>)
+        a.p1(href="#") Two-room (<span>100</span>)
+        a.p1(href="#") Three-room (<span>58</span>)
+      </div>
+      <svg viewBox="0 0 1760 987">
+        <a class="layer-link" data-link-id="0">
+          <path class="house-path house-first" fill="#bcbcbc68" d="m 39.394759,209.61677 104.075461,-17.95668 0.18323,-1.64909 56.61851,-9.3448 49.28926,-8.42865 0.54969,-0.54969 13.74236,-1.64908 48.55633,-7.87896 57.16821,13.92559 0.5497,14.84175 85.56908,-15.7579 61.38253,14.47528 6.9628,279.61118 20.33868,7.87895 0.18324,9.3448 3.48139,1.46585 0.36647,19.2393 4.58078,2.01555 1.64909,6.96279 -0.36647,5.31372 -1.09939,2.74847 0.91616,16.67406 -87.4014,32.0655 -96.01327,35.73013 -85.01939,30.59965 2.56524,47.45694 -2.01554,1.46585L 183.41467,727.61204 155.19703,708.00628 95.46358,667.3289 47.640174,633.43108 46.174323,602.6482 60.832838,596.7848 56.618515,528.6227 53.50358,469.07248 50.022183,413.00366 45.991091,343.55895 41.96,270.26637 37.928908,209.2503Z">
+        </a>
+        <a class="layer-link" data-link-id="1">
+          <path class="house-path house-second" fill="#bcbcbc68" d="m 619.5055,117.77201 22.30842,-3.52721 0.0916,-0.87035 3.20655,-0.27484 32.37908,-5.10786 0.25912,-1.48998 24.09894,-4.3404 22.99765,-3.757365 29.79976,-4.793876 4.40519,0.06478 2.33215,0.583038 2.33216,-0.647821 20.6007,-3.822143 12.50295,-0.453475 16.26972,3.014134 0.73293,0.274847v 2.290393l 28.40087,3.114935 -0.18323,10.444193 26.11048,-5.03886 31.60742,4.39755 29.40865,4.39756 -0.36647,42.87615 0.0916,35.27206 -0.36646,28.67572v 30.59965l -0.18323,35.45528 0.27484,35.08882 -0.54969,23.45362 4.76402,0.64131 0.27484,5.58856 7.23764,1.46585 0.91616,42.69293 -52.67904,20.79677 -39.02829,15.11659 -30.23319,11.45197 -4.30594,1.46585 -0.73293,14.20043 -0.27484,21.07162 -48.28149,20.98 -10.71904,3.84786 -52.86227,-20.43031 -32.70681,-11.81842 -34.44751,-13.83398 -27.66795,-10.62742 -0.18323,-24.55301 16.39922,-5.31371 -0.36647,-28.76734 -0.36646,-37.47083 -0.36646,-41.86838 -0.36646,-40.49415 -1.00778,-43.60908 -1.09939,-39.94446 -0.64131,-42.78454z">
+        </a>
+        <a class="layer-link" data-link-id="2">
+          <path class="house-path house-second" fill="#bcbcbc68" d="m 1026.7962,43.015312 47.1614,-9.58775 51.0483,-11.272085 49.4935,-9.458186 32.7798,2.591284v 6.219081l 10.7538,1.295642 0.2591,14.640754 55.8422,-1.295642 30.5771,8.551237v 2.332155l 3.4983,1.425206 -0.1296,27.597173 -1.4252,39.646639 -1.1661,45.21791 -0.7774,45.86572 -0.9069,40.1649 0.9069,37.18493 -36.1484,1.94346 -11.6608,0.90695 -5.9599,-2.46172 -3.4982,3.2391 -9.0695,1.55477 -2.98,-3.10954 -5.053,0.38869 -3.2391,2.33216 -0.2592,1.55477 -15.8068,4.92344 -4.4052,3.10954 -2.073,-1.55477 -5.053,1.42521 -37.1849,19.1755 -19.046,10.23557 -38.351,1.68433 -28.3745,-5.18256 -53.8987,-10.10601 -31.48412,-7.90342 1.29564,-23.45112 1.03651,-1.4252 30.31807,-10.36514 0.5182,-43.66313 0.6478,-51.30742 0.2592,-46.25442 0.7773,-45.088338z">
+        </a>
+        <a class="layer-link" data-link-id="3">
+          <path class="house-path house-second" fill="#bcbcbc68" d="m 1407.8445,77.608952 19.1755,-0.518257v -0.90695l 7.9034,-0.259128 0.5183,-0.906949 6.6078,-0.259129 54.2874,-2.332155 44.9587,10.106007v 14.640754l 22.026,4.664315 0.3886,14.51119 29.4111,6.8669 -0.1295,14.64075 16.8433,3.49823v 15.02945l 27.0789,6.47821 -0.2591,14.77032 38.8692,11.14252v 2.72085l 0.6479,1.16608 -1.1661,11.27208h 5.053l 22.8033,7.25559 -0.1296,10.4947 8.6808,2.85042 -0.5182,4.66431 13.8633,4.79387 2.4618,8.55124 -0.5183,14.51119 4.4052,14.1225 -0.5183,15.80683 5.8304,19.43463 0.1296,21.76678 3.2391,12.56773 -0.1296,18.26855 8.6808,29.92933 -0.2591,15.93639 3.2391,13.99294 -2.5913,46.25441 -1.4252,40.68316 2.7209,18.52768 -0.2592,4.01649 -3.4982,6.8669 -114.7939,-15.15901 -5.9599,-21.50766 -55.1944,-2.07302 -0.5182,-86.03063 -8.033,-8.81036 -26.9494,-12.17904 -101.5783,-45.86572 -5.4417,-9.06949 -22.285,-10.36514 -5.4417,2.07303 -10.8834,-5.18257 0.898,-6.72654 9.6197,-2.10716 -0.9162,-5.03886v -8.33703l 1.191,-33.71459 1.3742,-31.42419v -32.43196l 1.0078,-34.72236 1.4659,-34.81398 1.8323,-35.546895 0.9161,-18.689606z">
+        </a>
+      </svg>
+      img(src="img/layer-main.jpg" alt="")
+    </div>
+  .ui-container 
+    .different-mesh 
+      a.item-different(href="#") 
+        .item-different__link.h2 Playgrounds →
+        img(src="img/item-diff-1.jpg" alt="")
+      a.item-different(href="#") 
+        .item-different__link.h2 Home Solutions →
+        img(src="img/item-diff-2.jpg" alt="")
+      a.item-different(href="#") 
+        .item-different__link.h2.item-different__link_color apartments with new renovation and smart technologies →
+        img(src="img/item-diff-3.jpg" alt="")
+      a.item-different(href="#") 
+        .item-different__link.h2 Cozy surroundings →
+        img(src="img/item-diff-4.jpg" alt="")
+      a.item-different(href="#")
+        .item-different__link.h2 Walking areas →
+        img(src="img/item-diff-5.jpg" alt="")
+      a.item-different(href="#") 
+        .item-different__link.h2 Warm parking →
+        img(src="img/item-diff-6.jpg" alt="")
+      a.item-different(href="#") 
+        .item-different__link.h2 Safe Yard →
+        img(src="img/item-diff-7.jpg" alt="")
+  .ui-container 
+    .map-primary 
+      .maps-block.maps-block-footer
+        .maps-block__container
+          .maps-block__item
+            .maps-block__map
+              .maps-block__field(href="#")
+                .maps-block__links 
+                  a.btn1.button-primary(href="#") Contacts
+                  a.btn1.button-primary(href="#") How to get there?
+                .maps-block__info 
+                  .p2 Kaluga region, Obninsk, Polenova st., 9
+                  .btn1 Mon-Fri from 9:00 to 19:00
+                  .btn1 Sat–Sun from 10:00 to 18:00
+                  a(href="#").p1 Request a call
+                .maps-block__tags 
+                  a.tag-text.p1(href="#") 8 800 550-68-31
+                  a.tag-text.p1(href="#") pro@novyigorod.ru
+                .users-links
+                  a(href="#").user-link 
+                    +svgIcon('svg-insta')
+                  a(href="#").user-link 
+                    +svgIcon('svg-face')
+                  a(href="#").user-link 
+                    +svgIcon('svg-vk')
+                  a(href="#").user-link 
+                    +svgIcon('svg-vk')
+                  a(href="#").user-link 
+                    +svgIcon('svg-youtube')
+                button.button-primary.btn1(js-modal-open data-modal-name="form-modal") Book a meeting
+              <div data-longitude="36.574691" data-latitude="55.130940" data-marker-longitude="36.574691" data-marker-latitude="55.542871" data-icon-src="img/map-icon.svg" data-icon-src-mobile="img/map-icon-mobile.svg" data-action="api/customization.json" class="js-ymap" data-placeholder-caption="New city" data-placeholder-balloon="249034, Kaluga region, Obninsk, Polenova st., 9"></div>
+  
+  .banner-container
+    <div class="banner-block swiper-container">
+      <div class="banner-block__content swiper-wrapper">
+        <div class="banner-el swiper-slide">
+          .banner-el__top
+            span.banner-el__subtitle House №1
+            .banner-el__title
+              |An oasis of satisfaction <br> and harmony in the residential complex Neighbors
+          .banner-el__bottom 
+            .banner-el__description
+              p 
+                |Multiple layout options with and without finishing: from studios
+                |to 3-room apartments, as well as collectible apartments
+                |with terraces on the ground floors.
+              .banner-el__links
+                a(href="#section1").smooth-anchor.banner-el__link.banner-el__anchor Read more
+                a(target="_blank" href="https://novyigorod.ru/objekty/sosedi/#/catalog/house/101744/smallGrid?filter=property.status:AVAILABLE").banner-el__link.banner-el__apartment Select an apartment
+          <img src="img/b-img-1.jpg" alt="">
+        </div>
+        <div class="banner-el swiper-slide">
+          .banner-el__top
+            span.banner-el__subtitle House №2
+            .banner-el__title
+              |The ability to implement your <br> design ideas in the residential complex Neighbors
+          .banner-el__bottom 
+            .banner-el__description
+              p 
+                |We offer apartments with pre-finishing of white box apartments.
+              .banner-el__links
+                a(href="#section2").smooth-anchor.banner-el__link.banner-el__anchor Read more
+                a(target="_blank" href="https://novyigorod.ru/objekty/sosedi/#/catalog/house/106162/smallGrid?filter=property.status:AVAILABLE").banner-el__link.banner-el__apartment Select an apartment
+          <img src="img/b-img-2.jpg" alt="">
+        </div>
+        <div class="banner-el swiper-slide">
+          .banner-el__top
+            span.banner-el__subtitle House №3
+            .banner-el__title
+              |PROthoughtful apartments <br> in the residential complex Neighbors
+          .banner-el__bottom 
+            .banner-el__description
+              p 
+                |In apartments with PRO MAX configuration, our architects have already implemented
+                |everything you need for a comfortable stay.
+              .banner-el__links
+                a(href="#section3").smooth-anchor.banner-el__link.banner-el__anchor Read more
+                a(target="_blank" href="https://novyigorod.ru/objekty/sosedi/#/catalog/house/118372/facades?facadeId=52324&filter=property.status:AVAILABLE").banner-el__link.banner-el__apartment Select an apartment
+          <img src="img/b-img-3.jpg" alt="">
+        </div>
+      </div>
+      .control-inner
+        .swiper-pagination
+    </div>
+  .title-section 
+    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+    |distinctio dolor non quia. Omnis numquam, modi nam ea magnam eveniet commodi
+    |saepe quia? Ipsum repellendus, laudantium illum voluptas nostrum dolorem.
+  .title-section 
+    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+    |distinctio dolor non quia. Omnis numquam, modi nam ea magnam eveniet commodi
+    |saepe quia? Ipsum repellendus, laudantium illum voluptas nostrum dolorem.
+  .title-section 
+    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+    |distinctio dolor non quia. Omnis numquam, modi nam ea magnam eveniet commodi
+    |saepe quia? Ipsum repellendus, laudantium illum voluptas nostrum dolorem.
+  .title-section 
+    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+    |distinctio dolor non quia. Omnis numquam, modi nam ea magnam eveniet commodi
+    |saepe quia? Ipsum repellendus, laudantium illum voluptas nostrum dolorem.
+  .title-section 
+    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+    |distinctio dolor non quia. Omnis numquam, modi nam ea magnam eveniet commodi
+    |saepe quia? Ipsum repellendus, laudantium illum voluptas nostrum dolorem.
+  .title-text(id="section3")

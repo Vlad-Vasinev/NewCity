@@ -1,0 +1,25 @@
+include ./utilities/_mixins
+doctype html
+html(lang="en")
+  head()
+    include ./shared/_head
+
+  body    
+    <div class="preloader">
+      //-img(src="img/logo.svg" alt="logo").preloader__image
+    </div>
+    .body-wrapper
+      include ./../components/header/_header
+
+      .page
+        include ../components/mortgage-page/_mortgage
+
+      include ./../components/footer/_footer
+      include ./../components/modals/_modals
+
+    //- a(href="#section-body").scroll-top
+    //-   +svgMono('arrow-top')
+
+    block scripts
+      include ./shared/_scripts
+    include ./shared/_pages-list

@@ -1,0 +1,127 @@
+div
+  // List of pages
+  // To see the list of pages - click in the lower left corner
+  style.
+    .pl {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    }
+    .pl .pl__trigger {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+    }
+    .pl .pl__ctr {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      background-color: #fff;
+      display: none;
+    }
+    .pl._v .pl__ctr {
+      display: block;
+    }
+    .pl a {
+      display: block;
+      padding: 4px 8px;
+    }
+  .pl(title='List of pages')
+    .pl__trigger
+    .pl__ctr
+      a(href='homepage.html')
+        | Home
+        b 
+          small (homepage)
+      a(href='product.html')
+        | Product
+        b 
+          small (product)
+      a(href='blogpage.html')
+        | Blog page
+        b 
+          small (blogpage)
+      a(href='promotionPage.html')
+        | Promotions page
+        b 
+          small (promotionpage)
+      a(href='apartmentComplex.html')
+        | RC page
+        b 
+          small (apartmentComplex)
+      a(href='blogElementNew.html')
+        | One of the pages of the new blog
+        b 
+          small (blogElementNew)
+      a(href='filterPage.html')
+        | Page filter
+        b 
+          small (filterPage)
+      a(href='mortgage.html')
+        | Mortgages page
+        b 
+          small (mortgagePage)
+      a(href='about.html')
+        | About Us Page
+        b 
+          small (aboutPage)
+      a(href='installment.html')
+        | Installment Page
+        b 
+          small (installmentPage)
+      a(href='trade.html')
+        | Trade Page
+        b 
+          small (tradePage)
+      a(href='livFacility.html')
+        | Residential Complex Page
+        b 
+          small (livFacility)
+      a(href='uiPage.html')
+        | ui-elements page
+        b 
+          small (uiPage)
+      a(href='uiFacilityPage.html')
+        | Residential Complex Ui Elements Page
+        b 
+          small (uiFacilityPage)
+      a(href='componentsPage.html')
+        | Components Page
+        b 
+          small (componentsPage)
+      //- a(href='imgCanvas.html')
+      //-   | Тестовая Canvas
+      //-   b 
+      //-     small (testCanvas)
+  script.
+    (() => {
+    const pl = document.querySelector(".pl");
+    if (!pl) { return }
+    pl.querySelector('.pl__trigger').addEventListener('click', (e) => {
+      pl.classList.toggle('_v');
+    })
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

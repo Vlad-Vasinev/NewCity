@@ -1,0 +1,100 @@
+/*! .mortgage-block style block*/
+.mortgage-block
+  padding: aCalc(100) aCalc(60)
+  background-color: $DownFeatures
+  position: relative
+  +r($sm)
+    padding: 64px 0 500px
+  img 
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: aCalc(8)
+  .filter-plan
+    position: absolute
+    top: aCalc(150)
+    left: aCalc(106)
+    border-radius: aCalc(8)
+    width: aCalc(490)
+    background-color: $White 
+    padding: aCalc(40)
+    +r($sm)
+      width: 100%
+      left: 0
+      right: 0
+      top: auto 
+      bottom: 64px
+      border-radius: 8px
+      padding: 40px 12px
+    .prom-h1
+      margin-bottom: aCalc(40)
+      +r($sm)
+        margin-bottom: 32px
+    .prom-btn
+      text-align: center
+    .filter__form
+      display: block
+      background-color: transparent
+      margin-bottom: aCalc(24)
+      padding: 0
+      +r($sm)
+        margin-bottom: 24px
+      .filter__form-controls div
+        border-left: none
+      .filter__form-field + .filter__form-field
+        margin-top: aCalc(32)
+        +r($sm)
+          margin-top: 32px
+      .irs-handle.from, .irs-handle.to
+        background-color: $PaleGold
+        border: none
+      .filter__form-controls
+        height: aCalc(60)
+        +r($sm)
+          height: 60px
+      .input-ion-from, .input-ion-to
+        padding: aCalc(21) aCalc(24)
+        height: aCalc(60)
+        background-color: $DownFeatures
+        color: $DireWolf
+        +r($sm)
+          padding: 21px 24px
+          border-radius: 4px
+          height: 60px
+      .filter__form-label
+        .checkboxes
+          margin-top: aCalc(6)
+          +r($sm)
+            gap: 8px
+            flex-wrap: wrap
+            margin-top: 6px
+      .input-ion-from
+        text-align: left
+      .input-ion-to
+        text-align: right
+      .chess-cell 
+        min-width: aCalc(40)
+        width: unset
+        .checkmark 
+          min-width: aCalc(40)
+          width: unset
+          background-color: $DownFeatures
+      .chess-cell.chess-cell_extended
+        height: auto
+        input:checked + span
+          background-color: #FFDD66
+        +r($sm)
+          width: 100px
+          height: 60px
+        .checkmark
+          padding: aCalc(20)
+          height: auto
+          +r($sm) 
+            width: 100px
+            height: 60px
+    .irs-bar
+      display: initial 
+      height: 1px
+      background-color: $PaleGold
+      top: 0
+/*! .mortgage-block style block*/

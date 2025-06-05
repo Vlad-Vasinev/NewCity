@@ -1,0 +1,72 @@
+/*! .drop-blocks style block*/
+.drop-blocks 
+  margin-bottom: aCalc(72)
+  +r($sm)
+    margin-bottom: 48px
+  .h1 
+    margin-bottom: aCalc(32)
+    +r($sm)
+      margin-bottom: 24px
+  &__inner 
+    display: flex
+    flex-direction: column
+    gap: aCalc(24)
+    +r($sm)
+      justify-content: center
+      gap: 16px
+
+.drop-el
+  position: relative
+  background-color: $Gray
+  border-radius: aCalc(8)
+  padding: aCalc(32) aCalc(48)
+  transition: background-color .3s
+  cursor: pointer
+  &:hover
+    background-color: $PaleGold
+    .drop-el__icon
+      background-color: #ffffff
+  +r($sm)
+    padding: 16px
+    border-radius: 8px
+  &__title  
+    display: flex
+    justify-content: space-between
+    pointer-events: none
+  &__icon 
+    flex-shrink: 0
+    display: grid 
+    justify-content: center
+    align-items: center
+    width: aCalc(32)
+    height: aCalc(32)
+    border-radius: 50%
+    background-color: $PaleGold
+    transition: background-color .3s
+    +r($sm)
+      width: 32px
+      height: 32px
+    svg
+      width: aCalc(26)
+      height: aCalc(26)
+      transition: transform .3s
+      +r($sm)
+        width: 26px
+        height: 26px
+  &__inside
+    overflow: hidden
+    pointer-events: none
+    max-height: 0
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), margin .3s
+    +r($sm)
+      margin-top: 16px
+    .p1 
+      +r($sm)
+        padding-right: 64px
+    &.dropContent_active
+      margin-top: aCalc(16)
+      max-height: 1000px
+      transition: max-height .6s ease-in-out, margin .3s
+      +r($sm)
+        max-height: 1000px
+/*! .drop-blocks style block*/

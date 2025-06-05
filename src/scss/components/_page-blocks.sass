@@ -1,0 +1,243 @@
+/*! .page style blocks*/
+.page
+  .page__container
+    &._no-padding-top
+      padding-top: 0
+  .page__block, .page__heading
+    & >
+      h1, .h1
+        +aProp(margin-bottom, 60)
+        +r($sm)
+          margin-bottom: 16px
+        &:only-child
+          margin: 0
+      h2
+        font-weight: 600
+      p, h2
+        & + div, p, h2
+          +aProp(margin-top, 24)
+          +r($sm)
+            margin-top: 16px
+  .page__block
+    padding: 0 aCalc(40)
+    +r($sm)
+      padding: 0 16px
+    & +
+      .page__block, .page__content-wrapper
+        padding-top: aCalc(200)
+        +r($sm)
+          padding-top: 80px
+    &:last-child
+      padding-bottom: 0
+  .page__block.page__block_full-width
+    padding-left: 0
+    padding-right: 0
+    .page-block-heading.page-block-heading_border
+      padding: 0 aCalc(40)
+      +r($sm)
+        padding: 0 16px
+    & > h2
+      padding: 0 aCalc(30)
+      +r($sm)
+        padding: 0 16px
+    &:first-child
+      & + .page__block
+        +aProp(padding-top, 100)
+        +r($sm)
+          padding-top: 50px
+  .page__block.page__block_full-w-mob
+    +r($sm)
+      padding-left: 0
+      padding-right: 0
+      .page-block-heading.page-block-heading_border
+        padding: 0 16px
+      & > h2
+        padding: 0 16px
+  .page__block.page__block_article 
+    +rmin($sm1)
+      +aProp(padding-left, 505)
+      +aProp(padding-right, 505)
+    & > * + *
+      +aProp(margin-top, 40)
+      +r($sm)
+        margin-top: 24px
+    & > h1, & > .h1
+      font-weight: 600     
+      margin: 0 
+      +aProp(margin-bottom, 40)
+      +r($sm)
+        margin-bottom: 24px
+    & > h1 + *, & > .h1 + *
+      margin-top: 0
+  .page__block.page__block_header-offset
+    +aProp(--plus-padding, 16)
+    padding-top: calc(var(--header-height) + var(--plus-padding))
+    +r($sm)
+      padding-top: 0
+  .page__block.page__block_no-pad-top
+    padding-top: 0 !important
+  .page__project-block-h
+    padding: 0 aCalc(155) aCalc(40)
+    +r($sm)
+      padding: 0 0 16px
+  .page__block_full-width .page__project-block-h
+    padding: 0 aCalc(195) aCalc(40)
+    +r($sm)
+      padding: 0 16px 16px
+    
+  .page__block.page__block_extra-padding-h
+    +rmin($sm1)
+      +aProp(padding-left, 155)
+      +aProp(padding-right, 155)
+  .page__block.page__block_border-top
+    border-top: 1px solid #E5E5E5
+  .page__block.page__block_article.page__block_header-offset
+    +aProp(--plus-padding, 50) 
+    +r($sm)
+      --plus-padding: 16px
+  .page__block.page__block_text
+    a:not([class])
+      text-decoration: underline
+    h1, h2, h3
+      font-weight: 600
+    h1 + p, h1 + h2, p + h2, h1 + h3, p + h3
+      +aProp(margin-top, 40)
+      +r($sm)
+        margin-top: 24px
+    h2 + p, h3 + p, p + p
+      +aProp(margin-top, 24)
+      +r($sm)
+        margin-top: 16px
+  .page__block.page__block_centered
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .page__content-wrapper
+    +rmin($sm1)
+      +aProp(max-width, 920)
+      margin: 0 auto
+    & +
+      .page__block, .page__content-wrapper
+        padding-top: aCalc(120)
+        +r($sm)
+          padding-top: 50px
+  .page__heading
+    +rmin($sm1)
+      text-align: center
+      
+    & +
+      .page__block, .page__content-wrapper
+        padding-top: aCalc(60)
+        +r($sm)
+          padding-top: 16px
+
+.page__container_catalog
+  .page__block_header-offset
+    img.full-width-img_mobile-logo
+      +r($sm)
+        padding: 0 16px
+        margin-bottom: 16px
+  .page__block + .page__block
+    padding-top: 0 !important
+  
+
+
+.page-block-bottom
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: nowrap
+  +aProp(margin-top, 60)
+  +r($sm)
+    margin-top: 30px
+
+.page-block-heading
+  display: flex
+  width: 100%
+  justify-content: space-between
+  font-weight: 600
+  +aProp(margin-bottom, 24)
+  +r($sm)
+    margin-bottom: 15px
+    
+  &.page-block-heading_border
+    +aProp(padding-bottom, 24)
+    border-bottom: 1px solid #E5E5E5
+    +aProp(margin-bottom, 40)
+    +r($sm)
+      margin-bottom: 30px
+      padding-bottom: 16px
+  .page-block-heading__link
+    display: none
+    +rmin($sm1)
+      display: flex
+      align-items: center
+      +aProp(gap, 10)
+    svg
+      display: block
+      +aProp(width, 32)
+      height: auto
+      aspect-ratio: 1
+      [fill]
+        transition: fill 0.2s linear
+    &:hover
+      color: $LightGreen
+      [fill='#161616']
+        fill: $LightGreen
+
+.page-block-paragraph
+  +aProp(padding-top, 60)
+  border-top: 1px solid #E5E5E5
+  margin-top: 40px
+  +r($sm)
+    padding-top: 45px
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4
+    font-weight: 600
+    margin: 24px 0
+    +r($sm)
+      margin: 16px 0
+  
+  ul
+    margin-bottom: 40px
+    +r($sm)
+      margin-bottom: 24px
+      
+    li
+      padding-left: 16px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        display: inline-block
+        +wah(0.3334em)
+        border-radius: 100%
+        background-color: $LightGreen
+        margin: 0.5em 0
+        
+        left: 0
+        top: 0
+        
+    li + li
+      margin-top: 10px
+      +r($sm)
+        margin-top: 8px
+  h5 + ul, p + ul
+    margin-top: 10px
+    +r($sm)
+      margin-top: 8px
+  p
+    @extend .h5
+    overflow-wrap: break-word
+    margin-bottom: 10px
+    +r($sm)
+      margin-bottom: 8px
+  p + p
+    margin-top: 10px
+    +r($sm)
+      margin-top: 8px
+  > *:first-child
+    margin-top: 0
+  > *:last-child
+    margin-bottom: 0
+/*! .page style blocks*/

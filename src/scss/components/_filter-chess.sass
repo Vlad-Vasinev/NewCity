@@ -1,0 +1,306 @@
+
+/*! .chess-block, .chess-cell style block*/
+.select__wrapper
+  cursor: pointer
+
+.chess-block
+  display: flex
+  .chess-column 
+    margin-right: aCalc(8)
+    +r($sm)
+      margin-right: 8px
+    .checkboxes
+      display: flex
+      flex-direction: column
+      gap: aCalc(8)
+      .chess-cell
+        &:hover
+          cursor: initial
+      .chess-cell + .chess-cell 
+        margin-left: 0
+      p 
+        font-weight: 700
+  .chess-info
+    display: grid 
+    grid-template-columns: repeat(auto-fit, aCalc(153))
+    margin-top: aCalc(16)
+    gap: aCalc(8)
+    +r($sm)
+      margin-top: 16px
+      grid-template-columns: repeat(1, auto)
+      gap: 8px
+    &__el
+      display: flex
+      align-items: center
+      margin-bottom: 0
+      .chess-cell 
+        margin-right: aCalc(8)
+        +r($sm)
+          margin-right: 8px
+  .chess-cell
+    margin-bottom: 0
+  p, label 
+    margin: 0
+
+.chess-cell
+  display: grid
+  justify-content: center
+  align-items: center 
+  padding: 0
+  position: relative
+  width: aCalc(40)
+  height: aCalc(36)
+  cursor: pointer
+  border-radius: aCalc(2)
+  background-color: #FFF
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  margin: 0
+  +r($sm)
+    width: 36px
+    height: 36px
+    border-radius: 2px
+  input 
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    top: 0
+    height: 0
+    width: 0
+  .checkmark 
+    width: aCalc(40)
+    height: aCalc(36)
+    font-size: aCalc(12)
+    font-style: normal
+    font-weight: 400
+    line-height: aCalc(18)
+    border: 1px solid transparent
+    border-radius: aCalc(2)
+    display: grid
+    justify-content: center
+    align-items: center
+    margin: 0
+    +r($sm)
+      width: 36px
+      height: 36px
+      font-size: 12px
+      line-height: 18px
+      border-radius: 2px
+  &:not(.cell-booked)
+    input[type='checkbox']:checked + .checkmark 
+      background-color: $BrassBalls
+.filter-chess
+  margin-bottom: aCalc(8)
+  +r($sm)
+    margin-bottom: 8px
+  &__about 
+    margin-top: aCalc(16)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +r($sm)
+      margin-top: 16px
+    p:first-child 
+      max-width: aCalc(40)
+      width: 100%
+      text-align: center
+      +r($sm)
+        max-width: 36px
+    p:last-child 
+      width: 100%
+      text-align: center
+  .checkboxes
+    gap: aCalc(8)
+    +r($sm)
+      gap: 8px
+    label
+      margin-bottom: 0
+
+  .filter__form-field
+    margin-bottom: 0
+
+  .checkmark.chess-inactive-primary
+    background-color: transparent
+    opacity: 0.5
+    color: $MediumGray
+    cursor: initial
+    &:hover 
+      background-color: transparent
+    border: 1px solid $Porcelain
+
+  .checkmark.chess-inactive-secondary
+    background-color: $Gray
+    color: $MediumGray
+    cursor: initial
+    &:hover 
+      background-color: $Gray
+    opacity: 0.5
+
+  .checkmark.chess-active-primary
+    background-color: $ChessFilterPrimary
+
+  .checkmark.chess-active-secondary
+    background-color: $ChessFilterSecondary
+
+  .checkmark.chess-empty
+    cursor: initial
+    &:hover 
+      background-color: transparent
+    background-color: transparent
+
+  .checkmark.chess-empty-border
+    background-color: transparent
+    border: 1px solid $Porcelain
+
+  .checkmark.chess-info-primary-first
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: aCalc(2)
+      background-color: $PaleGold
+      left: 0
+      top: 0
+      transform: none
+      border-width: 0
+      +r($sm)
+        width: 5px
+        height: 5px
+        border-radius: 2px
+    &::after 
+      display: none
+
+  .checkmark.chess-info-primary-second
+    position: relative
+    &::before
+      display: none
+    &::after 
+      display: block
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: aCalc(2)
+      background-color: $MediumAquamarine
+      left: 0
+      top: 0
+      transform: none
+      border-width: 0
+      +r($sm)
+        width: 5px
+        height: 5px
+        border-radius: 2px
+
+  .checkmark.chess-info-primary-grid
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: 2px 
+      background-color: $PaleGold
+      left: aCalc(10)
+      top: 0
+      transform: none
+      border-width: 0
+      +r($sm)
+        left: 7px
+        width: 5px
+        height: 5px
+        border-radius: 2px
+    &::after  
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: 2px 
+      background-color: $MediumAquamarine
+      left: 0
+      top: 0
+      transform: none
+      border-width: 0
+      display: block
+      +r($sm)
+        width: 5px
+        height: 5px
+        border-radius: 2px
+
+  .checkmark.chess-info-secondary-grid
+    position: relative
+    &::before
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: aCalc(2)
+      background-color: $PaleGold
+      left: 0
+      top: 0
+      transform: none
+      border-width: 0
+      +r($sm)
+        width: 5px
+        height: 5px
+        border-radius: 2px
+    &::after 
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: aCalc(2)
+      background-color: $MediumAquamarine
+      left: aCalc(10)
+      top: 0
+      transform: none
+      border-width: 0
+      display: block
+      +r($sm)
+        left: 7px
+        width: 5px
+        height: 5px
+        border-radius: 2px
+
+  .checkmark.chess-booked 
+    display: grid
+    justify-content: center
+    align-content: center
+    cursor: initial
+    &:hover 
+      background-color: transparent
+    svg 
+      +r($sm)
+        width: 20px
+        height: 20px
+
+  .checkmark
+    svg
+      width: aCalc(20)
+      height: aCalc(20)
+      +r($sm)
+        width: 20px
+        height: 20px
+    transition: all .3s 
+    &:hover 
+      background-color: $LightTan
+
+  .checkmark.chess-sold
+    &:hover
+      background-color: transparent
+      cursor: initial
+    svg
+      opacity: 0.3
+
+  .chess-grid
+    .checkboxes
+      display: grid 
+      grid-template-columns: repeat(8, aCalc(40))
+      gap: aCalc(8)
+      +r($sm)
+        gap: 8px
+        grid-template-columns: repeat(5, 36px)
+/*! .chess-block, .chess-cell style block*/

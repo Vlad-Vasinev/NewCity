@@ -1,0 +1,26 @@
+/*! .blog-card  style block*/
+.blog-card 
+  display: block
+  max-width: aCalc(424)
+  width: 100%
+  +r($sm)
+    max-width: 100%
+  &__img 
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 16px
+    img
+      width: aCalc(424)
+      //width: 100%
+      height: aCalc(212)
+      object-fit: cover
+      +r($sm)
+        height: auto
+        width: 100%
+  &__subtitle.p2
+    display: block
+    margin-top: aCalc(8)
+    color: $MediumGray
+    +r($sm)
+      margin-top: 8px
+/*! .blog-card  style block*/

@@ -1,0 +1,30 @@
+/*! .solution-block style block*/
+.solution-block 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: aCalc(424)
+  padding: aCalc(16) aCalc(24)
+  background-color: $Gray
+  border-radius: aCalc(8)
+  transition: background .3s
+  +r($sm)
+    width: 100%
+    padding: 20px 14px
+    border-radius: 8px
+  &:hover
+    background-color: $PaleGold
+  &__img 
+    margin-right: aCalc(17)
+    +r($sm)
+      margin-right: 17px
+    img
+      width: aCalc(52)
+      height: aCalc(52)
+      object-fit: contain
+      +r($sm)
+        width: 52px
+        height: 52px
+/*! .solution-block style block*/
+
+  

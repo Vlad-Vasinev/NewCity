@@ -1,0 +1,126 @@
+/*! .form-primary  style block*/
+.form-order.form-primary
+  display: flex
+  justify-content: space-between
+  background-color: #FFDD66
+  padding: aCalc(40)
+  border-radius: 0
+  border: none
+  +r($sm)
+    flex-direction: column
+    padding: 20px 12px 12px 12px
+  .modal__top
+    max-width: aCalc(504)
+    width: 100%
+    margin-right: aCalc(22)
+    +r($sm)
+      margin-bottom: 24px
+      max-width: unset
+    .form-order__top
+      border-bottom: none
+      position: relative
+      padding-top: 0
+      +r($sm)
+        padding: 0
+      &::after 
+        position: absolute 
+        content: ""
+        background-image: url('../../img/form-primary-icon.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: aCalc(161)
+        height: aCalc(152)
+        right: 0
+        bottom: 0
+        +r($sm)
+          display: none
+      .h2.form-order__title
+        font-weight: 700
+        font-size: aCalc(20)
+        line-height: aCalc(28)
+        +r($sm)
+          font-size: 18px
+          line-height: 24px
+        span
+          margin-top: aCalc(20)
+          font-weight: 700
+          font-size: aCalc(32)
+          line-height: aCalc(44)
+          position: relative
+          z-index: 1
+          +r($sm)
+            font-size: 22px
+            line-height: 30px
+          &::after 
+            position: absolute 
+            content: ""
+            background-color: #ffffff 
+            width: aCalc(329)
+            height: aCalc(26)
+            left: 0
+            bottom: aCalc(-5)
+            z-index: -1
+            +r($sm)
+              width: 100%
+              height: 16px
+  .modal__body
+    background-color: #FFDD66
+    max-width: aCalc(521)
+    width: 100%
+    padding: aCalc(20)
+    background-color: #ffffff
+    +r($sm)
+      max-width: unset
+      padding: 10px
+    &-text 
+      margin-bottom: aCalc(14)
+      font-weight: 700
+      +r($sm) 
+        margin-bottom: 14px
+      a 
+        +r($sm)
+          display: block
+      span 
+        font-weight: 400
+        font-size: aCalc(10)
+        line-height: aCalc(14)
+        display: block 
+        margin-top: aCalc(10)
+        +r($sm) 
+          font-size: 9px
+          line-height: 12px
+          margin-top: 10px
+    .popup__login-wrap-btn
+      margin-top: aCalc(16)
+      +r($sm)
+        margin-top: 16px
+        width: 100%
+      button 
+        +r($sm)
+          width: 100%
+          margin-bottom: 12px
+    .form-order__el
+      display: flex
+      flex-wrap: wrap
+    .form-response
+      text-align: center
+      font-size: aCalc(26)
+      line-height: 100%
+      font-weight: 700
+      margin
+      +r($sm)
+        font-size: 22px
+    .h2.form-order__title
+      display: none
+      +r($sm)
+        margin-bottom: 16px
+    &.sent-request
+      .h2.form-order__title
+        display: block
+    .policy 
+      color: #737373
+  .sent-request
+    display: grid 
+    justify-content: center
+    align-items: center
+/*! .form-primary  style block*/

@@ -1,0 +1,29 @@
+/*! .apartment-complex style page*/
+.apartment-complex 
+  h1.blog__title.h1.content-hide
+    max-height: aCalc(4)
+    +r($sm)
+      max-height: 0
+  .terms 
+    padding: 0 0 aCalc(50)
+  .block-info 
+    &__content 
+      padding-top: 0
+    .titles-mesh 
+      margin-top: aCalc(48)
+      display: grid
+      grid-template-columns: repeat(2, aCalc(200)) 
+      gap: aCalc(24)
+      +r($sm)
+        margin-top: 24px
+        grid-template-columns: repeat(2, 138px) 
+        gap: 24px
+      .titles-mesh__item 
+        width: aCalc(200)
+        +r($sm)
+          width: 138px
+        .h1 
+          margin-bottom: aCalc(8)
+          +r($sm)
+            margin-bottom: 8px
+/*! .apartment-complex style page*/

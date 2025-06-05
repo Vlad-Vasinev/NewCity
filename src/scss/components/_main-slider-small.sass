@@ -1,0 +1,91 @@
+
+/*! .sm-slider style block*/
+.sm-slider
+  width: aCalc(424)
+  position: relative
+  +r($sm)
+    width: 100%
+  &:not(.swiper-initialized)
+    .sm-slider__el:nth-child(n + 2)
+      display: none
+  &__el 
+    opacity: 1
+  .card-product
+    height: 100%
+    .card-product__el
+      height: 100%
+      padding: aCalc(24)
+      +r($sm)
+        padding: 16px
+        min-height: 470px
+    .card-product__el-img
+      img 
+        width: aCalc(376)
+        height: aCalc(254)
+        object-fit: contain
+        +r($sm)
+          width: 315px
+          height: 160px
+  .control-inner
+    position: absolute
+    width: aCalc(56)
+    bottom: aCalc(24)
+    right: aCalc(24)
+    z-index: 11
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    +r($sm)
+      // right: 16px
+      bottom: 16px
+      right: auto 
+      left: 16px
+      width: 56px
+    .slider-navigation-next, .slider-navigation-prev
+      border-radius: 0
+      background-color: transparent
+      &:hover 
+        background-color: transparent
+        span 
+          border-radius: 0
+          background-color: transparent
+          svg 
+            path
+              opacity: 1
+    .slide-button span
+      border-radius: none
+      display: grid 
+      justify-content: center
+      align-items: center
+      padding: 0
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px 
+      svg 
+        width: aCalc(20)
+        height: aCalc(20)
+        +r($sm)
+          width: 24px
+          height: 24px
+  .swiper-pagination
+    margin-left: aCalc(16)
+    height: aCalc(4)
+    border-radius: aCalc(2)
+    position: static
+    +r($sm)
+      height: 4px
+      border-radius: 2px
+      margin-left: 16px
+    &:not(.swiper-pagination-progressbar)
+      background-color: $Gray
+      width: 100%
+      height: aCalc(4)
+  .swiper-pagination-progressbar-fill
+    border-radius: aCalc(2)
+    +r($sm)
+      border-radius: 2px
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: #FD6
+/*! .sm-slider style block*/

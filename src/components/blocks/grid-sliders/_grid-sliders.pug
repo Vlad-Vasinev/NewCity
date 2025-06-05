@@ -1,0 +1,131 @@
+.grid-sliders 
+  .grid-sliders__el
+    .bg-slider.swiper-container
+      .swiper-wrapper
+        .bg-slider__el.swiper-slide
+          img(src="img/bg-slider.jpg" alt="")
+        .bg-slider__el.swiper-slide
+          img(src="img/bg-slider-1.jpg" alt="")
+        .bg-slider__el.swiper-slide
+          img(src="img/bg-slider-2.jpg" alt="")
+      .control-inner
+        .swiper-pagination
+        button.slider-navigation-prev.slide-button.slide-button_horizontal
+          span 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+            </svg>
+        button.slider-navigation-next.slide-button.slide-button_horizontal
+          span 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+            </svg>
+    .sm-slider.swiper-container
+      .swiper-wrapper
+        .sm-slider__el.swiper-slide
+          .card-product
+            .card-product__el(data-apartment-id = "0")  
+              a.card-product__el-title(href="#")
+                |3-room, 87,73 м2 →
+                span.card-product__el-subtitle Cascade-22, кв. №228
+              .card-product__el-img 
+                img(src="img/filtered-img.png" alt="")
+              .card-product__info 
+                .card-product__info-price 5 329 170 ₽
+                .card-product__info-title Smart apartment  
+              .card-product__about
+                .card-product__about-icon 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5985_1183)">
+                    <path d="M12 5.27273C12.2898 5.27273 12.5089 5.16042 12.6163 5.097C12.7364 5.02605 12.8367 4.94324 12.9097 4.87805C13.0546 4.74868 13.2076 4.5828 13.3427 4.43429C13.3793 4.39403 13.4164 4.35302 13.4542 4.31135C13.7173 4.02069 14.0095 3.69798 14.3634 3.37332C15.17 2.6335 16.1764 2 17.4545 2C19.365 2 20.7244 2.70648 21.6162 3.70982C22.5244 4.73156 23 6.12216 23 7.54545C23 9.59844 21.87 11.7837 19.8031 14.1362C17.8149 16.399 15.073 18.69 12 21.0203C8.92702 18.69 6.18507 16.399 4.19691 14.1362C2.13004 11.7837 1 9.59844 1 7.54545C1 6.12216 1.47556 4.73156 2.38377 3.70982C3.27563 2.70648 4.63499 2 6.54545 2C7.82358 2 8.82995 2.6335 9.63656 3.37332C9.99052 3.69798 10.2827 4.02069 10.5458 4.31135C10.5836 4.35302 10.6207 4.39403 10.6573 4.43429C10.7924 4.5828 10.9454 4.74868 11.0903 4.87805C11.1633 4.94324 11.2636 5.02605 11.3837 5.097C11.4911 5.16042 11.7102 5.27273 12 5.27273Z" stroke="#CDCDCD" stroke-width="2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5985_1183">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                .card-product__about-primary.p1
+                  |Floor 3
+                  span.p1 from 16
+                .card-product__about-secondary.p1
+                  |Completion date 
+                  span.p1 IV Qтал 2021
+              .card-product__btns 
+                .card-product__btns-primary.p1 Buy with a mortgage
+                a.card-product__btns-secondary.b1(href="#") from 19 980 ₽/мес
+        .sm-slider__el.swiper-slide
+          .card-product
+            .card-product__el(data-apartment-id = "0")  
+              a.card-product__el-title(href="#")
+                |3-room, 222 →
+                span.card-product__el-subtitle Cascade222228
+              .card-product__el-img 
+                img(src="img/filtered-img.png" alt="")
+              .card-product__info 
+                .card-product__info-price 5 32222
+                .card-product__info-title Смарт-к2222
+              .card-product__about
+                .card-product__about-icon 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5985_1183)">
+                    <path d="M12 5.27273C12.2898 5.27273 12.5089 5.16042 12.6163 5.097C12.7364 5.02605 12.8367 4.94324 12.9097 4.87805C13.0546 4.74868 13.2076 4.5828 13.3427 4.43429C13.3793 4.39403 13.4164 4.35302 13.4542 4.31135C13.7173 4.02069 14.0095 3.69798 14.3634 3.37332C15.17 2.6335 16.1764 2 17.4545 2C19.365 2 20.7244 2.70648 21.6162 3.70982C22.5244 4.73156 23 6.12216 23 7.54545C23 9.59844 21.87 11.7837 19.8031 14.1362C17.8149 16.399 15.073 18.69 12 21.0203C8.92702 18.69 6.18507 16.399 4.19691 14.1362C2.13004 11.7837 1 9.59844 1 7.54545C1 6.12216 1.47556 4.73156 2.38377 3.70982C3.27563 2.70648 4.63499 2 6.54545 2C7.82358 2 8.82995 2.6335 9.63656 3.37332C9.99052 3.69798 10.2827 4.02069 10.5458 4.31135C10.5836 4.35302 10.6207 4.39403 10.6573 4.43429C10.7924 4.5828 10.9454 4.74868 11.0903 4.87805C11.1633 4.94324 11.2636 5.02605 11.3837 5.097C11.4911 5.16042 11.7102 5.27273 12 5.27273Z" stroke="#CDCDCD" stroke-width="2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5985_1183">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                .card-product__about-primary.p1
+                  |Floor 3
+                  span.p1 from 60
+                .card-product__about-secondary.p1
+                  |Completion date 
+                  span.p1 IV Q2222
+              .card-product__btns 
+                .card-product__btns-primary.p1 Buy with a mortgage
+                a.card-product__btns-secondary.b1(href="#") from 19 980 ₽/мес
+        .sm-slider__el.swiper-slide
+          .card-product
+            .card-product__el(data-apartment-id = "0")  
+              a.card-product__el-title(href="#")
+                |3-room, 87,7 → 333
+                span.card-product__el-subtitle Cascadeкв. №228 33
+              .card-product__el-img 
+                img(src="img/filtered-img.png" alt="")
+              .card-product__info 
+                .card-product__info-price 5 329 170 ₽ 33
+                .card-product__info-title Smart apartment  
+              .card-product__about
+                .card-product__about-icon 
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5985_1183)">
+                    <path d="M12 5.27273C12.2898 5.27273 12.5089 5.16042 12.6163 5.097C12.7364 5.02605 12.8367 4.94324 12.9097 4.87805C13.0546 4.74868 13.2076 4.5828 13.3427 4.43429C13.3793 4.39403 13.4164 4.35302 13.4542 4.31135C13.7173 4.02069 14.0095 3.69798 14.3634 3.37332C15.17 2.6335 16.1764 2 17.4545 2C19.365 2 20.7244 2.70648 21.6162 3.70982C22.5244 4.73156 23 6.12216 23 7.54545C23 9.59844 21.87 11.7837 19.8031 14.1362C17.8149 16.399 15.073 18.69 12 21.0203C8.92702 18.69 6.18507 16.399 4.19691 14.1362C2.13004 11.7837 1 9.59844 1 7.54545C1 6.12216 1.47556 4.73156 2.38377 3.70982C3.27563 2.70648 4.63499 2 6.54545 2C7.82358 2 8.82995 2.6335 9.63656 3.37332C9.99052 3.69798 10.2827 4.02069 10.5458 4.31135C10.5836 4.35302 10.6207 4.39403 10.6573 4.43429C10.7924 4.5828 10.9454 4.74868 11.0903 4.87805C11.1633 4.94324 11.2636 5.02605 11.3837 5.097C11.4911 5.16042 11.7102 5.27273 12 5.27273Z" stroke="#CDCDCD" stroke-width="2"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5985_1183">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                .card-product__about-primary.p1
+                  |Floor 3
+                  span.p1 from 33
+                .card-product__about-secondary.p1
+                  |Completion date 
+                  span.p1 IV к333
+              .card-product__btns 
+                .card-product__btns-primary.p1 Buy33
+                a.card-product__btns-secondary.b1(href="#") from 3330 ₽/mounth
+      .control-inner
+        button.slider-navigation-prev.slide-button.slide-button_horizontal
+          span 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+            </svg>
+        button.slider-navigation-next.slide-button.slide-button_horizontal
+          span 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+            </svg>

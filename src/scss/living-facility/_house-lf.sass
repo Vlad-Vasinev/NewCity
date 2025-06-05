@@ -1,0 +1,218 @@
+
+.houseLf-mesh-wrapper
+  +r($sm)
+    padding: 0 16px
+  &:not(.swiper-initialized)
+    .houseLf-mesh
+      +r($sm)
+        display: flex
+        gap: 8px
+    .house-lf
+      img
+        +r($sm)
+          min-width: 100%
+    .house-lf:nth-child(n + 4)
+      +r($sm)
+        display: none
+
+.houseLf-mesh 
+  display: grid 
+  grid-template-columns: repeat(3, aCalc(476))
+  gap: aCalc(24)
+  +r($sm)
+    display: flex
+    gap: unset
+
+.house-lf 
+  position: relative
+  cursor: pointer
+  border-radius: 50%
+  overflow: hidden
+  +r($sm)
+    width: 157px
+    border-radius: 12px
+  &:hover 
+    .house-lf__info-svg 
+      svg 
+        transform: rotate(90deg)
+    img
+      transform: scale(1.15)
+    .house-lf__info-title 
+      opacity: 1
+      transform: scale(1)
+  img
+    width: aCalc(476)
+    height: aCalc(476)
+    object-fit: cover 
+    border-radius: aCalc(48)
+    transition: transform .3s
+    +r($sm)
+      width: 100%
+      height: 230px
+      border-radius: 12px
+  &__info 
+    position: absolute
+    width: aCalc(95)
+    transform: translateY(-25%)
+    top: 50%
+    left: 0
+    right: 0
+    margin: 0 auto
+    display: flex
+    align-items: center
+    flex-direction: column
+    gap: aCalc(16)
+    +r($sm)
+      position: unset
+      justify-content: space-between
+      top: 0
+      transform: none
+    &-svg 
+      background-color: $White
+      display: grid 
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      width: aCalc(56)
+      height: aCalc(56)
+      +r($sm)
+        width: 40px
+        height: 40px
+        position: absolute
+        top: auto 
+        bottom: 12px 
+        right: 12px
+      svg 
+        transition: transform .3s
+        width: aCalc(24)
+        height: aCalc(24)
+        +r($sm)
+          width: 24px
+          height: 24px
+    .title-m
+      padding: aCalc(8) aCalc(16)
+      color: $ChaosBlack
+      width: max-content
+      border-radius: aCalc(24)
+      background-color: $PaleGold
+      +r($sm)
+        padding: 6px 12px
+        border-radius: 24px
+        width: max-content
+        position: absolute
+        transform: scale(1)
+        top: 12px 
+        left: 12px
+    &-title
+      transition: opacity .7s, transform .3s
+      transform: scale(0)
+      opacity: 0
+
+.houseLf-popup
+  overflow-y: scroll
+  overflow-x: hidden
+  padding: aCalc(100) 0
+  position: fixed
+  width: aCalc(1360)
+  top: 0
+  right: 0
+  z-index: 100
+  transform: translateX(100%)
+  height: 100vh
+  background-color: $White
+  transition: transform .3s
+  +r($sm)
+    padding: 80px 0 132px
+    width: 100%
+    max-height: 100%
+    height: var(--app-height)
+    overflow-y: scroll
+  &__hidd
+    display: none 
+    +r($sm)
+      width: 100%
+      background-color: $White 
+      display: grid 
+      justify-content: center
+      align-items: center 
+      position: fixed
+      bottom: 0
+      padding: 8px 16px
+      z-index: 100000
+      left: 50%
+      transform: translateX(-50%)
+    a.button-color
+      +r($sm)
+        text-align: center
+        max-width: unset 
+        width: 343px
+  &__container 
+    position: relative
+    max-width: aCalc(1120)
+    padding: 0
+    margin: 0 auto
+    +r($sm)
+      margin: 0
+      max-width: unset
+      padding: 0 16px
+  &__close
+    position: fixed
+    z-index: 10
+    top: aCalc(36)
+    right: aCalc(36)
+    +r($sm)
+      top: 16px
+      right: 16px
+    svg
+      width: aCalc(24)
+      height: aCalc(24)
+      transition: transform .3s
+      +r($sm)
+        width: 24px
+        height: 24px
+    &:hover 
+      svg
+        transform: rotate(90deg)
+  &.houseLf-popup_active
+    transform: none
+    z-index: 2001
+  .title-xxl
+    margin-bottom: aCalc(24)
+    +r($sm)
+      margin-bottom: 16px
+  .title-xl, .block-appInfo
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px
+  .block-appInfo 
+    .button-color.slide-button
+      width: auto
+    +r($sm)
+      margin-bottom: 50px
+  .sliderLf-bg
+    .info-img 
+      img 
+        height: aCalc(770)
+        +r($sm)
+          width: 100%
+          height: 257px
+    margin-bottom: aCalc(100)
+    +r($sm)
+      margin-bottom: 48px
+  &__descr 
+    .title-xxl
+      margin-bottom: aCalc(24)
+      +r($sm)
+        margin-bottom: 16px
+    .title-xl
+      margin-bottom: aCalc(40)
+      +r($sm)
+        margin-bottom: 24px
+    .title-l-bold
+      margin-bottom: aCalc(8)
+      +r($sm)
+        margin-bottom: 8px
+    .title-l
+      margin-bottom: aCalc(24)
+      +r($sm)
+        margin-bottom: 16px

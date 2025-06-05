@@ -1,0 +1,25 @@
+.fullscreen-slider
+  template#slide-tpl
+    .swiper-slide.fullscreen-slider__slide
+      .swiper-zoom-container()
+        img()
+  .fullscreen-slider__close(fs-close)
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 21L12 12M21 3L12 12M12 12L3 3M12 12L21 21" stroke="#0F0F0F" stroke-width="2"/>
+    </svg>
+  .fullscreen-slider__slider.swiper-container
+    .fullscreen-slider__wrapper.swiper-wrapper 
+  .slider-pagination-navigation
+    button.slider-navigation-prev.full-prev.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>
+    .swiper-pagination
+    button.slider-navigation-next.full-next.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>
+  .gallery-thumbs
+    ul.gallery-thumbs__content.swiper-wrapper 

@@ -1,0 +1,26 @@
+.block-descr 
+  display: flex
+  border-radius: aCalc(12)
+  overflow: hidden
+  img   
+    width: aCalc(980)
+    height: aCalc(700)
+    object-fit: cover
+    +r($sm)
+      order: 0
+      width: 100%
+      height: 272px
+  +r($sm)
+    flex-direction: column
+  .title-xxl
+    +r($sm)
+      padding: 0 16px
+      margin-bottom: 24px
+  .block-sm-text
+    +r($sm)
+      order: 1
+      padding: 24px 16px
+    .title-xxl
+      +r($sm)
+        display: none
+  

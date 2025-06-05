@@ -1,0 +1,11 @@
+.pros-block
+	- var prosbg = ["img/pros-bg.jpg", "img/pros-bg-1.jpg", "img/pros-bg-2.jpg", "img/pros-bg-3.jpg"];
+	- var h3items = ["Come in right away", "No extra expenses", "Live at home", "Don't be afraid that the price will go up"];
+	- var p1items = ["Move in and settle into your apartment from day one", "No need to pay a loan for the down payment and rent an apartment while you save up", "Paint your walls your favorite color, get a cat - you don't need anyone's permission", "The price of apartments will not change. Save up for the first payment before the deadline - the price will decrease"];
+	- var n = 0;
+	while n < 4
+		.pros-el
+			img(src= prosbg[n] alt="")
+			h3.h3= h3items[n]
+			.p1= p1items[n]
+			- n++

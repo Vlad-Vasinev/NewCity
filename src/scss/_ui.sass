@@ -1,0 +1,213 @@
+
+
+
+body
+  color: $baseTextColor
+  font-weight: 400
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+div,
+span
+  color: inherit
+  font-family: $baseFont
+  font-weight: inherit
+  margin: 0
+  transition: color 0.2s linear
+
+div, span
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p
+    display: block
+
+h1, .h1
+  // font-weight: inherit
+  font-weight: 600
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 50)
+  +aProp(line-height, 56)
+  +r($sm1)
+    // font-weight: 400
+    font-size: 26px
+    line-height: 32px
+
+h2, .h2
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 40)
+  +aProp(line-height, 50)
+  +r($sm1)
+    font-size: 24px
+    line-height: 30px
+
+h3, .h3
+  font-weight: 600
+  font-weight: inherit
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 26)
+  +aProp(line-height, 32)
+  +r($sm1)
+
+    font-size: 20px
+    line-height: 24px
+
+h4, .h4
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 24)
+  +aProp(line-height, 32)
+  +r($sm1)
+
+    font-size: 16px
+    line-height: 22px
+
+h5, .h5
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 18)
+  +aProp(line-height, 24)
+  +r($sm1)
+
+    font-size: 16px
+    line-height: 22px
+
+h6, .h6, p
+
+  font-family: $baseFont
+  color: inherit
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  +r($sm1)
+    font-size: 12px
+    line-height: 16px
+
+p, li, div
+  @extend .h5
+
+.buttonM
+  font-weight: 600
+  +aProp(font-size, 18)
+  +aProp(line-height, 24)
+  +r($sm)
+    font-size: 16px
+    line-height: 24px
+
+.buttonS
+  font-weight: 600
+  +aProp(font-size, 16)
+  +aProp(line-height, 20)
+  letter-spacing: 0em
+  +r($sm)
+    font-size: 13px
+    line-height: 18px
+
+button, .button,  .button_medium
+  @extend .buttonM
+  background: $LightGreen
+  color: #fff
+  font-weight: 600
+  +aPadd(20, 32)
+  //+aProp(border-radius, 12)
+  min-width: max-content
+  width: max-content
+  flex-shrink: 0
+  display: block
+  +r($sm)
+    padding: 14px 32px
+    border-radius: 12px
+  &:active
+    transform: scale(.97)
+  &.button_grey
+    color: $baseTextColor
+    background-color: $ColdStone
+
+
+.button_small
+  @extend .button_medium
+  @extend .buttonS
+  +aPadd(16, 24)
+  +r($sm)
+    padding: 10px 24px
+
+
+.cls-btn-rotate
+  +rmin($sm1)
+    svg
+      transition: transform 0.3s 
+    &:hover
+      svg
+        transform: rotate(90deg)
+.cls-btn-rotate-svg
+  +rmin($sm1)
+    transition: transform 0.3s 
+    &:hover
+      transform: rotate(90deg)
+
+// Выбор филиала
+
+// Выбор подкатегории
+
+.toggle-tag
+  @extend .h6
+  +aProp(border-radius, 8)
+  padding: aCalc(8) aCalc(16) aCalc(10)
+  color: #202020
+
+  width: max-content
+  white-space: nowrap
+  background-color: $WhiteGray
+  // vertical-align: center
+  align-items: center
+  display: flex
+  cursor: pointer
+  +no-select
+  +r($sm)
+    border-radius: 8px
+    padding: 12px 12px
+  &.toggle-tag_active 
+    background-color: $LightGreen
+    +aProp(padding-top, 6)
+    +aProp(padding-bottom, 8)
+    color: #fff
+    +r($sm)
+      padding: 8px 12px
+  &.toggle-tag_active, 
+  &.slide-button.toggle-tag_active .slide-button-inner > span,
+  &.slide-button.toggle-tag_active > span:only-child
+    
+    &:after
+      content: ''
+      display: block
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-width='1.5' d='M6 18 18 6M6 6l12 12' /%3E%3C/svg%3E")
+      mask-size: 100%
+      background-color: #fff
+      +aProp(height, 24)
+      width: auto
+      aspect-ratio: 1
+      font-size: inherit
+      line-height: inherit
+      background-size: 100%
+      +r($sm)
+        height: 24px
+        
+
+@import "inputs"
+@import "slideButton"
+@import "shinyBtn"
+@import "mixins/gradient-safari-mixin"

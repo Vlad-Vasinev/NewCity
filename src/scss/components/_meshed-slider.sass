@@ -1,0 +1,59 @@
+/*! .slider-mesh style block*/
+.slider-mesh
+	// display: flex
+	display: grid 
+	grid-template-columns: repeat(4, aCalc(312))
+	gap: aCalc(24)
+	+r($sm)
+		display: flex
+		flex-direction: column
+		gap: 26px
+.meshed-slider 
+	max-width: aCalc(312)
+	position: relative
+	&:not(.swiper-initialized)
+		.meshed-slider__item:nth-child(n + 2)
+			display: none
+	.control-inner
+		z-index: 100
+		bottom: aCalc(-14)
+		width: 100%
+		position: absolute
+		display: flex
+		justify-content: space-between
+		+r($sm)
+			bottom: -14px
+	+r($sm)
+		max-width: unset
+	&__item 
+		width: aCalc(312)
+		+r($sm)
+			width: 100%
+	&__img 
+		position: relative
+		img 
+			border-radius: aCalc(8)
+			width: 100%
+			height: aCalc(402)
+			object-fit: cover
+			+r($sm)
+				border-radius: 8px
+				height: 346px
+		&-count 
+			position: absolute
+			left: aCalc(16)
+			top: aCalc(16)
+			padding: aCalc(6) aCalc(12)
+			background-color: $White
+			border-radius: aCalc(16)
+			+r($sm)
+				left: 16px
+				top: 16px
+				padding: 6px 12px
+				border-radius: 16px
+	.h3 
+		text-align: center
+		margin-top: aCalc(27)
+		+r($sm)
+			margin-top: 23px
+/*! .slider-mesh style block*/

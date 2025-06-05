@@ -1,0 +1,45 @@
+/*! .accordeon-contents style block*/
+.accordeon-contents 
+  position: relative
+  height: aCalc(485)
+  +r($sm)
+    min-height: 226px
+    margin-bottom: 17px
+  +rmin($uhd + 2)
+    height: aCalc(350)
+    
+.accordeon-content
+  position: absolute
+  max-width: aCalc(648)
+  width: 100%
+  padding: aCalc(24) aCalc(70)
+  border-radius: aCalc(8)
+  border: 1px solid #F2F2F2
+  margin-bottom: aCalc(16)
+  display: grid 
+  justify-content: center
+  align-items: center
+  opacity: 0
+  overflow: hidden
+  transition: opacity 0.6s, -webkit-opacity 0.6s
+  +r($sm)
+    padding: 8px 30px
+    border-radius: 8px
+    max-width: unset
+    width: 100%
+  &.img_active
+    display: grid
+    opacity: 1
+  img 
+    max-width: aCalc(509)
+    width: 100%
+    max-height: aCalc(438)
+    //height: 100%
+    border-radius: aCalc(4)
+    object-fit: cover
+    display: block
+    +r($sm)
+      border-radius: 4px
+      max-width: 237px
+      max-height: 206px
+/*! .accordeon-contents style block*/

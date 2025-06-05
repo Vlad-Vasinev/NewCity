@@ -1,0 +1,63 @@
+
+.block-composition 
+  &__wrapper
+    position: relative
+    height: aCalc(1240)
+    +r($sm)
+      height: 398px
+  .title-l
+    +r($sm)
+      margin-top: 16px
+      padding: 0 16px
+.composition-el 
+  position: absolute
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+  &.composition-el_bg
+    img
+      height: aCalc(953)
+      +r($sm)
+        height: 248px
+    video
+      height: aCalc(953)
+      width: 100vw
+      object-fit: cover
+      +r($sm)
+        height: 350px
+  &.composition-el_text
+    left: 0
+    right: 0
+    text-align: center
+    top: aCalc(160)
+    margin: 0 auto
+    font-size: aCalc(216)
+    line-height: 90%
+    color: $White
+    letter-spacing: -13px
+    font-weight: 500
+    +r($sm)
+      font-size: 50px
+      letter-spacing: -3px
+  &.composition-el_textSm 
+    font-size: aCalc(18)
+    font-weight: 400
+    line-height: 130%
+    color: $ChaosBlack
+    width: aCalc(270)
+    left: auto 
+    right: aCalc(220)
+    top: aCalc(413)
+    +r($sm)
+      display: none
+  &.composition-el_main
+    +r($sm)
+      bottom: 0
+      top: auto
+    img, video 
+      width: 100vw
+      object-fit: cover
+      +r($sm)
+        // height: 398px
+        height: 328px

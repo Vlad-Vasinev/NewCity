@@ -1,0 +1,43 @@
+/*! .brief-info style block*/
+.brief-info
+  &__top
+    display: flex
+    justify-content: space-between
+    gap: aCalc(24)
+    margin-bottom: aCalc(32)
+    +r($sm)
+      flex-direction: column
+      gap: 16px
+      margin-bottom: 24px
+    &-el 
+      width: aCalc(424)
+      +r($sm)
+        width: 100%
+      div 
+        display: flex 
+        align-items: center
+        gap: aCalc(16)
+        +r($sm)
+          gap: 16px
+        span 
+          display: grid 
+          flex-shrink: 0
+          justify-content: center 
+          align-items: center
+          width: aCalc(87)
+          height: aCalc(87)
+          border-radius: 50%
+          background-color: $PaleGold
+          +r($sm)
+            width: 64px
+            height: 64px
+  &__body
+    img, video 
+      object-fit: cover 
+      width: 100% 
+      height: aCalc(428)
+      border-radius: aCalc(8)
+      +r($sm)
+        border-radius: 8px
+        height: 228px
+/*! .brief-info style block*/

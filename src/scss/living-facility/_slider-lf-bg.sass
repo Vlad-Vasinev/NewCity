@@ -1,0 +1,73 @@
+
+.sliderLf-bg
+  position: relative
+  .control-inner
+    display: flex
+    align-items: center
+    position: absolute
+    z-index: 100
+    right: aCalc(220)
+    gap: aCalc(12)
+    top: auto
+    bottom: aCalc(40)
+    +r($sm)
+      align-items: center
+      gap: 8px
+      right: 16px
+      bottom: 12px
+    .slider-navigation-prev, .slider-navigation-next
+      border-radius: aCalc(48)
+      +r($sm)
+        border-radius: 48px
+    .slider-navigation-next
+      svg 
+        transform: translateX(aCalc(-2))
+    .swiper-pagination
+      margin-right: aCalc(11)
+      position: initial
+      padding: aCalc(14) aCalc(16)
+      //height: aCalc(33)
+      background-color: #0F0F0F33
+      color: $White
+      +r($sm)
+        margin-right: 4px
+        padding: 6px 10px
+        //height: 30px
+        border-radius: 24px
+      span 
+        font-size: aCalc(16)
+        line-height: aCalc(20)
+        width: aCalc(21)
+        flex-shrink: 0
+        +r($sm)
+          width: 16px
+          font-size: 14px
+          line-height: 18px
+      &.pag-tab
+        width: auto
+        background-color: rgb(15, 15, 15, 0.6)
+        +r($sm)
+          background-color: rgb(15, 15, 15, 0.8)
+        .swiper-pagination-current
+          margin-right: aCalc(4)
+          +r($sm)
+            margin-right: 4px
+        .swiper-pagination-total
+          margin-left: aCalc(4)
+          opacity: 0.5
+          +r($sm)
+            margin-left: 4px
+  &:not(.swiper-initialized)
+    .swiper-pagination.pag-tab 
+      width: aCalc(80)
+      +r($sm)
+        width: 68px
+  .blured-text
+    position: absolute
+    top: auto
+    bottom: aCalc(40)
+    left: aCalc(220)
+    .title-xxl
+      margin-bottom: aCalc(24)
+    .title-xxl, .title-l
+      color: $White

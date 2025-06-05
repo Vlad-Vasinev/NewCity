@@ -1,0 +1,289 @@
+.calc
+  .calc__wrapper 
+    .filter__sort 
+      .select-fields
+        <div class="select-fields__wrapper">
+          p.select-fields__wrapper-text.p1 New City / Cascade-18
+          .select-fields__wrapper-list
+            label
+              p First City / Cascade-18
+              input(placeholder="Cheaper first" type="checkbox")
+            label
+              p Old Town New / Cascade-18
+              input(placeholder=" More expensive at first" type="checkbox")
+            label
+              p Old Town New / Cascade-1
+              input(placeholder="First with a smaller area" type="checkbox")
+            label 
+              p Old Town New / Casce-1888
+              input(placeholder=" First with a larger area" type="checkbox")
+        </div>
+      .select-fields
+        <div class="select-fields__wrapper">
+          p.select-fields__wrapper-text.p1 4th entrance
+          .select-fields__wrapper-list
+            label
+              p.p1 Cheaper first
+              input(placeholder="Cheaper first" type="checkbox")
+            label
+              p.p1 More expensive at first
+              input(placeholder=" More expensive at first" type="checkbox")
+            label
+              p.p1 First with a smaller area
+              input(placeholder="First with a smaller area" type="checkbox")
+            label
+              p.p1 СFirst with a larger area
+              input(placeholder=" First with a larger area" type="checkbox")
+        </div>
+    .filter-chess
+      .filter__form-field
+        .checkboxes 
+          <label class="chess-cell">
+            <span class="checkmark chess-empty">
+              p.p1 St
+            </span>
+          </label>
+          <label class="chess-cell">
+            <span class="checkmark chess-inactive-primary">
+              p.p1 1
+            </span>
+          </label>
+          <label class="chess-cell">
+            <span class="checkmark chess-inactive-secondary">
+              p.p1 2
+            </span>
+          </label>
+          <label class="chess-cell">
+            <input type="checkbox">
+            <span class="checkmark chess-active-primary">
+              p.p1 3
+            </span>
+          </label>
+          <label class="chess-cell">
+            <input type="checkbox">
+            <span class="checkmark chess-active-secondary">
+              p.p1 4
+            </span>
+          </label>
+      .filter-chess__about 
+        p.p2 Floor
+        p.p2 Price, million ₽
+    .chess-block
+      .chess-column 
+        .filter__form-field
+          .chess-grid
+            .checkboxes 
+              - var n = 0
+              while n < 8
+                <label class="chess-cell container-booked">
+                  <span class="checkmark chess-empty">
+                    p.p1 1
+                  </span>
+                </label>
+                - n++
+      .filter-chess
+        .filter__form-field
+          .chess-grid
+            .checkboxes 
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-empty">
+                  p.p1 St
+                </span>
+              </label>
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-inactive-primary">
+                  p.p1 1
+                </span>
+              </label>
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-inactive-secondary">
+                  p.p1 2
+                </span>
+              </label>
+              - var n = 0
+              while n < 10
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-inactive-secondary">
+                    p.p1 6
+                  </span>
+                </label>
+                - n++
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary">
+                  p.p1 3
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-secondary">
+                  p.p1 4
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-empty-border">
+                  p.p1 5
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary chess-info-primary-first">
+                  p.p1 6
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary chess-info-primary-second">
+                  p.p1 7
+                </span>
+              </label>
+              - var k = 0
+              while k < 10
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-second">
+                    p.p1 6
+                  </span>
+                </label>
+                - k++
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary chess-info-primary-grid">
+                  p.p1 8
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary chess-info-secondary-grid">
+                  p.p1 9
+                </span>
+              </label>
+              - var d = 0
+              while d < 10
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-secondary-grid">
+                    p.p1 6
+                  </span>
+                </label>
+                - d++
+              - var de = 0
+              while de < 4
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border chess-booked chess-sold">
+                    +svgIcon('svg-lock')
+                  </span>
+                </label>
+                - de++
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-empty-border">
+                  +svgIcon('svg-male')
+                </span>
+              </label>
+              - var f = 0
+              while f < 5
+                <label class="chess-cell cell-booked">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border chess-booked chess-sold">
+                    +svgIcon('svg-male')
+                  </span>
+                </label>
+                - f++
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-empty-border">
+                  +svgIcon('svg-male')
+                </span>
+              </label>
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-empty">
+                  p.p1 St
+                </span>
+              </label>
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-inactive-primary">
+                  p.p1 1
+                </span>
+              </label>
+              <label class="chess-cell cell-booked">
+                <input type="checkbox">
+                <span class="checkmark chess-inactive-secondary">
+                  p.p1 2
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary">
+                  p.p1 3
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-secondary">
+                  p.p1 4
+                </span>
+              </label>
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-empty-border">
+                  p.p1 5
+                </span>
+              </label>
+              - var i = 0
+              while i < 3
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-empty-border">
+                    p.p1 6
+                  </span>
+                </label>
+                - i++
+              <label class="chess-cell">
+                <input type="checkbox">
+                <span class="checkmark chess-active-primary chess-info-primary-first">
+                  p.p1 6
+                </span>
+              </label>
+              - var ci = 0
+              while ci < 3
+                <label class="chess-cell">
+                  <input type="checkbox">
+                  <span class="checkmark chess-active-primary chess-info-primary-second">
+                    p.p1 7
+                  </span>
+                </label>
+                - ci++
+        .chess-info 
+          .chess-info__el 
+            <label class="chess-cell cell-booked">
+              <input type="checkbox">
+              <span class="checkmark chess-booked chess-empty-border">
+                p.p1 12,2
+              </span>
+            </label>
+            p.p1 On sale
+          .chess-info__el 
+            <label class="chess-cell cell-booked">
+              <input type="checkbox">
+              <span class="checkmark chess-booked chess-inactive-secondary">
+                p.p1 12,2
+              </span>
+            </label>
+            p.p1 Booked
+          .chess-info__el 
+            <label class="chess-cell cell-booked">
+              <input type="checkbox">
+              <span class="checkmark chess-empty-border chess-sold chess-booked">
+                +svgIcon('svg-lock')
+              </span>
+            </label>
+            p.p1 Sold

@@ -1,0 +1,18 @@
+
+.form-lf 
+  <div js-lazy>
+    img(src="img/living-facility/form-bg.jpg" alt="")
+  </div>
+  //- img(src="img/living-facility/form-bg.jpg" alt="")
+  .form-lf__el.form-order
+    .title-xxl Sign up for a tour
+    .title-l We will present the project and offer the best purchase options.
+    form.baseLf-form(id="form-modal" action="/local/ajax/forms.php" data-redirect='/thanks.html') 
+      .ui-input.required(js-input-focus)
+        input(type="text" name="name" id="name-gt" required placeholder="Your name").field-lf
+      .ui-input.required(js-input-focus)
+        input(type="tel" name="phone" id="phone-gt" required placeholder="+7").field-lf
+      .g-recaptcha(id="recaptcha37" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+      button.button-color.slide-button
+        span Sign up
+      .text-s By clicking the button, you agree to the terms of the privacy policy

@@ -1,0 +1,27 @@
+.full-slider.swiper-container 
+  .full-slider__wrapper.swiper-wrapper 
+    each path in sliderPath
+      .full-slider__item.swiper-slide 
+        .full-item(js-lazy) 
+          img(src=path alt="full element")
+          .full-item__content 
+            .full-item__content-info
+              .tag-text.p1 Discounts up to 7%
+              .tag-text.p1 Parking as a gift
+    //- .full-slider__item.swiper-slide 
+    //-   .full-item(js-lazy)
+    //-     img(src="img/full-slider-1.jpg" alt="full element")
+    //-     .full-item__content 
+    //-       .h1 Trade-in в ЖК Новый город 222
+    //-       .p1
+    //-         |Если квартира from Застройщика Новый Город гfromовы выкупить вашу
+    //-         |квартиру, иные Застройщики продажа через АН, фиксация брони на 2
+    //-         |месяца, скидка -2% from стоимости
+    //- .full-slider__item.swiper-slide 
+    //-   .full-item(js-lazy)
+    //-     img(src="img/apartment-slider-bg.jpg" alt="full element")
+    //-     .full-item__content 
+    //-       .full-item__content-info
+    //-         .tag-text.p1 Скидки to 77%
+    //-         .tag-text.p1 Паркингк и не только
+  .swiper-pagination

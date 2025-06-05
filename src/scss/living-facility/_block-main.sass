@@ -1,0 +1,52 @@
+
+.block-main 
+  position: relative
+  width: 100vw
+  height: aCalc(1080)
+  +r($sm)
+    height: 588px
+  .block-lf 
+    +r($sm)
+      height: 100%
+      position: absolute
+  .h1-lf, .title-m, .title-xl, .button-icon
+    color: $White
+  .img-wrapper
+    position: relative
+    width: 100vw
+    height: aCalc(1080)
+    +r($sm)
+      height: 588px
+    img, video
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+  .img-wrapper.had-loaded 
+    &::before
+      display: block
+      position: absolute
+      z-index: 1
+      content: ""
+      left: 0
+      top: 0
+      width: 100%
+      height: aCalc(370)
+      opacity: 0.6
+      background: linear-gradient(0deg, rgba(20, 20, 20, 0.00) 0%, rgba(20, 20, 20, 0.60) 82.8%)
+      +r($sm)
+        height: 278px
+  &__info 
+    position: absolute
+    top: aCalc(24)
+    gap: aCalc(410)
+    z-index: 100
+    display: flex
+    justify-content: space-between
+    +r($sm)
+      gap: 0
+      top: 0
+      padding: 78px 16px 16px
+      height: 100%
+      flex-direction: column
+      justify-content: space-between

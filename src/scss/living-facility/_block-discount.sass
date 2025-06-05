@@ -1,0 +1,105 @@
+
+.block-discount
+  &:not(.swiper-initialized)
+      .discount-wrapper
+        +r($sm)
+          gap: 8px
+      .discount-el
+        +r($sm)
+          width: 262px
+      .discount-el:nth-child(n + 3)
+        +r($sm)
+          display: none
+  +r($sm)
+    padding: 0 16px
+    margin-bottom: 24px
+
+.discount-wrapper 
+  display: flex
+  gap: aCalc(25)
+  +r($sm)
+    gap: unset
+
+.discount-el 
+  width: aCalc(477)
+  height: aCalc(580)
+  padding: aCalc(40)
+  border-radius: aCalc(12)
+  background-color: $White
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative
+  +r($sm)
+    height: 340px
+    padding: 16px
+    border-radius: 12px
+  &.discount-el_ordinary
+    &:hover 
+      button.slider-navigation-next.slide-button.slide-button_horizontal
+        .slide-button-inner
+          & > span
+            transform: translateX(-100%)
+  &.discount-el_small.discount-el_bg
+    &:hover 
+      button.slider-navigation-next.slide-button.slide-button_horizontal
+        .slide-button-inner
+          & > span
+            transform: translateX(-100%)
+  &__img 
+    position: absolute
+    z-index: 1
+    bottom: 0
+    right: 0
+    img 
+      width: 100%
+      height: aCalc(439)
+      object-fit: cover
+      border-radius: aCalc(12)
+      +r($sm)
+        width: 100%
+        height: 200px
+        border-radius: 12px
+  &.discount-el_little 
+    display: flex
+    padding: 0
+    background-color: transparent
+    flex-direction: column
+    justify-content: space-between
+    +r($sm)
+      display: none
+  .discount-el_small
+    height: aCalc(278)
+  &.discount-el_bg
+    background-color: $PaleGold
+    .discount-el__user-link 
+      background-color: $White
+  &.discount-el_mob 
+    display: none 
+    +r($sm)
+      display: flex 
+  &.discount-el_bg 
+    background-color: $PaleGold
+  &.discount-el_small.discount-el_bg 
+    background-color: $PaleGold
+    button.slider-navigation-next.slide-button.slide-button_horizontal
+      background-color: $White
+  &__user 
+    .slider-navigation-next.slide-button.slide-button_horizontal
+      background-color: $PaleGold
+      border-radius: aCalc(48)
+      +r($sm)
+        border-radius: 48px
+  &__user, &__info
+    position: relative
+    z-index: 1
+  &__user-link 
+    +r($sm)
+      position: relative
+      z-index: 1
+  .discount-el__user-link.button-arrow.slide-button.slide-button_horizontal
+    justify-content: initial
+  .title-xl
+    margin-bottom: aCalc(12)
+    +r($sm)
+      margin-bottom: 12px

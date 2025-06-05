@@ -1,0 +1,743 @@
+
+/*! .promotion style page*/
+a.h3.prom-btn
+  display: block
+  max-width: max-content
+  text-align: center
+  
+.prom-btn
+  cursor: pointer
+
+.prom-container 
+  margin: 0 auto
+  padding: 0 aCalc(12)
+  max-width: aCalc(1562)
+  width: 100%
+  +r($sm)
+    max-width: 696px
+    padding: 0 12px
+
+.prom-h-x
+  font-weight: 600
+  font-size: aCalc(40)
+  line-height: aCalc(40)
+  color: #282828
+  +r($sm)
+    font-size: 32px
+    line-height: 40px
+
+.prom-h1
+  font-weight: 600
+  font-size: aCalc(32)
+  line-height: aCalc(36)
+  color: #282828
+  +r($sm)
+    font-size: 24px
+    line-height: 28px
+
+.prom-h2
+  font-weight: 600
+  font-size: aCalc(24)
+  line-height: aCalc(24)
+  color: #282828
+  +r($sm)
+    font-size: 20px
+    line-height: 22px
+
+.prom-h2-medium
+  font-weight: 700
+  font-size: aCalc(24)
+  line-height: aCalc(28)
+  color: #282828
+  +r($sm)
+    font-size: 20px
+    line-height: 22px
+
+.prom-h3
+  font-weight: 600
+  font-size: aCalc(18)
+  line-height: aCalc(18)
+  color: #282828
+  +r($sm)
+    font-size: 16px
+    line-height: 18px
+
+.prom-p1
+  font-weight: 400
+  font-size: aCalc(16)
+  line-height: aCalc(20)
+  color: #737373
+  +r($sm)
+    font-size: 16px
+    line-height: 20px  
+
+.prom-p1-medium
+  font-weight: 400
+  font-size: aCalc(14)
+  line-height: aCalc(20)
+  color: #282828
+  +r($sm)
+    font-size: 16px
+    line-height: 20px  
+
+.prom-p2
+  font-weight: 400
+  font-size: aCalc(14)
+  line-height: aCalc(22)
+  color: #282828
+  +r($sm)
+    font-size: 12px
+    line-height: 14px  
+
+.prom-p3
+  font-weight: 400
+  font-size: aCalc(12)
+  line-height: aCalc(14)
+  color: $IndustrialRevolution
+  +r($sm)
+    font-size: 12px
+    line-height: 14px  
+
+.prom-p2-medium
+  font-weight: 600
+  font-size: aCalc(14)
+  line-height: aCalc(14)
+  color: #282828
+  +r($sm)
+    font-size: 12px
+    line-height: 14px  
+
+.prom-p2-small
+  font-weight: 400
+  font-size: aCalc(12)
+  line-height: aCalc(16)
+  color: #737373
+  +r($sm)
+    font-size: 12px
+    line-height: 14px  
+
+.prom-b1
+  font-weight: 500
+  font-size: aCalc(14)
+  line-height: aCalc(20)
+  color: #282828
+  transition: background .3s
+  &:hover 
+    background-color: #FFEBA4
+  +r($sm)
+    font-size: 12px
+    line-height: 14px 
+
+.prom-btn
+  min-width: aCalc(309)
+  padding: aCalc(20)
+  border-radius: aCalc(4)
+  background-color: #FFDD66
+  transition: background .3s
+  &:hover 
+    background-color: #FFEBA4
+  +r($sm)
+    min-width: 100%
+    padding: 20px
+    border-radius: 4px
+
+.prom-btn-empty
+  flex-shrink: 0
+  min-width: aCalc(184)
+  padding: aCalc(8)
+  border-radius: aCalc(4)
+  border: 1px solid #FFDD66
+  background-color: transparent
+  +r($sm)
+    min-width: 100%
+    padding: 8px
+    border-radius: 4px
+
+.prom-btn-filled
+  flex-shrink: 0
+  min-width: aCalc(184)
+  padding: aCalc(8)
+  border-radius: aCalc(4)
+  background-color: #FFDD66
+  +r($sm)
+    min-width: 100%
+    padding: 8px
+    border-radius: 4px
+
+.prom-hr 
+  margin: 0
+  border: none
+  height: 1px
+  background-color: #CDCDCD
+
+.promotion-block
+  position: relative
+  height: aCalc(650)
+  width: 100%
+  padding: aCalc(167) aCalc(60)
+  +r($sm)
+    height: 100vh
+    padding: 0
+    margin-bottom: 604px
+  img 
+    position: absolute
+    width: 100%
+    height: 100%
+    object-fit: cover
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 0
+  &__info 
+    position: relative
+    margin-bottom: aCalc(64)
+    +r($sm)
+      padding: 40px 12px
+  .prom-h-x, .prom-h3
+    position: inherit
+  .prom-h3 
+    margin-top: aCalc(24)
+    margin-bottom: aCalc(56)
+    +r($sm)
+      margin-top: 16px
+      margin-bottom: 48px
+    span 
+      margin-bottom: aCalc(8)
+      display: block
+      +r($sm)
+        margin-bottom: 8px
+
+.promotion 
+  h1.blog__title.h1.content-hide
+    +r($sm)
+      max-height: 20px
+  
+.pros-block
+  display: grid 
+  grid-template-columns: repeat(auto-fit, aCalc(312))
+  gap: aCalc(24)
+  +r($sm)
+    position: absolute
+    bottom: -560px
+    gap: 16px
+    grid-template-columns: repeat(1, 1fr)
+
+.pros-el 
+  position: relative
+  padding: aCalc(24)
+  width: aCalc(312)
+  min-height: aCalc(134)
+  +r($sm)
+    width: 100%
+    padding: 24px 16px
+    min-height: 114px
+  img
+    position: absolute
+    border-radius: aCalc(8)
+    +r($sm)
+      border: 1px solid $Gray
+      border-radius: 8px
+  .p1 
+    margin-top: aCalc(8)
+  .h3, .p1 
+    position: relative
+
+.steps-block
+  padding: aCalc(50) aCalc(60)
+  +r($sm)
+    padding: 0
+  &__title 
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px
+  .prom-hr 
+    margin-top: aCalc(50)
+    +r($sm)
+      margin-top: 40px
+  &__mesh 
+    display: grid 
+    grid-template-columns: repeat(auto-fit, aCalc(270))
+    margin-bottom: aCalc(64)
+    +r($sm)
+      grid-template-columns: repeat(1, 1fr)
+      margin-bottom: 31px
+
+.steps-el 
+  position: relative
+  width: aCalc(270)
+  +r($sm)
+    display: flex
+    width: 100% 
+    margin-bottom: 24px
+  &__step 
+    display: grid 
+    justify-content: center
+    align-items: center
+    width: aCalc(40)
+    height: aCalc(40)
+    border-radius: 50%
+    background-color: #FFDD66
+    color: #282828
+    +r($sm)
+      min-width: 28px
+      height: 28px
+    &::after 
+      position: absolute
+      content: ""
+      top: 17%
+      transform: translateY(-50%)
+      left: aCalc(40)
+      height: aCalc(2)
+      background-color: #737373
+      width: calc(100% - aCalc(40))
+      z-index: 1
+      +r($sm)
+        top: 99%
+        left: 13px
+        height: 90%
+        width: 2px
+      +r($ms + 7)
+        top: 99%
+  .h3 
+    margin-top: aCalc(24)
+    +r($sm)
+      margin-left: 24px
+  .p1
+    +r($sm)
+      margin-left: 24px
+      margin-top: 12px
+
+.steps-el:last-child
+  .steps-el__step 
+    &::after 
+      +r($sm)
+        top: 85%
+      +r($ms + 7)
+        top: 86%
+
+.steps-el:nth-child(2)
+  .steps-el__step 
+    &::after 
+      +r($ms + 7)
+        top: 86%
+
+.steps-el:nth-child(3)
+  .steps-el__step 
+    &::after 
+      +r($ms + 7)
+        top: 86%
+
+.steps-el:nth-child(4)
+  .steps-el__step 
+    &::after 
+      +r($ms + 7)
+        top: 100%
+
+.steps-el:nth-child(5)
+  .steps-el__step 
+    &::after 
+      +r($ms + 7)
+        top: 86%
+
+.apartment-block 
+  padding: 0 aCalc(60)
+  +r($sm)
+    padding: 0
+    margin-top: 40px
+  .prom-hr 
+    margin-top: aCalc(50)
+    +r($sm)
+      margin-top: 40px
+  .h3.prom-btn 
+    margin: aCalc(40) auto 0
+    +r($sm)
+      margin: 32px auto 0
+  &__title 
+    margin-bottom: aCalc(40)
+    +r($sm)
+      margin-bottom: 24px
+
+.apartment-sm-mesh
+  display: grid 
+  grid-template-columns: repeat(2, 1fr)
+  gap: aCalc(24)
+  margin-bottom: aCalc(24)
+  +r($sm)
+    gap: 8px
+    grid-template-columns: repeat(2, 1fr)
+    margin-bottom: 32px
+
+.apartment-price 
+  width: 100%
+  max-width: unset
+  text-align: left
+  padding: aCalc(20)
+  background-color: transparent
+  border-radius: aCalc(8)
+  border: 1px solid #CDCDCD
+  transition: background .3s
+  +r($sm)
+    border-radius: 8px
+    padding: 12px
+    width: 100%
+  &:hover 
+    background-color: #FFDD66
+    .apartment-price__count
+      border-color: #ffffff
+  &__counts 
+    display: flex
+    gap: aCalc(4)
+    margin-bottom: aCalc(20)
+    +r($sm)
+      display: none
+  &__count
+    width: aCalc(24)
+    height: aCalc(24)
+    border-radius: 50%
+    background-color: #FFDD66
+    border: aCalc(2) solid transparent
+    transition: background .3s, border .3s
+    +r($sm)
+      display: none
+
+.apartment-bg-mesh
+  display: grid 
+  grid-template-columns: repeat(auto-fit, aCalc(424))
+  gap: aCalc(24)
+  +r($sm)
+    gap: 16px
+    display: flex
+    flex-direction: column
+
+.apartment-card 
+  border-radius: aCalc(8)
+  border: 1px solid #FFEBA4
+  width: aCalc(424)
+  padding: aCalc(16)
+  transition: background .3s
+  +r($sm)
+    border-radius: 8px
+    width: 100%
+    padding: 16px
+  &:hover 
+    background-color: #FFF9E6
+  img 
+    margin: 0 auto
+  hr.prom-hr
+    margin-top: 0
+  .h2,  .prom-p2-medium
+    text-align: left
+  &__title 
+    margin-bottom: aCalc(16)
+    text-align: left
+    +r($sm)
+      margin-bottom: 16px
+  &__subtitle 
+    text-align: left
+    margin-top: aCalc(8)
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-top: 8px
+      margin-bottom: 16px
+  &__price 
+    margin-top: aCalc(16)
+    margin-bottom: aCalc(16)
+    display: flex
+    align-items: center
+    gap: aCalc(24)
+    +r($sm)
+      gap: 24px
+      margin-top: 16px
+      margin-bottom: 16px
+    .prom-p2-medium
+      padding: aCalc(8)
+      background-color: #6CE4AA
+      border-radius: aCalc(4)
+      +r($sm)
+        padding: 8px
+        border-radius: 4px
+  &__book 
+    display: flex
+    justify-content: space-between
+    margin-top: aCalc(16)
+    +r($sm)
+      margin-top: 16px
+      gap: 24px
+    a 
+      display: block
+      max-width: max-content
+      text-align: center
+      +r($sm)
+        min-width: 120px
+        width: 100%
+  &__descr 
+    margin-top: aCalc(16)
+    margin-bottom: aCalc(16)
+    display: grid 
+    grid-template-columns: repeat(2, aCalc(184))
+    gap: aCalc(24)
+    +r($sm)
+      display: block
+      margin-top: 8px
+      margin-bottom: 8px
+    div 
+      display: flex
+      justify-content: space-between
+      +r($sm)
+        margin-bottom: 8px
+      span:first-child 
+        color: #737373
+      span:last-child 
+        color: #282828
+
+.apartment-state
+  position: absolute
+  right: 0 
+  top: aCalc(24)
+  padding: aCalc(4)
+  border-radius: aCalc(4)
+  background-color: #6CE4AA
+  display: none
+  +r($sm)
+    top: 16px
+    padding: 4px
+    border-radius: 4px
+
+.apartment
+  padding: aCalc(20) aCalc(12)
+  border-radius: aCalc(8)
+  border: 1px solid #F2F2F2
+  position: relative
+  +r($sm)
+    border-radius: 8px
+    padding: 16px 12px
+  &.apartment_free 
+    .apartment-state 
+      display: block
+  &__title 
+    margin-bottom: aCalc(14)
+    +r($sm)
+      margin-bottom: 6px
+  &__descr 
+    display: flex
+    align-items: center
+    gap: aCalc(16)
+    +r($sm)
+      gap: 8px
+  &__user 
+    margin-top: aCalc(24)
+    display: flex
+    justify-content: space-between
+    +r($sm) 
+      margin-top: 24px
+    &-price 
+      .h2 
+        margin-bottom: aCalc(4)
+        +r($sm) 
+          margin-bottom: 4px
+    &-send 
+      a 
+        padding: aCalc(8)
+        border-radius: aCalc(4)
+        background-color: #FFDD66
+        text-align: center
+        +r($sm)
+          padding: 8px
+          border-radius: 4px
+  &__info 
+    margin-top: aCalc(24)
+    +r($sm)
+      margin-top: 16px
+    &-el 
+      border-bottom: 1px solid #CDCDCD
+      display: flex
+      justify-content: space-between
+      .p2 
+        padding: aCalc(10)
+        +r($sm)
+          padding: 10px
+      .p2:first-child 
+        width: 50%
+        color: #737373
+        border-right: 1px solid #CDCDCD
+      .p2:last-child 
+        color: #282828
+        width: 50%
+    &-el:last-child
+      border-bottom: none
+    &-descr 
+      padding: aCalc(12) 0
+      border-bottom: 1px solid #CDCDCD
+      border-top: 1px solid #CDCDCD
+      margin-bottom: aCalc(24)
+      +r($sm)
+        padding: 12px 0
+        margin-bottom: 16px
+      .prom-p2-medium
+        span 
+          display: block 
+          max-width: max-content
+          border-radius: aCalc(4)
+          margin-bottom: aCalc(4)
+          background-color: #FFDD66
+          padding: aCalc(4)
+          +r($sm)
+            padding: 4px
+            margin-bottom: 4px
+            border-radius: 4px
+    &-icon 
+      img, svg 
+        width: aCalc(56)
+        height: aCalc(56)
+        +r($sm)
+          width: 40px
+          height: 40px
+
+.apartment-slider
+  margin-top: aCalc(24) 
+  position: relative
+  +r($sm)
+    margin-top: 16px
+  &:not(.swiper-initialized) 
+    .apartment-slider__el:nth-child(n + 2) 
+      display: none
+  &__el 
+    margin-bottom: aCalc(20)
+    text-align: center
+    +r($sm)
+      margin-bottom: 12px
+    img 
+      margin: 0 auto
+      object-fit: cover
+      width: aCalc(210)
+      height: aCalc(180)
+      +r($sm)
+        width: auto
+        height: 180px
+  .apartment-slider__wrapper.swiper-wrapper
+  .control-inner
+    position: absolute
+    width: aCalc(424)
+    left: 0
+    bottom: aCalc(-20)
+    height: aCalc(10)
+    +r($sm)
+      width: 100%
+      bottom: -24px
+      height: 10px
+    .swiper-pagination-bullet
+      width: aCalc(12)
+      height: aCalc(12)
+      background-color: transparent
+      border: aCalc(2) solid #282828
+      +r($sm)
+        width: 12px
+        height: 12px
+        border: 2px solid #282828
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+      background-color: #FFDD66
+      border-color: transparent
+
+.promotion-form 
+  padding: 0 aCalc(60)
+  margin-bottom: aCalc(72)
+  +r($sm)
+    padding: 0
+  .p2 
+    color: #CDCDCD
+  .policy.p2
+    color: #282828
+  .form-order
+    border-radius: aCalc(8)
+    margin-top: aCalc(72)
+    margin-bottom: aCalc(24)
+    +r($sm)
+      border-radius: 8px
+      margin-top: 40px
+      margin-bottom: 24px
+
+.comparison-block 
+  padding: 0 aCalc(60)
+  margin-top: aCalc(58)
+  +r($sm)
+    margin-top: 40px
+    padding: 0
+  &__title
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 16px
+
+.comparison-mesh 
+  margin-top: aCalc(40)
+  border: 1px solid #F2F2F2
+  border-radius: aCalc(4)
+  display: grid 
+  grid-template-columns: repeat(auto-fit, minmax(aCalc(236), 1fr))
+  +r($hd)
+    grid-template-columns: repeat(auto-fit, minmax(aCalc(220), 1fr))
+  +r($sm)
+    border-radius: 4px
+    margin-top: 24px
+    grid-template-columns: repeat(3, 1fr)
+
+.comparison-el 
+  min-width: aCalc(236)
+  height: aCalc(88)
+  padding: aCalc(24)
+  border-bottom: 1px solid #F2F2F2
+  border-right: 1px solid #F2F2F2
+  +r($hd)
+    min-width: aCalc(220)
+  +r($sm)
+    min-width: unset
+    height: 56px
+    padding: 12px
+  svg 
+    width: aCalc(30)
+    height: aCalc(40)
+    +r($sm)
+      width: 18px
+      height: 24px
+  &.comparison-el_color 
+    svg 
+      path 
+        fill: #CDCDCD
+
+.comparison-el:nth-child(7)
+  +r($sm)
+    grid-column-start: 2
+    grid-row-start: 1
+.comparison-el:nth-child(13)
+  +r($sm)
+    grid-column-start: 3
+    grid-row-start: 1
+.comparison-el:nth-child(3)
+  +r($sm)
+    grid-column-start: 1
+    grid-row-start: 3
+.comparison-el:nth-child(4)
+  +r($sm)
+    grid-column-start: 1
+    grid-row-start: 4
+.comparison-el:nth-child(5)
+  +r($sm)
+    grid-column-start: 1
+    grid-row-start: 5
+.comparison-el:nth-child(6)
+  +r($sm)
+    grid-column-start: 1
+    grid-row-start: 6
+.comparison-el:nth-child(9)
+  +r($sm)
+    grid-column-start: 2
+    grid-row-start: 4
+.comparison-el:nth-child(10)
+  +r($sm)
+    grid-column-start: 2
+    grid-row-start: 5
+.comparison-el:nth-child(12)
+  +r($sm)
+    grid-column-start: 3
+    grid-row-start: 2
+/*! .promotion style page*/

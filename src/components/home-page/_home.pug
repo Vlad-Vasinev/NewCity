@@ -1,0 +1,49 @@
+.container
+  .home
+    include ../blocks/consultation-modal/_consultation-modal.pug
+    include ../blocks/quiz/_quiz.pug
+    .main-title
+      h1.blog__title.h1.content-hide Home
+    include ../blocks/grid-sliders/_grid-sliders.pug
+    include ../blocks/grid-solution/_grid-solution.pug
+    .mirror-grid 
+      - var n = 0 
+      while n < 1
+        .mirror-grid__el 
+          include ../blocks/mirror-block/_mirror-block-img.pug
+        - n++
+      - var no = 0 
+      while no < 1
+        .mirror-grid__el 
+          include ../blocks/mirror-block/_mirror-block-info.pug
+        - no++
+      - var nk = 0 
+      while nk < 1
+        .mirror-grid__el 
+          include ../blocks/mirror-block/_mirror-block-img.pug
+        - nk++
+    .block-page
+      include ../blocks/main-form/_main-form.pug
+    .block-page.mb-null
+      include ../blocks/main-banner/_main-banner.pug
+    .block-page
+      .benefits
+        .benefits__title.h1.block-page__title Advantages of our apartments
+        include ../blocks/grid-benefits/_grid-benefits.pug
+    .block-page.mb-null
+      .main-info 
+        .main-info__more
+          .main-info.h1 New City - developer <br> a company with a solid reputation
+          button.btn1.button-primary Learn more
+        include ../blocks/info-block/_info-block.pug
+    .block-page
+      .main-video 
+        .main-video__title.h1.block-page__title Our videos
+        include ../blocks/grid-video/_grid-video.pug
+        include ../blocks/navigate-links/_navigate-links.pug
+    .block-page
+      .main-news 
+        .main-news__title.h1.block-page__title Company news
+        include ../blocks/blog-list/_blog-list.pug
+    .block-page
+      include ../blocks/map-primary/_map-primary.pug

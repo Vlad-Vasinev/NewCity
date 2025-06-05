@@ -1,0 +1,49 @@
+- var sliderPath = ["img/apartment-slider-bg.jpg", "img/full-slider-1.jpg", "img/apartment-slider-bg.jpg"]
+
+section.apartment-complex
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .main-title
+    h1.blog__title.h1.content-hide Home
+    include ../blocks/full-slider/_full-slider.pug
+  .container
+    .block-page 
+      .block-info
+        .block-info__content
+          .h1 Comfort in the apartment and outside it
+          .p1
+            |Modern and dynamically developing residential complex
+            |"New City" is for those who value both the advantages of a big city and freedom.
+            |The microdistrict's space is planned with intelligence and love so that families can spend time in
+            |comfortable environment not only in apartments, but also outside them.
+          include ../blocks/titles-mesh/_titles-mesh.pug
+        .block-info__img 
+          img(src="img/apartment-info.jpg" alt="")
+    .block-page
+      .benefits__title.h1.block-page__title Peculiarities
+      include ../blocks/different-mesh/_different-mesh.pug
+    .block-page
+      .benefits__title.h1.block-page__title Infrastructure of the area
+      include ../blocks/map-secondary/_map-secondary.pug
+  .block-page 
+    .container
+      .prom-h1.block-page__title General plan
+    include ../blocks/layers/_layers.pug
+  .container
+    .block-page 
+      .prom-h1.block-page__title Select an apartment
+      include ../blocks/filter-mesh-slider/_filter-mesh-slider.pug
+    .block-page 
+      include ../blocks/any-info-accordeon/_any-info-accordeon.pug
+    .block-page
+      .terms 
+        .prom-h1.terms__title Calculate your benefit
+        include ../blocks/block-terms/_block-terms.pug
+    .block-page 
+      .product-form
+        include ../blocks/form-order/_form-order.pug
+    .block-page
+      .prom-h1.terms__title.block-page__title Construction dynamics
+      include ../blocks/slider-mesh/_slider-mesh.pug
+    .block-page
+      include ../blocks/map-primary/_map-primary.pug

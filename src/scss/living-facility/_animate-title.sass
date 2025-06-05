@@ -1,0 +1,39 @@
+
+.animate-title
+  position: relative
+  text-align: center
+  margin-bottom: aCalc(160)
+  +r($sm)
+    margin-bottom: 111px
+  &__icon 
+    max-width: max-content
+    margin: 0 auto aCalc(30)
+    +r($sm)
+      margin: 0 auto 20px
+    svg, img 
+      width: aCalc(80)
+      height: aCalc(80)
+      object-fit: cover
+      +r($sm)
+        width: 72px
+        height: 72px
+  &__static
+    position: relative
+    background-color: $White
+    z-index: 100
+  &__static, &__active, .title-el
+    text-transform: uppercase
+    font-size: aCalc(90)
+    font-weight: 300
+    line-height: aCalc(98)
+    letter-spacing: aCalc(-6)
+    color: $PaleGold
+    +r($sm)
+      font-size: 40px
+      letter-spacing: -2
+      line-height: 42px
+  .title-wrapper.swiper-container
+    overflow: hidden
+    max-height: aCalc(110)
+    +r($sm)
+      max-height: 43px

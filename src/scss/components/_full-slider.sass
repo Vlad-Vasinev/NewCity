@@ -1,0 +1,80 @@
+/*! .full-slider style */
+.full-slider 
+  overflow-x: hidden
+  position: relative
+  margin-bottom: aCalc(48)
+  .swiper-pagination
+    position: absolute
+    left: auto
+    right: aCalc(60)
+    bottom: aCalc(38)
+    width: aCalc(160)
+    z-index: 1
+    display: flex
+    gap: aCalc(13)
+    +r($sm)
+      gap: 16px 
+      right: auto
+      width: 100%
+      bottom: 32px
+      justify-content: center
+    span 
+      height: aCalc(3)
+      width: aCalc(44)
+      background-color: $ColdStone
+      font-size: 0
+      line-height: 0
+      border-radius: 0
+      flex-shrink: 0
+      margin: 0 !important
+      +r($sm)
+        height: 3px
+        width: 88px
+    span.swiper-pagination-bullet.swiper-pagination-bullet-active
+      background-color: #ffffff
+
+.full-item
+  position: relative
+  height: aCalc(700)
+  +r($sm)
+    height: 600px
+  img, video 
+    width: 100vw 
+    height: 100%
+    object-fit: cover
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+  &__content 
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    margin: 0 auto
+    padding-bottom: aCalc(48)
+    max-width: aCalc(1344)
+    width: 100%
+    position: relative
+    +r($sm)
+      padding: 0 20px
+      max-width: 696px
+      padding-bottom: 71px
+    .h1, .p1
+      max-width: aCalc(421)
+      color: #ffffff
+      +r($sm)
+        max-width: unset
+    .p1 
+      margin-top: aCalc(16)
+    &-info 
+      display: flex
+      gap: aCalc(16)
+      +r($sm)
+        gap: 16px
+    .tag-text.p1 
+      max-width: max-content
+      color: $DireWolf
+      display: inline
+/*! .full-slider style */

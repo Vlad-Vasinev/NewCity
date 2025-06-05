@@ -1,0 +1,39 @@
+/*! .element-banner style block*/
+.element-banner
+  height: aCalc(600)
+  border-radius: aCalc(8)
+  position: absolute
+  z-index: 10
+  top: 0
+  right: 0
+  margin: 0 0 aCalc(72) 0
+  transition: opacity .4s, padding .4s
+  opacity: 0
+  padding: 0
+  width: 0
+  +r($sm)
+    display: none
+  &.element-banner_margin
+    top: aCalc(60)
+    +r($sm)
+      top: unset
+  &.element-banner_start 
+    opacity: 1
+    position: sticky
+    z-index: 101
+    width: aCalc(424)
+    padding: 0 aCalc(24) aCalc(24) aCalc(24)
+  &__block 
+    display: block
+    position: relative
+    height: 100%
+    img 
+      position: absolute
+      left: 0
+      right: 0
+      top: 0 
+      bottom: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+/*! .element-banner style block*/

@@ -1,0 +1,183 @@
+/*! .blog style page*/
+.blog
+  margin-top: aCalc(64)
+  +r($sm)
+    padding: 0
+  
+.blog__title
+  margin-bottom: aCalc(32)
+  +r($sm)
+    margin-bottom: 32px
+
+.blog-list
+  display: grid
+  grid-gap: aCalc(32) aCalc(24)
+  justify-content: center
+  grid-template-columns: repeat(3, aCalc(424))
+  margin-bottom: aCalc(32)
+  +r($sm)
+    grid-gap: 32px 24px
+    grid-template-columns: repeat(2, 1fr)
+    margin-bottom: 32px
+
+.navigate-links
+  display: flex
+  justify-content: center
+  margin-bottom: aCalc(72)
+  +r($sm)
+    margin-bottom: 60px
+
+.navigate-links__el
+  display: grid
+  justify-content: center
+  align-content: center
+  max-width: aCalc(40)
+  width: 100%
+  height: aCalc(36)
+  background-color: #F2F2F2
+  font-size: aCalc(14)
+  font-style: normal
+  font-weight: 400
+  border-radius: aCalc(2)
+  line-height: aCalc(20)
+  transition: .3s
+  &:hover
+    background-color: #FFEBA4
+  +r($sm)
+    border-radius: 2px
+    max-width: 40px
+    width: 100%
+    height: 36px
+    font-size: 12px
+    line-height: 18px
+
+.navigate-links__el + .navigate-links__el 
+  margin-left: aCalc(8)
+  +r($sm)
+    margin-left: 8px
+
+.navigate-links__el.navigate-links__dots
+  display: flex
+  background-color: transparent
+
+.navigate-links__el.navigate-links__dots p 
+  width: aCalc(8)
+  height: aCalc(8)
+  align-self: center
+  border-radius: aCalc(4)
+  background-color: #F2F2F2
+  +r($sm)
+    border-radius: 4px
+    width: 8px
+    height: 8px
+
+.navigate-links__el.navigate-links__dots p + p 
+  margin-left: aCalc(2)
+  +r($sm)
+    margin-left: 2px
+
+.navigate-links__active
+  background-color: #FD6
+
+.form-order
+  padding: 0
+  border-radius: aCalc(8)
+  border: 2px solid #F2F2F2
+  margin-bottom: aCalc(72)
+  +r($sm)
+    border-radius: 8px
+    margin-bottom: 48px
+
+.form-order__top 
+  padding: aCalc(24) aCalc(24) 0 aCalc(24)
+  border-bottom: 2px solid #F2F2F2
+  +r($sm)
+    padding: 12px 16px
+
+.form-order__bottom
+  padding: aCalc(16) aCalc(24) aCalc(24)
+  +r($sm)
+    padding: 12px 16px 
+
+.form-order__el
+  display: flex
+  align-items: flex-end
+  .popup__login-wrap-btn
+    +r($ms + 100)
+      flex-direction: column
+  div + div 
+    +r($sm)
+      margin-top: 8px
+  +r($sm)
+    flex-direction: column
+    align-items: flex-start
+  .popup__login-wrap-btn
+    display: flex
+
+.form-order__el .ui-input
+  position: relative
+  margin-bottom: 0
+  height: auto
+  margin-right: aCalc(24)
+  border-bottom: aCalc(2) solid transparent 
+  transition: .3s
+  +r($sm)
+    width: 100%
+  label
+    position: static
+    color: #282828
+  input 
+    cursor: pointer
+    margin-top: aCalc(8)
+    max-width: aCalc(284)
+    width: 100%
+    max-height: aCalc(36)
+    height: 100%
+    border-radius: aCalc(2)
+    box-sizing: border-box
+    padding: aCalc(8) 
+    border: none
+    min-width: aCalc(215)
+    +r($sm)
+      margin-top: 8px
+      max-width: 100%
+      min-width: 100%
+      border-radius: 2px
+      max-height: 36px
+      padding: 8px
+
+.form-order__title
+  margin-bottom: aCalc(16)
+
+.form-order__title a 
+  cursor: pointer
+  margin-left: aCalc(4)
+  padding-bottom: aCalc(2)
+  border-bottom: 2px solid #FD6
+  +r($sm)
+    margin-left: 4px
+    padding-bottom: 2px
+
+.form-order__subtitle
+  display: block
+  margin-top: aCalc(8)
+  font-weight: 400
+  +r($sm)
+    margin-top: 8px
+
+.form__bottom-btn
+  margin-right: aCalc(16)
+  color: #282828
+  &.btn.button-primary
+    font-weight: 500
+  +r($sm)
+    max-height: 36px
+    margin-right: 16px
+    margin-bottom: 8px
+
+// .input-hover
+//   border-bottom: aCalc(2) solid #FD6 !important
+
+.navigate-links__el.navigation-active
+  background-color: #FD6
+/*! .blog style page*/

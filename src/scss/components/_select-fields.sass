@@ -1,0 +1,104 @@
+
+/*! .select-fields style block*/
+.select-fields
+  &__wrapper 
+    cursor: pointer
+    position: relative
+    height: aCalc(44)
+    background-color: #ffffff
+    +r($sm)
+      height: 44px
+    p 
+      padding: aCalc(12) aCalc(12) 0
+      +r($sm)
+        padding: 12px 12px 0    
+    &-list 
+      pointer-events: none
+      display: flex
+      flex-direction: column
+      position: relative
+      z-index: 101
+      opacity: 0
+      max-width: aCalc(294)
+      max-height: aCalc(196)
+      overflow-y: scroll !important
+      width: 100%
+      transition: transform .3s, height .3s, visibility .3s, opacity .3s
+      background-color: #ffffff
+      transform: translateY(aCalc(-20))
+      visibility: hidden
+      height: 0
+      +r($sm)
+        max-width: 294px
+        max-height: 196px
+      label 
+        pointer-events: auto
+        padding: 0 aCalc(12)
+        position: relative
+        height: aCalc(44)
+        width: 100%
+        transition: all .3s 
+        display: grid 
+        justify-content: flex-start
+        align-items: center
+        +r($sm)
+          padding: 0 12px
+          height: 44px
+        p   
+          pointer-events: none
+          padding: 0
+        &:hover 
+          background-color: #ffffff
+        input
+          pointer-events: auto
+          left: 0
+          opacity: 0
+          position: absolute
+          &::placeholder
+            color: #000000
+      .hided-label
+        p 
+          color: #ffffff
+    &-list.list_active
+      transform: translateY(aCalc(10))
+      height: auto
+      visibility: visible
+      opacity: 1
+    &-list.list_checker
+    input 
+      cursor: pointer
+      width: 100%
+      height: aCalc(44)
+      padding: aCalc(12)
+      transition: all .3s 
+      +r($sm)
+        padding: 12px
+        height: 44px
+      &::placeholder
+        color: #000000
+      &:hover 
+        background-color: blue
+        &::placeholder
+          color: #ffffff
+    select 
+      background-color: #ffffff
+      color: #282828
+      border: none
+      height: aCalc(44)
+      transition: transform .3s
+      +r($sm)
+        height: 44px
+    option 
+      color: #000000
+    option + option 
+      margin-top: aCalc(4)
+      +r($sm)
+        margin-top: 4px
+    .select_active 
+      transform: translateY(aCalc(40))
+      height: aCalc(88)
+      z-index: 100
+      +r($sm)
+        transform: translateY(40px)
+        height: 88px
+/*! .select-fields style block*/

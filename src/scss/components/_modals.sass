@@ -1,0 +1,384 @@
+/*! .modal style blocks*/
+.modal-background
+  width: 100%
+  top: 0
+  left: 0
+  height: 100%
+  position: fixed
+  z-index: 1502
+  display: block
+  background: #080808
+
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.3s, background-color 0.1s, visibility 0s 0.31s, z-index 0s 0.31s
+  &.modal-consultation 
+    opacity: 0.6
+    visibility: visible
+    transition: opacity 0.3s, background-color 0.1s, visibility 0s 0s, z-index 0s 0s
+
+
+.modal.opened ~ .modal-background, .modal-background.opened, .modal-background_opened
+  visibility: visible
+  opacity: 0.6
+  transition: opacity 0.3s, background-color 0.1s, visibility 0s 0s, z-index 0s 0s
+
+[js-modal-open]
+  cursor: pointer
+
+.modal
+  display: none
+  top: 0
+  height: auto
+  +aProp(width, 1118)
+  top: 45%
+  position: fixed
+  // z-index: 210
+  z-index: 1999 
+  opacity: 0
+  visibility: hidden
+  max-height: 95%
+  left: 50vw
+
+  transform: translate(-50%, -40%)
+  transition: opacity 0.2s, visibility 0s 0.41s, transform 0.4s
+  +r($sm)
+    width: 100%
+    top: 0
+    left: 0
+    min-height: 100vh
+    min-height: -webkit-fill-available
+    height: 100vh
+    max-height: 100vh
+    opacity: 1
+    transform: translate(-100%, 0%)
+    transition: visibility 0s 0.41s, transform 0.4s
+    
+
+  &.opened
+    opacity: 1
+    visibility: visible
+    transition: transform 0.4s, visibility 0s 0s, opacity 0.2s
+    transform: translate(-50%, -50%)
+    +r($sm)
+
+      transform: translate(0, 0)
+  &._inited
+    display: block
+  .modal__close-button
+    @extend .cls-btn-rotate
+    cursor: pointer
+    flex: 0 0 auto
+    
+  .modal__body
+    width: 100%
+    position: relative
+
+    +r($sm)
+      height: auto
+      overflow-y: scroll
+      overflow-x: hidden
+      +hideScroll
+      padding-bottom: 118px
+
+  .modal__inner
+    +aProp(border-radius, 12)
+    height: auto
+    width: 100%
+    position: relative
+    background-color: #fff
+    +aPadd(50, 60, 60, 60)
+    color: #000
+    +r($sm)
+      display: flex
+      flex-direction: column
+      height: 100%
+      border-radius: 0
+      padding: 15px
+      
+  .modal__top
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +aProp(margin-bottom, 40)
+    +r($sm)
+      margin-bottom: 24px
+    span
+      color: #000
+    h2, .h2
+      font-weight: 600
+    span:not([class])
+      @extend .h2
+      font-weight: 600
+    svg
+      display: block
+      +aProp(width, 32)
+      height: auto
+      +r($sm)
+        width: 32px
+
+
+.modal[data-modal-name="mini-gallery"]
+  width: 100vw
+  max-height: 100%
+  top: 0
+  left: 0
+  +rmin($sm1)
+    transform: none
+  .modal__inner
+    border-radius: 0
+    padding: 0
+    height: 100vh
+  .modal__top
+    z-index: 1
+    top: 0
+    left: 0
+    right: unset
+    padding: aCalc(40) aCalc(40) 0
+    margin-bottom: 0
+    +r($sm)
+      padding: 16px
+  .modal__body
+    padding: aCalc(100) aCalc(500)
+    padding-top: aCalc(28)
+    max-height: 100%
+    overflow-y: scroll
+    +r($sm)
+      padding: 8px 16px 118px
+
+
+.modal[data-modal-name="form-modal"], .modal.modal_with-form
+  text-align: center
+  +rmin($sm1)
+    +aProp(width, 600)
+  .modal__inner
+    +rmin($sm1)
+      padding: aCalc(50)
+  .modal__top
+    flex-direction: column
+    
+    +rmin($sm1)
+      +aProp(margin-bottom, 30)
+    
+    span + span
+      +rmin($sm1)
+        +aProp(margin-top, 10)
+      +r($sm)
+        margin-top: 10px
+    .modal__close-button
+      margin: 0
+      order: -1
+      +aProp(margin-bottom, 8)
+      +r($sm)
+        align-self: flex-end
+        margin-bottom: 57px
+      
+  .modal__body
+    padding: 0
+    +aProp(padding-bottom, 24)
+    +r($sm)
+      padding-bottom: 24px
+    button
+      +aProp(margin-top, 8) 
+      // width: 100%
+      width: auto
+      +r($sm)
+        margin-top: 8px
+    button.form__bottom-btn.button-primary
+      font-weight: 500
+    .form-policy
+      +aProp(margin-top, 24)
+      +r($sm)
+
+        margin-top: 16px
+.modal.modal_equip-table
+  +rmin($sm1)
+    display: none
+  +r($sm)
+    height: auto
+    min-height: unset
+    
+    top: unset
+    bottom: 0
+    &:not(.opened)
+      transform: translateY(100%)
+    .modal__inner
+      border-radius: 24px 24px 0 0
+    .modal__body
+      padding: 0
+      padding-bottom: 17px
+    .modal__top
+      justify-content: center
+  
+.modal.modal_on-map
+  top: unset
+  bottom: 0
+  height: auto
+  min-height: unset
+  transform: translate(0, 100%)
+  &.opened
+    transform: translate(0, 0)
+  +rmin($sm1)
+    display: none
+  .modal__body
+    padding: 0
+  .modal__top
+    margin-bottom: 0
+  .modal__inner
+    
+      
+        
+    +r($sm)
+      border-radius: 24px 24px 0 0
+      height: auto
+      &:before
+        content: ''
+        position: absolute
+        z-index: 1
+        width: 50px
+        height: 2px
+        border-radius: 2px
+        top: 8px
+        left: calc( 50% - 25px )
+        background-color: #E0E0E0
+.modal[data-modal-name="what-included-modal"]
+  
+  +rmin($sm1)
+    height: 100%
+    max-height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    transform: translateY(0)
+    overflow-y: scroll
+    padding: 40px 0
+    padding-left: var(--scrollbar-width)
+    .modal__inner
+      +aProp(width, 1026)
+      margin: 0 auto
+    .modal__top
+      flex-direction: column
+      +aProp(margin-bottom, 30)
+      .modal__close-button
+        margin: 0
+        order: -1
+        +aProp(margin-bottom, 8)
+  +r($sm)
+    .modal__body
+      padding-bottom: 0
+
+.loading 
+  
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: 25%
+    background-color: #fff9
+    top: 0
+    left: 0
+    z-index: 1
+    background-position: center
+    background-image: url(../img/loadingIcon.svg)
+.form-response
+  width: 100%
+  display: none
+  +r($sm)
+    font-size: 24px
+    line-height: 32px
+
+.form-response, .form-request
+  &.hidden
+    display: none
+  &.visible
+    display: block
+.error-message-ctr
+  text-align: center
+  color: #f44
+
+.modal.modal-order 
+  max-width: aCalc(1320)
+  width: 100%
+  +r($sm)
+    max-width: 100%
+    padding-top: 0
+  .modal__inner 
+    border-radius: aCalc(8)
+    border: aCalc(2) solid #F2F2
+    padding: aCalc(24) 0
+    +r($sm)
+      border: 2px solid #F2F2
+      padding-top: 0
+  .modal__top 
+    padding: 0 aCalc(24)
+    flex-direction: row
+    text-align: left
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 16px
+      padding: 0 12px
+  .ui-input
+    text-align: left
+  .form-order__input
+    +r($sm)
+      border-radius: 2px
+      padding: 8px
+  .popup__login-wrap-btn
+    align-items: flex-end
+    +r($sm)
+      align-items: flex-start
+      width: 100%
+    .policy.p2
+      text-align: left
+  .form__bottom-btn.button-primary.btn1
+    max-height: aCalc(36)
+    max-width: aCalc(144)
+    +r($sm)
+      max-width: 128px
+      padding: 8px 16px
+      max-height: 34px
+      margin-bottom: 8px
+  .form-order
+    margin-bottom: 0
+    +r($sm)
+      position: relative
+  .form-order-hr
+    margin: 0
+  .form-order__title
+    margin-bottom: 0
+    a 
+      +r($sm)
+        display: block
+        max-width: max-content
+  .modal__body
+    margin-top: aCalc(16)
+    padding: 0 aCalc(24)
+    +r($sm)
+      margin-top: 16px
+      padding: 0 12px
+  .form-order__top
+    order: -2
+    padding-left: 0
+    padding-top: 0
+    border-bottom: none
+    +r($sm)
+      padding-top: 60px
+  .form-response
+    text-align: center
+  .h2.form-response
+    +r($sm)
+      margin-top: 60px
+  .modal__close-button
+    order: 0
+    +r($sm)
+      position: absolute
+      right: 8px
+      top: 8px
+  .form-order
+    border: none
+/*! .modal style blocks*/

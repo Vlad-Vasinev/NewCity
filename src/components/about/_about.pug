@@ -1,0 +1,70 @@
+section.about
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .main-title
+    h1.blog__title.h1.content-hide Mortgage
+  .container
+    .block-pros
+      .block-pros__top 
+        h1.block-pros__top-title
+          |New City is a development company with a solid reputation
+        .block-pros__top-texts 
+          .p1 
+            |The New City Group of Companies is a leader in the construction industry
+            |in the Kaluga Region with a solid reputation and a strong competitive position
+            |in the market. Since 2006, more than 100,000 square
+            |meters of residential and commercial real estate have been designed and built.
+          .p1 
+            |Our activities include all areas of development: design,
+            |construction, automation, implementation and operation of real estate.
+    .block-page.mt-small 
+      include ../blocks/brief-info/_brief-info.pug
+    .block-page 
+      .block-pros
+        .block-pros__top 
+          h1.block-pros__top-title
+            |Universe "New City" -
+            span.h2 development of areas that create their own ecosystem and provide residents with comfort
+          .block-pros__top-texts 
+            .p1 
+              |According to the results of 2022, the New City Group of Companies is in first place
+              |in the rating of developers in the Kaluga Region in terms of the volume of current construction.
+              |Our result for this indicator is 55.9 thousand square meters.
+            .p1 
+              |The company's project portfolio includes 3 residential complexes: "Novy Gorod", "Kantri" and "Sosedi".
+              |The new buildings are equipped with underground parking, courtyards without cars, separate storage rooms,
+              |pram and bicycle rooms, as well as paw washers for dogs. The residential complex
+              |"Novy Gorod" has repeatedly become the best in the Kaluga region according to the independent portal ERZ.
+    .block-page 
+      .mirror-grid 
+        - var n = 0 
+        while n < 1
+          .mirror-grid__el 
+            include ../blocks/mirror-block/_mirror-block-img.pug
+          - n++
+        - var no = 0 
+        while no < 1
+          .mirror-grid__el 
+            include ../blocks/mirror-block/_mirror-block-info.pug
+          - no++
+    .block-page 
+      include ../blocks/info-summary/_info-summary.pug
+    .block-page 
+      .h1.block-page__title Our history
+      include ../blocks/video-section/_video-section.pug
+    .block-page 
+      .h1.block-page__title Values
+      include ../blocks/blog-list/_blog-list.pug
+    .block-page
+      .h1.block-page__title.block-pros__top-title
+        |Team
+      include ../blocks/company-slider/_company-slider.pug
+    .block-page 
+      .join-team 
+        .h2 Join our team!
+        .p1 We take a flexible approach to the needs of specialists, providing <br> individual working conditions
+        .join-team__btns 
+          button.btn1.button-secondary Submit a vacancy
+          button.btn1.button-primary Vacancies
+    .block-page 
+      include ../blocks/map-primary/_map-primary.pug

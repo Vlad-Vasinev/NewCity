@@ -1,0 +1,347 @@
+// lf ui-page-facility
+
+.ui-facility-container
+  .ui-containers
+    grid-template-columns: auto
+  .block-gap + .block-gap
+    margin-bottom: aCalc(32)
+    +r($sm)
+      margin-bottom: 32px
+
+h1.h1-lf, .h1-lf 
+  font-size: aCalc(96)
+  line-height: aCalc(86)
+  font-weight: 500
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 50px
+    line-height: 45px
+
+.title-xxxl
+  font-size: aCalc(56)
+  line-height: aCalc(56)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 24px
+    line-height: 29px
+    font-weight: 500
+
+.title-xxl
+  font-size: aCalc(32)
+  line-height: aCalc(38)
+  font-weight: 500
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 24px
+    line-height: 29px
+  &.title-xxl_mobhidden
+    +r($sm)
+      display: none
+  &.title-xxl_deskhidden
+    display: none
+    +r($sm)
+      display: block
+
+.title-xl
+  font-size: aCalc(24)
+  line-height: aCalc(31)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 16px
+    line-height: 21px
+
+.title-l
+  font-size: aCalc(18)
+  line-height: aCalc(23)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 16px
+    line-height: 21px
+
+.title-l-bold
+  font-size: aCalc(18)
+  line-height: aCalc(23)
+  font-weight: 600
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 16px
+    line-height: 21px
+
+.title-m
+  font-size: aCalc(16)
+  line-height: aCalc(21)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 14px
+    line-height: 18px
+
+.title-s
+  font-size: aCalc(14)
+  line-height: aCalc(18)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 14px
+    line-height: 18px
+
+.title-animated
+  font-size: aCalc(90)
+  line-height: aCalc(81)
+  font-weight: 300
+  color: $ConfidentYellow
+  +r($sm)
+    font-size: 40px
+    line-height: 36px
+
+.paragraph-lf
+  font-size: aCalc(16)
+  line-height: aCalc(21)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 12px
+    line-height: 16px
+
+.button-lf
+  font-size: aCalc(16)
+  line-height: aCalc(22)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 14px
+    line-height: 19px
+
+.text-button-lf
+  font-size: aCalc(16)
+  line-height: aCalc(21)
+  font-weight: 400
+  color: $ChaosBlack
+  +r($sm)
+    font-size: 14px
+    line-height: 18px
+
+.button-color, .button-color.slide-button
+  width: aCalc(192)
+  border-radius: aCalc(40)
+  padding: aCalc(14) aCalc(24)
+  background-color: $PaleGold
+  font-size: aCalc(16)
+  line-height: aCalc(22)
+  font-weight: 400
+  color: $ChaosBlack
+  transition: all .3s
+  max-height: aCalc(60)
+  padding-top: 0
+  padding-bottom: 0
+  // display: grid
+  // justify-content: center
+  // align-items: center
+  +r($sm)
+    width: 100%
+    border-radius: 40px
+    padding: 14px 24px
+    font-size: 14px
+    line-height: 19px
+    max-height: 46px
+  span
+    padding: aCalc(14) aCalc(24)
+    font-size: aCalc(16)
+    line-height: aCalc(22)
+    font-weight: 400
+    color: $ChaosBlack
+    max-height: aCalc(60)
+    +r($sm)
+      padding: 14px 24px
+      max-height: 46px
+      font-size: 14px
+      line-height: 19px
+  &:hover 
+    background-color: $Cowbell
+  &.button-color_disabled
+    background-color: $WhiteSmoke
+    color: $BlackMana
+    cursor: not-allowed
+  &.button-color_dots
+    display: grid 
+    justify-content: center
+    align-items: center
+    svg 
+      width: aCalc(27)
+      height: aCalc(22)
+      +r($sm)
+        width: 27px
+        height: 22px
+
+.button-icon
+  position: relative
+  height: aCalc(21)
+  color: $ChaosBlack
+  font-size: aCalc(16)
+  line-height: aCalc(21)
+  padding-right: aCalc(10)
+  font-weight: 400
+  +r($sm)
+    padding-right: 10px
+    font-size: 14px
+    line-height: 18px
+  img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    width: aCalc(5)
+    height: aCalc(10)
+    +r($sm)
+      width: 5px
+      height: 10px
+  span 
+    position: relative
+    height: aCalc(21)
+    color: $ChaosBlack
+    font-size: aCalc(16)
+    line-height: aCalc(21)
+    padding-right: aCalc(10)
+    font-weight: 400
+    +r($sm)
+      padding-right: 10px
+      font-size: 14px
+      line-height: 18px
+    img
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+      width: aCalc(5)
+      height: aCalc(10)
+      +r($sm)
+        width: 5px
+        height: 10px
+  &.button-icon_disabled
+    color: $BlackMana
+    cursor: not-allowed
+    img 
+      opacity: 0.5
+
+.button-arrow 
+  width: aCalc(48)
+  height: aCalc(48)
+  display: grid 
+  justify-content: center
+  align-items: center
+  background-color: $Cowbell
+  border-radius: aCalc(48)
+  +r($sm)
+    width: 40px
+    height: 40px
+    border-radius: 48px
+  svg 
+    width: aCalc(10)
+    height: aCalc(16)
+    +r($sm)
+      width: 10px
+      height: 16px
+  &.button-arrow_left
+    svg 
+      transform: rotate(0deg)
+  &.button-arrow_right
+    svg 
+      transform: rotate(180deg) translateX(aCalc(-2))
+      +r($sm)
+        transform: rotate(180deg) translateX(-2px)
+  &.button-arrow_disabled
+    background-color: $WhiteSmoke
+    cursor: not-allowed
+    svg 
+      path
+        stroke: $BlackMana
+  &.button-arrow_empty 
+    background-color: transparent
+    border-radius: none
+
+.pag-tab
+  width: aCalc(72)
+  padding: aCalc(6) aCalc(10)
+  display: flex 
+  justify-content: center
+  align-items: center
+  border-radius: aCalc(24)
+  gap: aCalc(4)
+
+.tab-lf
+  width: aCalc(81)
+  padding: aCalc(8) aCalc(12)
+  text-align: center
+  font-size: aCalc(16)
+  line-height: aCalc(21)
+  background-color: $ChaosBlack
+  color: $White
+  border-radius: aCalc(24)
+  transition: all .3s 
+  &:hover 
+    background-color: rgb(15, 15, 15, 0.4)
+  +r($sm)
+    width: 81px
+    border-radius: 24px
+    padding: 8px 12px
+    font-size: 14px
+    line-height: 18px
+  &.tab-lf_icon 
+    width: aCalc(109)
+    position: relative
+    padding-left: aCalc(28)
+    +r($sm)
+      width: 109px
+      padding-left: 28px
+    svg 
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: aCalc(12)
+      width: aCalc(18)
+      height: aCalc(18)
+      +r($sm)
+        left: 12px
+        width: 18px
+        height: 18px
+    
+.field-lf 
+  width: aCalc(343)
+  padding: aCalc(19) aCalc(16)
+  border-radius: aCalc(12)
+  background-color: $WhiteSmoke
+  color: $BlackMana
+  font-size: aCalc(16)
+  line-height: aCalc(22)
+  border: 1px solid transparent
+  transition: all .3s
+  &.field-lf_active
+    color: $ChaosBlack
+    &::placeholder
+      color: $ChaosBlack
+  &::placeholder
+    font-size: aCalc(16)
+    line-height: aCalc(22)
+    transition: all .3s
+    +r($sm)
+      font-size: 14px
+      line-height: 19px
+  &:focus 
+    border: 1px solid $PaleGold
+    color: $ChaosBlack
+    &::placeholder
+      color: $ChaosBlack
+  +r($sm)
+    width: 343px
+    border-radius: 12px
+    padding: 16px 12px
+    font-size: 14px
+    line-height: 19px
+  &.field-lf_disabled
+    cursor: not-allowed
+    color: rgb(133, 133, 133, 0.5)
+    &::placeholder
+      color: rgb(133, 133, 133, 0.5)

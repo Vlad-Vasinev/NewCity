@@ -1,0 +1,54 @@
+/*! .meshed-block style block*/
+.meshed-block
+  display: block
+  position: relative
+  overflow: hidden
+  max-width: max-content
+  img 
+    border-radius: aCalc(8)
+    +r($sm)
+      border-radius: 8px
+  &::after
+    position: absolute
+    left: 0
+    bottom: 0
+    transform: translateY(200%)
+    transition: transform .3s
+    content: ""
+    height: aCalc(8)
+    width: 100%
+    z-index: 11
+    background-color: $PaleGold
+    +r($sm)
+      height: 8px
+  &:hover 
+    &::after
+      transform: translateY(0)
+  &.meshed-block_primary
+    img
+      width: aCalc(872)
+      height: aCalc(324)
+      +r($sm)
+        width: 100%
+        height: 228px
+  &.meshed-block_secondary
+    img
+      width: aCalc(424)
+      height: aCalc(324)
+      +r($sm)
+        width: 100%
+        height: 228px
+    .meshed-block__text
+      display: none
+  &__text 
+    padding: aCalc(24)
+    background-color: $Porcelain
+    position: absolute
+    bottom: 0
+    height: aCalc(92)
+    width: 100%
+    z-index: 10
+    +r($sm)
+      height: 72px
+      padding: 12px
+/*! .meshed-block style block*/

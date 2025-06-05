@@ -1,0 +1,74 @@
+/*! .info-block style block*/
+.info-block 
+  display: grid
+  grid-template-columns: repeat(7, aCalc(165))
+  grid-template-rows: repeat(2, aCalc(140))
+  gap: aCalc(24)
+  +r($sm)
+    display: flex
+    flex-direction: column
+  &__el
+    border-radius: aCalc(8)
+    +r($sm)
+      border-radius: 8px
+  &__el.info-block_primary
+    grid-column: 1 / span 3
+    grid-row: 1 / span 2
+    +r($sm)
+      margin-bottom: 24px
+    img 
+      width: aCalc(648)
+      height: aCalc(304)
+      border-radius: aCalc(8)
+      +r($sm)
+        width: 100%
+        height: 228px
+        border-radius: 8px
+  .info-block__wrapper
+    grid-column: 4 / span 5
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(2, aCalc(140))
+    gap: aCalc(24)
+    +r($sm)
+      display: flex
+      gap: 24px
+      flex-direction: column
+    .info-block__inner:nth-child(1)
+      .info-block_tertiary
+        margin-left: aCalc(24)
+        +r($sm)
+          margin-left: 0
+    .info-block__inner:nth-child(2)
+      .info-block_tertiary
+        margin-right: aCalc(24)
+        +r($sm)
+          margin-right: 0
+    .info-block__inner
+      display: flex
+      justify-content: space-between
+    .info-block__inner
+      +r($sm)
+        display: flex
+        flex-direction: column
+        gap: 24px
+  &__el.info-block_secondary
+    padding: aCalc(24) aCalc(32)
+    min-width: aCalc(368)
+    width: 100%
+    height: aCalc(140)
+    +r($sm)
+      padding: 12px
+      min-width: unset
+      height: auto
+  &__el.info-block_tertiary
+    padding: aCalc(24) aCalc(32)
+    width: aCalc(256)
+    height: aCalc(140)
+    +r($sm)
+      padding: 12px
+      width: 100%
+      height: auto
+  &__el.info-block_secondary, .info-block_tertiary
+    background-color: $DownFeatures
+/*! .info-block style block*/

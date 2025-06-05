@@ -1,0 +1,117 @@
+
+.carousel-lf
+  overflow: hidden
+  +r($sm)
+    padding: 0 16px
+  &:not(.swiper-initialized)
+    .carousel-slide:nth-child(n + 5)
+      display: none
+    .carousel-wrapper
+      display: flex
+      gap: aCalc(24)
+      .carousel-slide
+        max-width: max-content
+  .control-inner
+    gap: aCalc(12)
+    display: flex
+    margin-top: aCalc(37)
+    justify-content: flex-end
+    align-items: center
+    +r($sm)
+      display: none
+      gap: 8px
+      margin-top: 24px
+    .swiper-pagination
+      padding: aCalc(14) aCalc(16)
+      //max-height: aCalc(33)
+      position: initial
+      order: 1
+      border-radius: aCalc(24)
+      background-color: rgba(15, 15, 15, 0.20)
+      backdrop-filter: blur(18px)
+      color: $White
+      +r($sm)
+        border-radius: 24px
+        //max-height: 40px
+        font-size: 16px
+        padding: 6px 10px
+        width: auto
+      span 
+        color: $White
+        font-size: aCalc(16)
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        width: aCalc(21)
+        flex-shrink: 0
+        +r($sm)
+          width: 16px
+          font-size: 16px
+    .slider-navigation-prev.slide-button.slide-button_horizontal, .slider-navigation-next.slide-button.slide-button_horizontal
+      border-radius: aCalc(48)
+      +r($sm)
+        border-radius: 48px
+        display: block
+      position: initial
+    .slider-navigation-prev.slide-button.slide-button_horizontal
+      order: 2
+    .slider-navigation-next.slide-button.slide-button_horizontal
+      order: 3
+    .swiper-pagination-current
+      +r($sm)
+        margin-right: 4px
+    .swiper-pagination-total
+      opacity: 0.4
+      +r($sm)
+        margin-left: 4px
+
+.carousel-slide
+  position: relative
+  &:hover 
+    img 
+      transform: scale(1.15)
+  img, video 
+    transition: transform .3s
+    object-fit: cover
+    width: aCalc(352)
+    height: aCalc(250)
+    border-radius: aCalc(12)
+    +r($sm)
+      width: 100%
+      height: 279px
+      border-radius: 12px
+  &__count 
+    display: flex
+    align-items: center
+    gap: aCalc(6)
+    position: absolute
+    z-index: 1
+    left: aCalc(8)
+    bottom: aCalc(8)
+    padding: aCalc(6) aCalc(8)
+    border-radius: aCalc(6)
+    background-color: rgba(15, 15, 15, 0.40)
+    backdrop-filter: blur(8px)
+    +r($sm)
+      gap: 6px
+      left: 8px
+      bottom: 8px
+      padding: 6px 8px
+      border-radius: 6px
+    svg 
+      width: aCalc(18)
+      height: aCalc(18)
+      +r($sm)
+        width: 18px
+        height: 18px
+  &__content 
+    border-radius: aCalc(12)
+    overflow: hidden
+    +r($sm)
+      border-radius: 12px
+  .title-l
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 14px
+  .title-s
+    color: $White

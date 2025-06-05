@@ -1,0 +1,23 @@
+section.filter
+	include ../blocks/consultation-modal/_consultation-modal.pug
+	include ../blocks/quiz/_quiz.pug
+	.main-title
+		h1.blog__title.h1.content-hide Home
+	button.filter__block-count <span>432</span> offers
+	.container 
+		h1.blog-element__title.blog__title.h1 Sale of apartments in Obninsk
+		button.filter__open.btn1.button-primary Show filters
+		include ../blocks/filter-presets/_filter-presets.pug
+	include ../blocks/filter-block/_filter-block.pug
+	.container.container-filtered
+		include ../blocks/filtered/_filtered.pug
+		include ../blocks/navigate-links/_navigate-links.pug
+	.container 
+		include ../blocks/info-video/_info-video.pug
+	.container 
+		include ../blocks/grid-solution/_grid-solution.pug
+	.container 
+		include ../blocks/any-info-accordeon/_any-info-accordeon.pug
+	.container 
+		.block-page
+			include ../blocks/drop-blocks/_drop-blocks.pug

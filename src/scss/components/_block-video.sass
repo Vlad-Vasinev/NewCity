@@ -1,0 +1,59 @@
+/*! .block-video style block*/
+.block-video
+  display: grid
+  justify-content: center
+  align-items: center
+  position: relative
+  width: aCalc(648)
+  height: aCalc(350)
+  +r($sm)
+    width: 100%
+    height: 210px
+  &:hover 
+    .block-video__btn::after 
+      transform: scale(1) translateX(20%) translateY(20%)
+      +r($sm)
+        transform: scale(1) translateX(23%) translateY(23%)
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 10
+    border-radius: aCalc(8)
+    +r($sm)
+      border-radius: 8px
+  &__link 
+    width: 100%
+    height: 100%
+  &__btn 
+    position: relative
+    width: aCalc(74)
+    height: aCalc(74)
+    background-image: url('../../img/btn-play.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 11
+    +r($sm)
+      width: 44px
+      height: 44px
+    &::after 
+      position: absolute
+      content: ""
+      left: -40%
+      top: -40%
+      border: 1px solid $White
+      border-radius: 50%
+      width: aCalc(96)
+      height: aCalc(96)
+      transform: scale(0) translateX(20%) translateY(20%)
+      transition: transform .3s
+      +r($sm)
+        width: 54px
+        height: 54px
+        transform: scale(0) translateX(23%) translateY(23%)
+/*! .block-video style block*/

@@ -1,0 +1,40 @@
+- var promotionImgDesk = "img/mortgage-bg-desktop.jpg"
+- var promotionImgMob = "img/mortgage-bg-mobile.jpg"
+- var promotionH1 = "Family Mortgage from 66% years"
+
+section.mortgage 
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .main-title
+    h1.blog__title.h1.content-hide Mortgage
+  .prom-container 
+    include ../blocks/mortgage-block-banner/_mortgage-block-banner.pug
+    .block-pros
+      .block-pros__top 
+        h1.block-pros__top-title
+          |What if we told you that registering an individual entrepreneur fromeku might not be scary at all,
+          |and is it easy and comfortable to pay it off?
+        .block-pros__top-texts 
+          .p1 
+            |We have launched a new investment program with a unique
+            |rate of only 5.7% for any apartments in the New City group.
+          .p1 
+            |A mortgage with such conditions can be issued for a period of up to 30 years
+            |with a down payment from 15%.
+      .block-pros__middle
+        include ../blocks/block-pros-mesh/_block-pros-mesh.pug
+      hr.prom-hr
+    .terms 
+      .prom-h1.terms__title Calculate your benefit
+      include ../blocks/block-terms/_block-terms.pug
+      hr.prom-hr
+    .projects-blocks
+      .prom-h1.projects-blocks__title Projects in Obninsk
+      .projects-blocks__inner
+        - var n = 0;
+        while n < 4
+          include ../blocks/project-block/_project-block.pug
+          - n++
+    include ../blocks/mortgage-block/_mortgage-block.pug
+    .block-page
+      include ../blocks/map-primary/_map-primary.pug

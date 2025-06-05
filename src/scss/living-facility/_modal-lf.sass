@@ -1,0 +1,16 @@
+.modal-lf
+  width: 100%
+  top: 0
+  left: 0
+  height: 100%
+  position: fixed
+  z-index: 1502
+  display: block
+  background: #080808
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.3s, background-color 0.1s, visibility 0s 0.31s, z-index 0s 0.31s
+  &.modal-lf_active
+    opacity: 0.6
+    visibility: visible
+    transition: opacity 0.3s, background-color 0.1s, visibility 0s 0s, z-index 0s 0s

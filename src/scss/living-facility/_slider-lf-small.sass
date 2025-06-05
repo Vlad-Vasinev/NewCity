@@ -1,0 +1,108 @@
+
+.sliderLf-mesh
+  display: flex 
+  justify-content: space-between
+  +r($sm)
+    flex-direction: column
+    gap: 48px
+  
+.sliderLf-sm
+  position: relative
+  width: aCalc(728)
+  overflow-x: hidden
+  border-radius: aCalc(12)
+  overflow: hidden
+  +r($sm)
+    width: 100%
+    border-radius: 0
+  &__el 
+    img 
+      width: aCalc(728)
+      height: aCalc(530)
+      object-fit: cover
+      +r($sm)
+        width: 100%
+        height: 238px
+    .title-xxl
+      margin-bottom: aCalc(24)
+      +r($sm)
+        padding: 0 16px
+        margin-bottom: 12px
+    .title-xl
+      +r($sm)
+        padding: 0 16px
+  &__badge.title-m 
+    position: absolute
+    z-index: 10
+    left: aCalc(24)
+    max-width: max-content
+    padding: aCalc(8) aCalc(16)
+    border-radius: aCalc(24)
+    background-color: #0F0F0F
+    bottom: aCalc(30)
+    color: $White
+    +r($sm)
+      left: 16px
+      bottom: 16px
+      border-radius: 24px
+      padding: 6px 12px
+  .control-inner
+    display: flex
+    align-items: center
+    align-items: center
+    position: absolute
+    z-index: 100
+    right: aCalc(24)
+    gap: aCalc(12)
+    top: aCalc(458)
+    +r($sm)
+      align-items: center
+      gap: 6px
+      right: 16px
+      top: 186px
+    .slider-navigation-prev, .slider-navigation-next
+      border-radius: aCalc(48)
+      +r($sm)
+        border-radius: 48px
+    .slider-navigation-next
+      svg 
+        transform: translateX(aCalc(-2))
+    .swiper-pagination
+      margin-right: aCalc(11)
+      position: initial
+      padding: aCalc(14) aCalc(16)
+      //height: aCalc(33)
+      backdrop-filter: blur(18px)
+      background-color: #0F0F0F33
+      color: $White
+      +r($sm)
+        margin-right: 4px
+        padding: 6px 10px
+        //height: 30px
+        border-radius: 24px
+      span 
+        font-size: aCalc(16)
+        line-height: aCalc(20)
+        width: aCalc(21)
+        flex-shrink: 0
+        +r($sm)
+          width: 16px
+          font-size: 14px
+          line-height: 18px
+      &.pag-tab
+        width: auto
+        background-color: rgb(15, 15, 15, 0.4)
+        .swiper-pagination-current
+          margin-right: aCalc(4)
+          +r($sm)
+            margin-right: 4px
+        .swiper-pagination-total
+          margin-left: aCalc(4)
+          opacity: 0.5
+          +r($sm)
+            margin-left: 4px
+  &:not(.swiper-initialized)
+    .swiper-pagination.pag-tab 
+      width: aCalc(80)
+      +r($sm)
+        width: 68px

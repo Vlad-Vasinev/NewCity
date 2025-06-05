@@ -1,0 +1,206 @@
+
+section.blog-element 
+  //- include ../blocks/consultation-modal/_consultation-modal.pug
+  //- include ../blocks/quiz/_quiz.pug
+  .container 
+    .blog-element__inner 
+      h1.blog-element__title.blog__title.h1
+        button.blog-element__back.p2 ← Go back
+        |New City announces the start of sales in the new Country project
+        .blog-element__social 
+          button.blog-element__share 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5.33337C13.1046 5.33337 14 4.43794 14 3.33337C14 2.2288 13.1046 1.33337 12 1.33337C10.8954 1.33337 10 2.2288 10 3.33337C10 4.43794 10.8954 5.33337 12 5.33337Z" stroke="#25282B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 10.0001C5.10457 10.0001 6 9.10463 6 8.00006C6 6.89549 5.10457 6.00006 4 6.00006C2.89543 6.00006 2 6.89549 2 8.00006C2 9.10463 2.89543 10.0001 4 10.0001Z" stroke="#25282B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 14.6667C13.1046 14.6667 14 13.7713 14 12.6667C14 11.5622 13.1046 10.6667 12 10.6667C10.8954 10.6667 10 11.5622 10 12.6667C10 13.7713 10.8954 14.6667 12 14.6667Z" stroke="#25282B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.72668 9.00671L10.28 11.66" stroke="#25282B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.2734 4.34003L5.72668 6.99336" stroke="#25282B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .social-links
+              .social-links__title.p2 Share
+              .social-links__wrapper
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0671 12.8826C14.0471 13.1134 13.9619 13.3326 13.8228 13.5118C13.6836 13.691 13.4968 13.8221 13.2864 13.8881C13.076 13.9542 12.8518 13.9521 12.6425 13.8822C12.4332 13.8124 12.2485 13.6779 12.1123 13.4961C10.9152 12.4905 9.04837 11.0443 9.04837 11.0443C9.04837 11.0443 7.69749 13.5564 7.45588 13.8139C7.37613 13.8849 7.28332 13.9375 7.18321 13.9683C7.08309 13.9992 6.97785 14.0076 6.87447 13.9931C6.77108 13.9786 6.67175 13.9414 6.58276 13.884C6.49376 13.8265 6.41708 13.7501 6.35767 13.6596C6.34472 13.6216 6.33382 13.5829 6.32483 13.5437L7.07154 9.53996L12.4748 3.93461L5.10569 8.37551C5.10569 8.37551 1.77813 7.32474 1.28393 7.11946C1.15645 7.04592 1.05132 6.93571 0.98069 6.80165C0.910064 6.66759 0.876926 6.51515 0.884971 6.36198C0.893016 6.2088 0.941904 6.06117 1.02614 5.93618C1.11037 5.81119 1.22648 5.71395 1.36088 5.65575C2.06374 5.27765 14.4625 0.276552 14.8798 0.147813C15.2971 0.0190735 16.3954 -0.316114 16.2746 0.812382C16.1538 1.94088 14.188 12.2632 14.0671 12.8826Z" fill="#202020"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.8217 14.4728C19.768 14.3828 19.4355 13.6602 17.8354 12.1751C16.1602 10.62 16.3852 10.8725 18.4029 8.18358C19.6317 6.54596 20.123 5.54588 19.9693 5.11835C19.823 4.71082 18.9192 4.81833 18.9192 4.81833L15.914 4.83583C15.914 4.83583 15.6914 4.80583 15.5252 4.90458C15.3639 5.00209 15.2602 5.22711 15.2602 5.22711C15.2602 5.22711 14.7839 6.4947 14.1488 7.57228C12.81 9.8462 12.2737 9.96621 12.0549 9.82495C11.5461 9.49618 11.6736 8.50235 11.6736 7.7973C11.6736 5.59339 12.0074 4.67457 11.0223 4.43705C10.6948 4.35829 10.4548 4.30579 9.61849 4.29704C8.54591 4.28579 7.6371 4.30079 7.12331 4.55206C6.78078 4.71957 6.51701 5.09335 6.67827 5.1146C6.87704 5.14085 7.32707 5.23586 7.56584 5.56088C7.87461 5.97966 7.86336 6.92223 7.86336 6.92223C7.86336 6.92223 8.04088 9.51618 7.44958 9.8387C7.0433 10.06 6.48701 9.60868 5.29317 7.54478C4.68188 6.48845 4.21934 5.31962 4.21934 5.31962C4.21934 5.31962 4.13059 5.1021 3.97182 4.98584C3.77931 4.84458 3.50929 4.79958 3.50929 4.79958L0.651577 4.81708C0.651577 4.81708 0.222796 4.82958 0.0652839 5.01584C-0.0747265 5.18211 0.0540331 5.52463 0.0540331 5.52463C0.0540331 5.52463 2.2917 10.7588 4.82439 13.3977C7.14831 15.8166 9.78601 15.6579 9.78601 15.6579H10.9811C10.9811 15.6579 11.3424 15.6179 11.5261 15.4191C11.6961 15.2366 11.6899 14.8941 11.6899 14.8941C11.6899 14.8941 11.6661 13.2902 12.4112 13.0539C13.145 12.8214 14.0876 14.6041 15.0864 15.2904C15.8415 15.8091 16.4152 15.6954 16.4152 15.6954L19.0867 15.6579C19.0867 15.6579 20.4843 15.5716 19.8217 14.4728Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0131 10.3168C12.96 10.3168 15.3681 8.00975 15.3681 5.15028C15.3513 2.30707 12.96 0 10.0131 0C7.06616 0 4.65809 2.30707 4.65809 5.16653C4.65809 8.00975 7.04932 10.3168 10.0131 10.3168ZM10.0131 3.02193C11.2424 3.02193 12.2359 3.9805 12.2359 5.16653C12.2359 6.33631 11.2424 7.29488 10.0131 7.29488C8.80065 7.29488 7.79027 6.33631 7.79027 5.16653C7.79027 3.9805 8.78381 3.02193 10.0131 3.02193Z" fill="#282828"/>
+                      <path d="M12.1686 14.5248C13.2632 14.2811 14.3072 13.8749 15.2671 13.29C15.9912 12.8513 16.2269 11.909 15.7554 11.2104C15.3008 10.4955 14.3241 10.2843 13.6 10.7392C11.4108 12.0715 8.58173 12.0715 6.39258 10.7392C5.66847 10.2843 4.70861 10.4955 4.2371 11.2104C3.78243 11.909 4.00134 12.8513 4.72545 13.29C5.68531 13.8749 6.74621 14.2973 7.82395 14.5248L4.84333 17.4167C4.2371 18.0016 4.2371 18.9602 4.84333 19.5613C5.14644 19.8538 5.55059 20 5.95475 20C6.3589 20 6.76305 19.8538 7.06616 19.5613L9.99627 16.7181L12.9432 19.5613C13.5494 20.1462 14.543 20.1462 15.166 19.5613C15.7723 18.9764 15.7723 18.0179 15.166 17.4167L12.1686 14.5248Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8252 3.42821C18.6819 3.65887 19.3574 4.33407 19.5879 5.19065C20.0164 6.75522 19.9999 10.0165 19.9999 10.0165C19.9999 10.0165 19.9999 13.2611 19.5881 14.8258C19.3574 15.6823 18.682 16.3576 17.8252 16.5881C16.2602 17 9.99996 17 9.99996 17C9.99996 17 3.75609 17 2.17467 16.5718C1.3179 16.3411 0.642545 15.6658 0.411833 14.8094C0 13.2611 0 10 0 10C0 10 0 6.75522 0.411833 5.19065C0.642392 4.33422 1.33438 3.6424 2.17452 3.41189C3.73961 3 9.99981 3 9.99981 3C9.99981 3 16.2602 3 17.8252 3.42821ZM13.2124 9.99999L8.00659 12.9977V7.00233L13.2124 9.99999Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013 20 20 17.2013 20 13.75V6.25C20 2.79875 17.2013 0 13.75 0ZM18.125 13.75C18.125 16.1625 16.1625 18.125 13.75 18.125H6.25C3.8375 18.125 1.875 16.1625 1.875 13.75V6.25C1.875 3.8375 3.8375 1.875 6.25 1.875H13.75C16.1625 1.875 18.125 3.8375 18.125 6.25V13.75Z" fill="#282828"/>
+                      <path d="M10 5C7.23875 5 5 7.23875 5 10C5 12.7612 7.23875 15 10 15C12.7612 15 15 12.7612 15 10C15 7.23875 12.7612 5 10 5ZM10 13.125C8.2775 13.125 6.875 11.7225 6.875 10C6.875 8.27625 8.2775 6.875 10 6.875C11.7225 6.875 13.125 8.27625 13.125 10C13.125 11.7225 11.7225 13.125 10 13.125Z" fill="#282828"/>
+                      <path d="M14.9375 5.8125C15.5934 5.8125 16.1251 5.28083 16.1251 4.62498C16.1251 3.96913 15.5934 3.43746 14.9375 3.43746C14.2817 3.43746 13.75 3.96913 13.75 4.62498C13.75 5.28083 14.2817 5.8125 14.9375 5.8125Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 6.875V4.375C11.25 3.685 11.81 3.125 12.5 3.125H13.75V0H11.25C9.17875 0 7.5 1.67875 7.5 3.75V6.875H5V10H7.5V20H11.25V10H13.75L15 6.875H11.25Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 6.875V4.375C11.25 3.685 11.81 3.125 12.5 3.125H13.75V0H11.25C9.17875 0 7.5 1.67875 7.5 3.75V6.875H5V10H7.5V20H11.25V10H13.75L15 6.875H11.25Z" fill="#282828"/>
+                    </svg>
+                .social-links__el 
+                  a.social-links__item(href="") 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 6.875V4.375C11.25 3.685 11.81 3.125 12.5 3.125H13.75V0H11.25C9.17875 0 7.5 1.67875 7.5 3.75V6.875H5V10H7.5V20H11.25V10H13.75L15 6.875H11.25Z" fill="#282828"/>
+                    </svg>
+          span.blog-element__data.p2  
+            |April 22, 2023
+      button.button-primary.btn1.form-primary-scroll(type="button") Find out more 11
+      ul.blog-element__list
+        li.blog-element__item
+          a.blog-element__link.h3(href="#anchor-1")
+            |1. New City announces the start of sales in the new Country project
+        li.blog-element__item
+          a.blog-element__link.h3(href="#anchor-2")
+            |2. An apartment in New Town - to each his own!
+        li.blog-element__item
+          a.blog-element__link.h3(href="")
+            |3. We continue to operate uninterrupted online and do not reduce the pace of construction.
+        li.blog-element__item
+          a.blog-element__link.h3(href="")
+            |4. Start of sales of underground parking in the residential complex "New City"
+      .blog-element__picture(js-lazy) 
+        <picture>
+          <source media="(min-width:768px)" srcset="img/blog-el-img-1.jpg">
+          <source media="(max-width:768px)" srcset="img/blog-el-img-1.jpg">
+          <img data-src="img/blog-el-img-1.jpg" alt="main image 1">
+        </picture>
+      .blog-element__content 
+        h2.blog-element__subtitle.h2(id="anchor-1")
+          |New City announces the start of sales in the new Country project
+        .blog-element__text 
+          p.p1
+            |A car also needs a roof over its head, especially in our weather conditions.
+            |We announce the start of sales of parking spaces for residents
+            |Cascade 22 and Cascade 21! An important advantage is access to the underground parking from the elevator.
+          p.p1
+            |Buyers will receive a special gift - a special offer on the Privilege Card with increased cashback!
+          p.p1
+            |Call us and our specialists will help you find the perfect tom for you and your car:
+        .video-section  
+          button.video-section__play
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M57.0408 10.9703C59.782 11.7084 61.9436 13.869 62.6814 16.6101C64.0525 21.6167 63.9997 32.0527 63.9997 32.0527C63.9997 32.0527 63.9997 42.4355 62.6819 47.4427C61.9436 50.1832 59.7825 52.3443 57.0408 53.082C52.0325 54.4 31.9999 54.4 31.9999 54.4C31.9999 54.4 12.0195 54.4 6.95896 53.0297C4.21727 52.2916 2.05614 50.1305 1.31787 47.3899C0 42.4355 0 32 0 32C0 32 0 21.6167 1.31787 16.6101C2.05566 13.8695 4.27 11.6557 6.95847 10.9181C11.9667 9.60001 31.9994 9.60001 31.9994 9.60001C31.9994 9.60001 52.0325 9.60001 57.0408 10.9703ZM42.2798 32L25.6211 41.5925V22.4075L42.2798 32Z" fill="#C4302B"/>
+              <path d="M42.2798 32L25.6211 41.5925V22.4075L42.2798 32Z" fill="white"/>
+            </svg>
+          <video class="video__el" muted playsinline webkit-playsinline preload="auto" poster="img/video-preview.jpg">
+            <source src="img/video.webm" type="video/webm">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
+      .blog-element__content 
+        h2.blog-element__subtitle.h2(id="anchor-2")
+          |An apartment in New Town - to each his own!
+        .blog-element__text 
+          p.p1
+            |A car also needs a roof over its head, especially in our weather conditions.
+            |We announce the start of sales of parking spaces for residents
+            |Cascade 22 and Cascade 21! An important advantage is access to the underground parking from the elevator.
+          p.p1
+            |Buyers will receive a special gift - a special offer on the Privilege Card with increased cashback!
+          p.p1
+            |Call us and our specialists will help you find the perfect tom for you and your car:
+            a.h3(href="tel:88005118164")
+              |8 800 511-81-64
+      .company-info 
+        .company-info__img(js-lazy)  
+          img(src="img/company-img-1.jpg")
+        .company-info__text 
+          p.p1
+            |On behalf of the New City group of companies and myself, I would like to inform you that we are continuing
+            |uninterrupted work online and do not reduce the pace of construction.
+          h3.h3.company-info__title
+            |Head of Sales Department, I.I. Ivanova
+      .blog-element__content 
+        .blog-element__text 
+          p.p1
+            |A car also needs a roof over its head, especially in our weather conditions.
+            |We announce the start of sales of parking spaces for residents
+            |Cascade 22 and Cascade 21! An important advantage is access to the underground parking from the elevator.
+          p.p1
+            |Buyers will receive a special gift - a special offer on the Privilege Card with increased cashback!
+          p.p1
+            |Call us and our specialists will help you find the perfect tom for you and your car:
+            a.h3(href="tel:88005118164")
+              |8 800 511-81-64
+      .blog-slider.swiper-container
+        .slider__wrapper.swiper-wrapper
+          .slider__el.swiper-slide
+            img(src="img/slider-blog-el-1.jpg")
+          .slider__el.swiper-slide
+            img(src="img/slider-blog-el-2.jpg")
+          .slider__el.swiper-slide
+            img(src="img/slider-blog-el-3.jpg")
+          .slider__el.swiper-slide
+            img(src="img/slider-blog-el-4.jpg")
+          .slider__el.swiper-slide
+            img(src="img/slider-blog-el-5.jpg")
+        .control-inner
+          button.slider-navigation-prev.slide-button.slide-button_horizontal
+            span 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+              </svg>
+          button.slider-navigation-next.slide-button.slide-button_horizontal
+            span 
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V16C0 20.4183 3.58172 24 8 24H16C20.4183 24 24 20.4183 24 16V8C24 3.58172 20.4183 0 16 0H8ZM15.2494 9.56174C16.1119 8.87172 16.2518 7.61313 15.5617 6.75061C14.8717 5.88809 13.6131 5.74824 12.7506 6.43826L5.79844 12L12.7506 17.5617C13.6131 18.2518 14.8717 18.1119 15.5617 17.2494C16.2518 16.3869 16.1119 15.1283 15.2494 14.4383L12.2016 12L15.2494 9.56174Z" fill="#CDCDCD"/>
+              </svg>
+          .swiper-pagination
+      .blog-element__content 
+        .blog-element__text 
+          p.p1
+            |A car also needs a roof over its head, especially in our weather conditions.
+            |We announce the start of sales of parking spaces for residents
+            |Cascade 22 and Cascade 21! An important advantage is access to the underground parking from the elevator.
+          p.p1
+            |Buyers will receive a special gift - a special offer on the Privilege Card with increased cashback!
+          p.p1
+            |Call us and our specialists will help you find the perfect tom for you and your car:
+            a.h3(href="tel:88005118164")
+              |8 800 511-81-64
+    .posts 
+      .posts__control
+        h2.posts__title.h1
+          |Read next
+        button.posts__more.btn1.button-secondary 
+          |All publications
+      ul.blog-list 
+        - var n = 0
+        while n < 3
+          li.blog-list__el 
+            a.blog-card(href="#")
+              .blog-card__img(js-lazy)
+                img(src="img/blog-list-1.jpg")
+              h2.blog-card__title.h3
+                |Start of sales of underground parking in the residential complex "New City"
+                span.blog-card__subtitle.p2 April 22, 2023
+          - n++
+        while n < 2
+          li.blog-list__el.posts-hide 
+            a.blog-card(href="#")
+              .blog-card__img 
+                img(src="img/blog-list-1.jpg")
+              h2.blog-card__title.h3
+                |Start of sales of underground parking in the residential complex "New City"
+                span.blog-card__subtitle.p2 April 22, 2023
+          - n++
+      

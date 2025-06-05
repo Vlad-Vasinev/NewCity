@@ -1,0 +1,46 @@
+/*! .info-summary */
+.info-summary 
+  display: flex 
+  padding: aCalc(32) aCalc(76)
+  align-items: center
+  justify-content: space-between 
+  background-color: $DownFeatures
+  gap: aCalc(105)
+  +r($sm)
+    gap: 16px
+    padding: 24px
+    flex-direction: column
+  &__el
+    +r($sm)
+      width: 100%
+    flex-shrink: 0
+    img 
+      width: aCalc(200)
+      height: aCalc(200)
+      object-fit: cover 
+      +r($sm)
+        width: 64px
+        height: 64px
+    .h1 
+      font-size: aCalc(40)
+      line-height: aCalc(48)
+      +r($sm)
+        margin-bottom: 0 !important
+        font-size: 32px
+        line-height: 40px
+    .p1 
+      max-width: aCalc(360)
+      +r($sm)
+        max-width: unset
+  &__el:nth-child(1)
+    +r($sm)
+      order: 1  
+  &__el:nth-child(2)
+    +r($sm)
+      display: grid 
+      justify-content: flex-end
+      order: 0
+  &__el:nth-child(3)
+    +r($sm)
+      order: 2
+/*! .info-summary */

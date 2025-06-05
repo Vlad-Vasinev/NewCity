@@ -1,0 +1,104 @@
+/*! .card-product style block*/
+.card-product
+  &__el
+    border-radius: aCalc(8)
+    padding: aCalc(16)
+    border: aCalc(2) solid #F2F2F2
+    display: block
+    max-width: aCalc(424)
+    width: 100%
+    +r($sm)
+      max-width: 100%
+      border-radius: 8px
+      padding: 16px
+    &-title 
+      color: #282828
+      .card-product__el-subtitle
+        margin-top: aCalc(8)
+        display: block
+    &-img
+      margin-top: aCalc(16)
+      display: grid
+      justify-content: center
+      align-content: center
+      margin-bottom: aCalc(24)
+      +r($sm)
+        margin-top: 16px
+        margin-bottom: 24px
+      img 
+        height: aCalc(184)
+        +r($sm)
+          height: 180px
+  &__info 
+    display: flex
+    align-items: center
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 16px
+    &-price 
+      color: #282828
+      margin-right: aCalc(16)
+      +r($sm)
+        margin-right: 16px
+    &-title 
+      padding: aCalc(6) aCalc(12)
+      border-radius: aCalc(16)
+      background-color: #F2F2F2  
+      +r($sm)
+        padding: 6px 12px
+        border-radius: 16px
+  &__about 
+    display: flex
+    align-items: center
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 16px
+    &-icon 
+      margin-right: aCalc(24)
+      cursor: pointer
+      +r($sm)
+        margin-right: 24px
+      svg 
+        width: aCalc(24)
+        height: aCalc(24)
+        +r($sm)
+          width: 24px
+          height: 24px
+        path 
+          transition: all .3s 
+      &.icon_checked
+        svg 
+          path 
+            fill: $Pompelmo
+    &-primary
+      position: relative
+    &-primary, &-secondary
+      color: #737373
+      margin-right: aCalc(24)
+      +r($sm)
+        margin-right: 24px
+      span 
+        margin-top: aCalc(4)
+        display: block
+        color: #282828
+        +r($sm)
+          margin-top: 4px
+          font-size: 12px
+          line-height: 18px
+  &__btns 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-primary
+      margin-right: aCalc(16)
+      +r($sm)
+        margin-right: 16px
+    &-secondary
+      color: #282828
+      padding: aCalc(8) aCalc(16)
+      border-radius: aCalc(4)
+      background-color: #6CE4AA
+      +r($sm)
+        border-radius: 4px
+        padding: 8px 16px
+/*! .card-product style block*/

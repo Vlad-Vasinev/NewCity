@@ -1,0 +1,12 @@
+
+.promotion-block 
+  picture
+    source(media="(min-width:768px)" srcset=promotionImgDesk)
+    source(media="(max-width:768px)" srcset=promotionImgMob)
+    img(data-src=promotionImgDesk alt="main image 1")
+  .promotion-block__info 
+    h1.prom-h-x=promotionH1
+    h3.prom-h3 
+      span.prom-p1 Hurry up to buy an apartment with minimal overpayment at a unique rate of 6% per annum
+    a(href="#").h3.prom-btn.anchor-btn Read more
+  include .././pros-block/_pros-block.pug  

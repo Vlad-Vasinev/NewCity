@@ -1,0 +1,35 @@
+.promotion
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .prom-container 
+    .main-title
+      h1.blog__title.h1.content-hide Home
+    include ../blocks/promotion-block-banner/_promotion-block-banner.pug  
+    include ../blocks/steps-block/_steps-block.pug  
+    .apartment-block 
+      .apartment-sm-mesh
+        a(href="#").apartment-price.studio
+          .apartment-price__counts
+            .apartment-price__count 
+            .apartment-price__count
+          .p1 Studio
+          .h2 from 5,7 million.
+        a(href="#").apartment-price.two-room
+          .apartment-price__counts
+            .apartment-price__count 
+            .apartment-price__count
+          .p1 2 Room
+          .h2 from 7,5 million.
+          - n++
+      include ../blocks/apartment-bg-mesh/_apartment-bg-mesh.pug
+      a(href="#").h3.prom-btn See more apartments
+      hr.prom-hr
+    include ../blocks/comparison-block/_comparison-block.pug
+    .promotion-form 
+      include ../blocks/form-order/_form-order.pug
+      .promotion-form__text 
+        .p2
+          |Discount up to 15% from the cost of the first payment is provided by LLC New City Real Estate,
+          |on apartments in the residential complex "New City" in Cascades No. 19 and No. 20. Developer OOO Spetsializirovanny
+          |Developer "New City". Project declaration on the website nash.tom.rf. The terms of the action from
+          |April 5 to September 30, detailed information on the website https://novyigorod.ru. Not a public offer.

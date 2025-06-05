@@ -1,0 +1,81 @@
+/*! .home style page*/
+body
+  +r($sm)
+    padding-top: 66px
+
+.home 
+  h1.blog__title.h1.content-hide
+    +r($sm)
+      max-height: 24px
+
+.grid-sliders
+  margin: 0 0 aCalc(24)
+  +r($sm)
+    margin: 0 0 24px
+  &__el 
+    display: flex
+    gap: aCalc(24)
+    justify-content: center
+    +r($sm)
+      gap: 24px
+      flex-direction: column
+.grid-solution
+  margin-bottom: aCalc(72)
+  background-color: transparent
+  display: grid
+  grid-template-columns: repeat(3, aCalc(424))
+  gap: aCalc(24)
+  +r($sm)
+    gap: 24px
+    grid-template-columns: 1fr
+    margin-bottom: 50px
+
+.grid-benefits
+  display: grid
+  grid-template-columns: repeat(3, aCalc(424))
+  gap: aCalc(24)
+  +r($sm)
+    gap: 24px
+    display: flex
+    flex-direction: column
+  &__el.big-benefit
+    grid-column: 1 / span 2
+
+.main-info
+  .h1
+    margin-bottom: 0
+    +r($sm)
+      margin-bottom: 16px !important
+  &__more 
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: aCalc(32)
+    button 
+      +r($sm) 
+        width: 100%
+    +r($sm)
+      flex-direction: column
+      margin-bottom: 32px
+
+.grid-video
+  margin-bottom: aCalc(32)
+  display: grid 
+  gap: aCalc(32) aCalc(24)
+  grid-template-columns: repeat(2, aCalc(648))
+  +r($sm)
+    display: flex
+    flex-direction: column
+    gap: 16px
+    margin-bottom: 24px
+
+.mirror-grid
+  &__el + &__el 
+    margin-top: aCalc(40)
+    +r($sm)
+      margin-top: 32px
+
+.hide-fix 
+  -webkit-overflow-scrolling: touch
+  -webkit-backface-visibility: hidden
+/*! .home style page*/

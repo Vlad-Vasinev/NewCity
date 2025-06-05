@@ -1,0 +1,17 @@
+.block-pros__mesh 
+	- var nTitle = ["The most important thing: less overpayment", "Fixed rate: for the entire term", "Monthly payment: also less"];
+	- var p1Title = ["The overpayment for an apartment can be several times less than at the standard rate", "That is why the benefit is very easy to calculate and there is nothing else to worry about.", "Payments become easier, and your life becomes more spacious, and all this for the entire term of the loan"];
+	- var n = 0;
+	while n < 3
+		.pros-item
+			.pros-item__img 
+				img(src="img/umniy-dom.svg" alt="")
+			.pros-item__content 
+				.h3= nTitle[n]
+				.p1= p1Title[n] 
+		- n++
+	.pros-item
+		.pros-item__img 
+			img(src="img/umniy-dom.svg" alt="")
+		.pros-item__content 
+			.h3 Hurry up to buy the apartment of your dreams!

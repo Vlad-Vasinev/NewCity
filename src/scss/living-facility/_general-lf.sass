@@ -1,0 +1,108 @@
+
+.living-facility
+  overflow-x: hidden
+  position: relative
+  .slider-navigation-prev, .slider-navigation-next 
+    width: aCalc(48)
+    height: aCalc(48)
+    +r($sm)
+      width: 40px
+      height: 40px
+    svg 
+      margin: 0 auto
+      width: aCalc(10) !important
+      width: aCalc(16) !important
+      +r($sm)
+        width: 10px !important
+        width: 16px !important
+  .blog__title
+    height: 0
+
+.block-wrapper 
+  background-color: $White
+  +r($sm)
+    margin: 64px 0
+  &.block-wrapper_color 
+    background-color: #F5F5F5
+    padding: aCalc(160) 0
+    +r($sm)
+      margin: 0 0 64px
+      padding: 0
+      background-color: $White
+  &__el 
+    margin: aCalc(160) 0
+    +r($sm)
+      margin: 64px 0
+  &__el.block-wrapper__bg
+    padding: 0
+    background-color: #F5F5F5
+    +r($sm)
+      margin: 0
+      padding: 64px 0
+  &__el.block-wrapper__bg.block-wrapper__bgMob
+    +r($sm)
+      background-color: $White
+  &__el.block-el__mrTopNo
+    margin-top: 0
+    +r($sm)
+      margin-top: 0
+  &.block-wrapper__mrTopNo
+    margin-top: 0
+    +r($sm)
+      margin-top: 0
+  &__el.block-wrapper__mrBottomNo
+    margin-bottom: 0
+    +r($sm)
+      margin-bottom: 0
+  &__el.block-el__mrBotNo
+    margin-bottom: 0
+    +r($sm)
+      margin-bottom: 0
+
+.block-lf
+  margin: 0 auto
+  max-width: aCalc(1480)
+  width: 100%
+  +r($sm)
+    margin: 64px 0
+    padding: 0
+    margin: 0
+    max-width: 696px
+  & + &
+    margin-top: aCalc(160)
+  &.block-lf_noBorders
+    max-width: unset
+    margin: aCalc(160) 0 0
+
+.block-title
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: aCalc(40)
+  +r($sm)
+    padding: 0 16px
+    margin-bottom: 24px 
+  .button-icon
+    +r($sm)
+      display: none
+  &.block-title_mob 
+    display: none 
+    +r($sm)
+      margin-bottom: 0
+      display: block 
+    .button-icon
+      height: auto
+      +r($sm)
+        display: block
+        max-width: max-content
+
+.bl-deskHidd
+  display: none 
+  +r($sm)
+    position: initial
+    display: block
+
+.block-mbNo
+  margin-bottom: 0
+  +r($sm)
+    margin-bottom: 0

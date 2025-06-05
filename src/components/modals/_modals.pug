@@ -1,0 +1,208 @@
+//- .fullscreen-slider
+//-   template#slide-tpl
+//-     .swiper-slide.fullscreen-slider__slide
+//-       .swiper-zoom-container(js-lazy)
+//-         img()
+//-   .fullscreen-slider__close(fs-close)
+//-     svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-       path(fill='#fff' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-       path(fill='#fff' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-   .fullscreen-slider__slider.swiper-container
+//-     .fullscreen-slider__wrapper.swiper-wrapper 
+//-   .slider-pagination-navigation
+//-     button.slider-navigation-prev.slide-button.slide-button_horizontal
+//-       span 
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='20' height='21' fill='none' viewBox='0 0 20 21')
+//-           path(stroke='#161616' stroke-linecap='round' stroke-width='2' d='m14.17 2.76-8.34 7.5 8.34 7.5')
+//-     .swiper-pagination
+//-     button.slider-navigation-next.slide-button.slide-button_horizontal
+//-       span 
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='20' height='21' fill='none' viewBox='0 0 20 21')
+//-           path(stroke='#161616' stroke-linecap='round' stroke-width='2' d='m14.17 2.76-8.34 7.5 8.34 7.5')
+//- .modal(data-modal-name="form-modal")
+//-   .modal__inner
+//-     .modal__top
+//-       span.h2.form-request Обсудить проект
+//-       span.h2.form-response Спасибо за вашу заявку
+//-       span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+//-       .modal__close-button(js-modal-close)
+//-         svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-           path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-           path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-     .modal__body
+//-       form#form-modal.form-request(action="/local/ajax/forms.php" data-redirect='/thanks.html')
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="form-modal-name-p") Ваше имя
+//-           input(type="text" name="name" id="form-modal-name-p" required)  
+//-         .ui-input(js-input-focus)
+//-           label.ui-input__float-label(for="form-modal-phoneNumber")  Ваш телефон:
+//-           input(type="tel" name="phoneNumber" id="form-modal-phoneNumber")
+        
+//-         <div class="g-recaptcha" id="recaptcha1" data-sitekey="6LdA9JseAAAAADFzWcsSaXOVX5YkFaM5Qb0hyjMb" data-size="invisible"></div>
+//-         button.fill-button(type="submit") fromправить
+//-         p.h6.form-policy By clicking the button you agree с условиями <a>политики конфиденциальности</a> и <a>обрабfromки персональных данных</a>
+//-       .form-response Спасибо за вашу заявку. Мы изучим все данные и с вами свяжемся. 
+
+.modal.modal-order(data-modal-name="form-modal")
+  .modal__inner
+    .form-order
+      .modal__top
+        .modal__close-button(js-modal-close)
+          svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+            path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+            path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+        .form-order__top
+          h2.h2.form-order__title
+            |We will tell you everything about the features of our apartments - just call
+            a(href="tel:88005116382") 8 800 511-63-82
+            span.form-order__subtitle.p1 Or leave your contact information and we will call you back.
+        //-span.h2.form-request Обсудить проект
+        span.h2.form-response Thank you for your application.
+        //- span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+      hr.form-order-hr
+      .modal__body
+        form#form-modal.form-request.form-order__el(action="/local/ajax/forms.php" data-redirect='/thanks.html')
+          .ui-input.required(js-input-focus)
+            label.ui-input__float-label.p1(for="form-modal-name-p") Your name
+            input.form-order__input.p1(type="text" name="name" value="Arkady" id="name-gt" required placeholder="Arkady")
+          .ui-input(js-input-focus)
+            label.ui-input__float-label.p1(for="form-modal-phoneNumber") Telephone
+            input.form-order__input.p1(type="tel" name="phone" value="+7" id="phone-gt" required placeholder="+7")
+          .g-recaptcha(id="recaptcha32" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+          .popup__login-wrap-btn
+            button.form__bottom-btn.button-primary(type="submit" id="form-order-call")
+              |Order a call
+            p.policy.p2 By clicking the button you agree <br>with the terms of the privacy policy
+        .form-response Thank you for your application. We will study all the data and contact you.
+
+//- .modal.modal-order(data-modal-name="form-consultation")
+//-   .consultation
+//-     .consultation__btn.btn1(js-modal-open data-modal-name="form-modal") Онлайн-консультация
+//-     .consultation__form 
+//-       .h2 Связаться с нами онлайн
+//-       .h3 Выберите любой уtoбный способ связи и наш менеджер продаж свяжется с вами
+//-       .consultation__form-close(js-modal-close)
+//-         +svgIcon('svg-close')
+//-       .form-order
+//-         .form-order__bottom
+//-           form.form-order__el
+//-             .ui-input.required(js-input-focus)
+//-               label.ui-input__float-label.p1(for="name-gt") Ваше имя
+//-               input.form-order__input.p1(type="text" name="name" id="name-gt" required placeholder="Arkady")
+//-             .ui-input(js-input-focus)
+//-               label.ui-input__float-label.p1(for="phone-gt") Telephone
+//-               input.form-order__input.p1(type="tel" name="phone" id="phone-gt" required placeholder="+7")
+//-             .ui-input(js-input-focus)
+//-               label.ui-input__float-label.p1(for="phone-gt") Способ связи
+//-               input.form-order__input.p1(type="tel" name="phone" id="phone-gt" required placeholder="Telegram")
+//-             .g-recaptcha(id="recaptcha32" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+//-             .popup__login-wrap-btn
+//-               button.form__bottom-btn.button-primary.btn1(type="submit")
+//-                 |Связаться
+//-               p.policy.p2 By clicking the button you agree <br>with the terms of the privacy policy
+
+//- .modal.modal-order(data-modal-name="form-modal-info")
+//-   .modal__inner
+//-     .form-order
+//-       .modal__top
+//-         .modal__close-button(js-modal-close)
+//-           svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+//-             path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+//-             path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+//-         .form-order__top
+//-           h2.h2-primary.form-order__title
+//-             |Расскажем всё об особенностях наших квартир — просто позвоните info
+//-             a(href="tel:88005116382") 8 800 511-63-82
+//-             span.form-order__subtitle.h3-primary Или оставьте свой контакт, мы сами перезвоним info
+//-         //-span.h2.form-request Обсудить проект
+//-         span.h2.form-response Спасибо за вашу заявку
+//-         //- span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+//-       hr.form-order-hr
+//-       .modal__body
+//-         form#form-modal.form-request.form-order__el(action="/local/ajax/forms.php" data-redirect='/thanks.html')
+//-           .ui-input.required(js-input-focus)
+//-             label.ui-input__float-label.p-primary(for="form-modal-name-p") Ваше имя info
+//-             input.form-order__input.p-primary(type="text" name="name" value="Arkady" id="name-gt" required placeholder="Arkady")
+//-           .ui-input(js-input-focus)
+//-             label.ui-input__float-label.p-primary(for="form-modal-phoneNumber") Telephone info
+//-             input.form-order__input.p-primary(type="tel" name="phone" value="+7" id="phone-gt" required placeholder="+7")
+//-           //-.g-recaptcha(id="recaptcha32" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+//-           .popup__login-wrap-btn
+//-             button.form__bottom-btn.btn-primary(type="submit" id="form-order-call")
+//-               |Заказать звонок
+//-             p.policy.p-secondary By clicking the button you agree <br>with the terms of the privacy policy info
+//-         .form-response Thank you for your application. We will study all the data and contact you.
+
+.modal.modal_with-form(data-modal-name="sale-modal")
+  .modal__inner
+    .modal__top
+      span.h2.form-request Обсудить проект
+      span.h2.form-response Спасибо за вашу заявку
+      span.h5 Если у вас вопрос по уже купленной недвижимости, напишите нам в чат
+      .modal__close-button(js-modal-close)
+        svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+          path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+          path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+    .modal__body
+      form#sale-modal.form-request(action="/local/ajax/forms.php")
+        input.visually-hidden(type='text' name='sale-id' value='0')
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="action-modal-name-p") Your name:
+          input(type="text" name="name" id="sale-modal-name-p" required)  
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="sale-modal-phoneNumber")  Your phone:
+          input(type="tel" name="phoneNumber" id="sale-modal-phoneNumber")
+        
+        <div class="g-recaptcha" id="recaptcha2" data-sitekey="  LdA9JseAAAAADFzWcsSaXOVX5YkFaM5Qb0hyjMb" data-size="invisible"></div>
+        button.fill-button(type="submit") fromправить
+        p.h6.form-policy By clicking the button you agree с условиями <a>политики конфиденциальности</a> и <a>обрабfromки персональных данных</a>
+      .form-response 
+        button.fill-button(js-modal-close) Закрыть
+
+// Модальные окна для страницы аукциона
+.modal.modal_with-form(data-modal-name="auction-bet-modal")
+  .modal__inner
+    .modal__top
+      span.h2.form-request Сделать ставку 122
+      span.h2.form-response Спасибо за вашу заявку
+      span.h5 Оставьте ваши данные и наш менеджер <br/>с вами свяжется
+      .modal__close-button(js-modal-close)
+        svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+          path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+          path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+    .modal__body
+      form#auction-bet-modal.form-request(action="/local/ajax/forms.php")
+        input.display-none(type='text' name='project-id' value='0')
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="auction-bet-modal-name-p") Ваше имя
+          input(type="text" name="name" id="auction-bet-modal-name-p" required)  
+        .ui-input(js-input-focus)
+          label.ui-input__float-label(for="auction-bet-modal-phoneNumber")  Ваш телефон:
+          input(type="tel" name="phoneNumber" id="auction-bet-modal-phoneNumber")
+        <div class="g-recaptcha" id="recaptcha3" data-sitekey="6LcCmRgnAAAAAH_ruytbtP_CauNbi3y574reslAW" data-size="invisible"></div>
+        button.fill-button(type="submit") fromправить
+        p.h6.form-policy By clicking the button you agree с условиями <a>политики конфиденциальности</a> и <a>обрабfromки персональных данных</a>
+      .form-response Спасибо за вашу заявку. Мы изучим все данные и с вами свяжемся. 
+
+.modal(data-modal-name="what-included-modal")
+  .modal__inner
+    .modal__top
+      span.h2 Что входит в стоимость
+      .modal__close-button(js-modal-close)
+        svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+          path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+          path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+    .modal__body
+      include ./_what-included
+
+template#modal-template
+  .modal
+    .modal__inner
+      .modal__top
+        span 
+        .modal__close-button(js-modal-close)
+          svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+            path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+            path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+      .modal__body
+.modal-background.fixed-block(js-modal-close)

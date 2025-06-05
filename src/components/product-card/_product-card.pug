@@ -1,0 +1,49 @@
+section.product 
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .product-calcMobile
+    h1.product__title.blog__title.h1  
+      a(href="#").p2.blog-element__back ← All apartments
+      span.product__subtitle.p1 Obninsk, Kaskadskaya St., 22, residential complex "New City"
+      |1-room apartment №255
+    .before-calc 
+      a.show-map.btn1.button-primary(target="blank" href="https://yandex.ru/maps/967/obninsk/?from=api-maps&ll=36.573809%2C55.131181&mode=routes&origin=jsapi_2_1_79&rtext=~55.130935%2C36.574691&rtt=auto&ruri=~&z=16") Show on map
+      a.show-map.btn1.button-primary(target="blank" href="https://youtu.be/TNX0-JLdM_U?si=oVWN9Zg0sKJB7LsR") Online show
+      button.product-hideMobile.btn1.button-primary Hide the checkerboard →
+    include ../blocks/calc/_calc.pug
+  .container
+    .product__wrapper 
+      h1.product__title.blog__title.h1  
+        button.p2.blog-element__back ← Все apartments
+        span.product__subtitle.p1 Obninsk, Kaskadskaya St., 22, residential complex "New City"
+        |1-room apartment №255
+      button.product-showMobile.btn1.button-primary Show checkerboard →
+      .product__accordeon
+        .product__accordeon-el
+          button.product__accordeon-btn.p1.el_active(data-plan-id="0") Layout
+        .product__accordeon-el
+          button.product__accordeon-btn.p1(data-plan-id="1") With furniture
+        .product__accordeon-el
+          button.product__accordeon-btn.p1(data-plan-id="2") Floor plan
+      .product__inner 
+        .product__inner-el(data-id="0")
+          include ../blocks/product-block/_product-block.pug
+        .product__inner-el(data-id="0")
+          .before-calc 
+            a.show-map.btn1.button-primary(target="blank" href="https://yandex.ru/maps/967/obninsk/?from=api-maps&ll=36.573809%2C55.131181&mode=routes&origin=jsapi_2_1_79&rtext=~55.130935%2C36.574691&rtt=auto&ruri=~&z=16") Show on map
+            a.show-map.btn1.button-primary(target="blank" href="https://youtu.be/TNX0-JLdM_U?si=oVWN9Zg0sKJB7LsR") Online show
+          include ../blocks/calc/_calc.pug
+  .container 
+    .block-page
+      include ../blocks/any-info-accordeon/_any-info-accordeon.pug
+
+  .container 
+    include ../blocks/block-info/_block-info.pug
+  .container 
+    .terms 
+      .prom-h1.terms__title Calculate your benefit
+      include ../blocks/block-terms/_block-terms.pug
+      hr.prom-hr
+  .container 
+    .product-form
+      include ../blocks/form-order/_form-order.pug

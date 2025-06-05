@@ -1,0 +1,82 @@
+
+.random-block
+  display: flex
+  flex-direction: column 
+  gap: aCalc(14)
+  position: relative
+
+.random-lf
+  padding: aCalc(24)
+  border-radius: aCalc(12)
+  position: absolute
+  background-color: rgba(15, 15, 15, 0.20)
+  backdrop-filter: blur(18px)
+  width: aCalc(417)
+  min-height: aCalc(170)
+  opacity: 0
+  visibility: hidden
+  transition: opacity .7s, visibility .4s
+  +r($sm)
+    border-radius: 12px
+    padding: 16px 24px
+    width: 100%
+    // max-width: 343px
+  &::before 
+    position: absolute
+    content: ""
+    z-index: 1
+    border-top-left-radius: aCalc(12)
+    border-bottom-left-radius: aCalc(12)
+    left: 0
+    top: 0
+    width: aCalc(8)
+    height: 100%
+    background-color: $PaleGold
+    +r($sm)
+      border-top-left-radius: 12px
+      border-bottom-left-radius: 12px
+      width: 8px
+  .button-icon 
+    .slide-button-inner 
+      position: relative
+      height: aCalc(21)
+      color: $ChaosBlack
+      font-size: aCalc(16)
+      line-height: aCalc(21)
+      padding-right: aCalc(10)
+      font-weight: 400
+    +r($sm)
+      padding-right: 10px
+      font-size: 14px
+      line-height: 18px
+  img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    width: aCalc(5)
+    height: aCalc(10)
+    +r($sm)
+      width: 5px
+      height: 10px
+  .button-icon img 
+    top: 60%
+    width: aCalc(24)
+    height: aCalc(24)
+    right: aCalc(-12)
+    +r($sm)
+      width: 24px
+      right: -12px
+      height: 24px
+  .title-xl
+    margin-bottom: aCalc(12)
+    +r($sm)
+      margin-bottom: 6px
+  .title-m
+    margin-bottom: aCalc(14)
+    +r($sm)
+      margin-bottom: 9px
+  &_start
+    position: relative
+    opacity: 1
+    visibility: visible

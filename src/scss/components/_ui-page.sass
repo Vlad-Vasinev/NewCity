@@ -1,0 +1,246 @@
+/*! .ui-page style */
+.container.ui-wrapper 
+  position: relative
+.components-containers
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  gap: aCalc(20)
+  +r($sm)
+    flex-direction: column  
+    gap: 20px
+.ui-containers
+  display: grid
+  grid-template-columns: repeat(auto-fit, aCalc(300))
+  gap: aCalc(20)
+  +r($sm)
+    grid-template-columns: repeat(auto-fit, 164px)
+    gap: 16px
+.ui-container
+  margin: aCalc(20) 0
+  +r($sm)
+    margin: 20px 0
+    max-width: 100%
+  padding: aCalc(20) aCalc(16) 
+  border: aCalc(2) dashed $CadmiumOrange
+  border-radius: aCalc(2)
+  max-width: max-content
+  & input, form
+    margin-bottom: aCalc(24)
+    +r($sm)
+      margin-bottom: 16px
+  +r($sm)
+    border-width: 2px
+    border-radius: 2px
+    padding: 20px 10px
+  .block-gap
+    margin-bottom: aCalc(16)
+    +r($sm)
+      margin-bottom: 12px
+    &__mesh 
+      display: flex
+      gap: aCalc(24)
+      +r($sm)
+        flex-wrap: wrap
+        gap: 24px
+
+.block-page
+  margin: aCalc(72) auto
+  +r($sm)
+    margin: 50px auto
+  &.mb-null
+    h1, .h1
+      margin-bottom: 0
+  &.mt-small
+    +r($sm)
+      margin-top: 24px
+  &__title 
+    margin-bottom: aCalc(32)
+    text-align: left
+    +r($sm) 
+      margin-bottom: 24px
+
+.svg-icon-el .sprite-icon
+  width: aCalc(20)
+  height: aCalc(20)
+  +r($sm)
+    width: 20px
+    height: 20px
+
+//Typography
+h1, .h1
+  font-size: aCalc(32)
+  line-height: aCalc(44)
+  font-weight: 700
+  color: $DireWolf
+  +r($sm)
+    font-size: 24px
+    line-height: 32px
+
+h2, .h2
+  font-size: aCalc(20)
+  line-height: aCalc(28)
+  font-weight: 700
+  color: $DireWolf
+  +r($sm)
+    font-size: 18px
+    line-height: 24px
+
+h3, .h3
+  font-size: aCalc(14)
+  line-height: aCalc(20)
+  font-weight: 700
+  color: $DireWolf
+  +r($sm)
+    font-size: 12px
+    line-height: 18px
+
+h4, .h4
+  font-size: aCalc(16)
+  line-height: aCalc(24)
+  font-weight: 400
+  color: $DireWolf
+  +r($sm)
+    font-size: 14px
+    line-height: 20px
+
+p.p1, .p1
+  font-size: aCalc(14)
+  line-height: aCalc(20)
+  font-weight: 400
+  color: $DireWolf
+  +r($sm)
+    font-size: 12px
+    line-height: 18px 
+
+p.p2, .p2
+  font-size: aCalc(12)
+  line-height: aCalc(16)
+  font-weight: 400
+  color: $DireWolf
+  +r($sm)
+    font-size: 10px
+    line-height: 14px 
+
+p.p3, .p3
+  font-size: aCalc(12)
+  line-height: aCalc(14)
+  font-weight: 400
+  color: $IndustrialRevolution
+  +r($sm)
+    font-size: 12px
+    line-height: 14px 
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .p1, .p2, p
+  &.content-hide
+    opacity: 0
+    max-height: aCalc(40)
+    margin-bottom: 0
+    +r($sm)
+      max-height: 8px
+
+button
+  padding: 0
+  background-color: transparent
+
+button.btn1, .btn1
+  font-size: aCalc(14)
+  line-height: aCalc(20)
+  font-weight: 500
+  color: $DireWolf
+  +r($sm)
+    font-size: 12px
+    line-height: 18px
+
+input[name="phone"]
+  transition: background-color .3s
+  &:focus 
+    background-color: #FFDD66
+    border-bottom: none
+
+input[name="name"]
+  transition: background-color .3s
+  &:focus 
+    background-color: #FFDD66
+    border-bottom: none
+
+//Buttons 
+button.button-primary, .button-primary
+  min-width: aCalc(82)
+  padding: aCalc(8) aCalc(16)
+  background-color: $PaleGold
+  border-radius: aCalc(4)
+  text-align: center
+  transition: all .3s
+  &:not(.button-primary-success, &.button-primary-error, &.button-primary-progress):hover 
+    background-color: $LightTan
+  +r($sm)
+    padding: 8px 16px
+    border-radius: 4px
+    min-width: 75px
+  &.button-primary-success, &.button-primary-error, &.button-primary-progress
+    display: grid
+    justify-content: center
+    align-items: center
+    svg 
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px
+
+button.button-secondary
+  min-width: aCalc(103)
+  border: 1px solid $PaleGold
+  padding: aCalc(8) aCalc(16)
+  background-color: transparent
+  border-radius: aCalc(4)
+  text-align: center
+  transition: all .3s
+  &:not(.button-secondary-success, &.button-secondary-error, &.button-secondary-progress):hover 
+    background-color: $LightTan
+  +r($sm)
+    padding: 8px 16px
+    border-radius: 4px
+    min-width: 93px
+  &.button-secondary-success, &.button-secondary-error, &.button-secondary-progress
+    display: grid
+    justify-content: center
+    align-items: center
+    svg 
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px  
+
+//Tags 
+.tag-text
+  min-width: aCalc(53)
+  max-width: max-content
+  padding: aCalc(6) aCalc(12)
+  text-align: center
+  border-radius: aCalc(16)
+  background-color: $Porcelain
+  transition: all .3s 
+  cursor: pointer 
+  &:hover 
+    background-color: $PaleGold
+  +r($sm)
+    padding: 6px 12px
+    border-radius: 16px
+    min-width: 49px
+  &.tag-text-icon
+    display: flex
+    justify-content: space-around
+    align-items: center
+    min-width: aCalc(124)
+    svg 
+      width: aCalc(20)
+      height: aCalc(20)
+      +r($sm)
+        width: 20px
+        height: 20px
+    div, p
+      margin-bottom: 0
+/*! .ui-page style */

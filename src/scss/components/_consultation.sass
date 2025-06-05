@@ -1,0 +1,116 @@
+
+/*! .consultation style block*/
+.consultation 
+  transform: translateX(aCalc(424))
+  position: fixed
+  //z-index: 1503
+  // z-index: 1501
+  z-index: 1000
+  right: 0
+  top: 0
+  height: 100%
+  display: flex 
+  justify-content: center
+  align-items: flex-start
+  transition: transform 0.4s
+  +r($sm)
+    z-index: 1049
+    transform: translateX( calc(100vw + 140px))
+    height: 100vh
+  &.consultation_active 
+    transform: none
+    z-index: 2000
+  &__btn 
+    cursor: pointer
+    left: aCalc(101)
+    top: 50%
+    transform: rotate(-90deg) translateY(-50%) translateX(50%)
+    width: aCalc(202)
+    height: aCalc(36)
+    background-color: $PaleGold
+    padding: aCalc(8) aCalc(8) aCalc(8) aCalc(18)
+    text-align: center
+    border-top-left-radius: aCalc(10)
+    border-top-right-radius: aCalc(10)
+    position: relative
+    +r($sm)
+      transform: rotate(-90deg) translateY(-230%) translateX(0%)
+      align-self: center
+      position: initial
+      flex-shrink: 0
+      padding: 6px 6px 6px 18px
+      border-top-left-radius: 4px
+      border-top-right-radius: 4px
+      width: 166px
+      height: 30px
+    &::before 
+      position: absolute
+      content: ""
+      width: aCalc(8)
+      height: aCalc(8)
+      border-radius: 50%
+      background-color: $MediumAquamarine
+      left: aCalc(10)
+      top: 50%
+      transform: translateY(-50%)
+      +r($sm)
+        width: 6px
+        height: 6px
+        left: 8px
+  &__form 
+    width: aCalc(424)
+    padding: aCalc(48) aCalc(16)
+    background-color: $White
+    height: 100%
+    position: relative
+    border: aCalc(2) solid #F2F2
+    +r($sm)
+      border: 2px solid #F2F2
+      width: 100vw
+      padding: 64px 16px 32px 16px
+    .h2 
+      margin-bottom: aCalc(16)
+    .form-order 
+      border: none
+      margin-top: aCalc(24)
+      &__top 
+        border-bottom: 0
+        padding: 0
+      &__bottom 
+        padding: 0
+      .form-order__el
+        gap: aCalc(16)
+        flex-direction: column
+        align-items: flex-start
+      .popup__login-wrap-btn
+        flex-direction: column
+        .btn1
+          margin-bottom: aCalc(6)
+          +r($sm)
+            margin-bottom: 6px
+      .ui-input
+        margin-right: 0
+        width: 100%
+        .form-order__input
+          max-width: 100%
+      .g-recaptcha
+        display: none
+  &__form-close 
+    cursor: pointer
+    position: absolute
+    top: aCalc(8)
+    right: aCalc(8)
+    z-index: 1
+    transition: transform .3s
+    &:hover 
+      transform: rotate(90deg)
+    +r($sm)
+      top: 8px
+      right: 8px
+    svg 
+      width: aCalc(32)
+      height: aCalc(32)
+      +r($sm)
+        width: 32px
+        height: 32px
+/*! .consultation style block*/

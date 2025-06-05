@@ -1,0 +1,114 @@
+
+.meshed-blocks 
+  display: flex 
+  justify-content: space-between
+  +r($sm)
+    margin: 0 16px
+    gap: 16px
+    flex-direction: column
+
+.mesh-block 
+  &.mesh-block_text
+    width: aCalc(352)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +r($sm)
+      width: unset
+    .title-xxl
+      +r($sm)
+        margin-bottom: 8px
+  &.mesh-block_img
+    img, video 
+      width: aCalc(478)
+      height: aCalc(478)
+      object-fit: cover
+      border-radius: aCalc(12)
+      +r($sm)
+        border-radius: 12px
+        width: 100%
+        height: 300px
+  &.mesh-block_contact
+    width: aCalc(603)
+    padding: aCalc(40)
+    border-radius: aCalc(12)
+    background-color: $PaleGold
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +r($sm)
+      width: 100%
+      padding: 24px 12px
+      border-radius: 12px
+    .title-xxl
+      +r($sm)
+        margin-bottom: 16px
+  &__contact 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +r($sm)
+      flex-direction: column
+      align-items: flex-start
+      gap: 24px
+    .tab-lf.tab-lf_icon
+      height: aCalc(50)
+      padding: aCalc(14) aCalc(12)
+      background-color: $WhiteSmoke
+      color: $ChaosBlack
+      padding-left: aCalc(28)
+      +r($sm)
+        display: flex
+        justify-content: center
+        gap: 6px
+        align-items: center
+        padding: 14px
+        height: unset
+        width: 100%
+      .title-m
+        +r($sm)
+          order: 1
+      svg 
+        +r($sm)
+          order: 0
+          transform: none
+          position: initial
+    .title-l-bold
+      margin-bottom: aCalc(4)
+      +r($sm)
+        margin-bottom: 4px
+  &__employee 
+    display: flex
+    align-items: center
+    gap: aCalc(12)
+    +r($sm)
+      gap: 12px
+    img
+      width: aCalc(64)
+      height: aCalc(64)
+      object-fit: cover
+      border-radius: 50%
+      +r($sm)
+        width: 64px
+        height: 64px
+  .tab-lf.tab-lf_icon.slide-button
+    padding: 0
+    width: auto
+    +r($sm)
+      display: block
+      width: 100%
+    svg 
+      position: initial
+      transform: translateY(0)
+    span 
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: aCalc(14) aCalc(14)
+      gap: aCalc(6)
+      min-width: aCalc(109)
+      +r($sm)
+        min-width: auto 
+        padding: 14px
+        gap: 6px
+        justify-content: center

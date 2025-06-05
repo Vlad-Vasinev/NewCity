@@ -1,0 +1,47 @@
+
+.maps-block.map-colorful
+  position: relative
+  .address-lf 
+    position: absolute
+    z-index: 1
+    top: aCalc(163)
+    left: aCalc(220)
+    .title-s, .title-l
+      display: block
+  .icon-marker-colorful
+    min-width: aCalc(80)
+    height: aCalc(88)
+    position: absolute
+    z-index: 100
+    +r($sm)
+      min-width: 60px
+      height: 67px
+  .js-ymap-lf-colorful
+    +r($sm)
+      border-radius: 0
+    .ymaps3x0--map
+      +r($sm)
+        border-radius: 0
+  .address-lf 
+    +r($sm)
+      display: none
+
+.map-colorful
+  &__title, &__address
+    display: none 
+    +r($sm)
+      display: block 
+      margin-bottom: 24px
+      margin-left: 16px
+  .title-xxl, .title-xl 
+    +r($sm)
+      margin-top: 24px
+      margin-bottom: 24px
+  .address-lf__days 
+    .title-s 
+      +r($sm)
+        margin-bottom: 3px
+  .title-l 
+    +r($sm)
+      display: block
+      margin-block: 16px

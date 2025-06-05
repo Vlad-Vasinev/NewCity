@@ -1,0 +1,131 @@
+/*! .banner-block style block*/
+.banner-container 
+  margin: 0 auto
+  padding: 0 aCalc(12)
+  max-width: aCalc(1440)
+  width: 100%
+  +r($sm)
+    max-width: 696px
+    padding: 0 12px
+  
+.banner-block 
+  position: relative
+  &:not(.swiper-initialized)
+    .banner-el.swiper-slide:nth-child(n + 2)
+      display: none
+  .control-inner
+    position: absolute
+    bottom: aCalc(20)
+    right: aCalc(60)
+    width: aCalc(160)
+    height: aCalc(14)
+    z-index: 10
+    +r($sm)
+      right: auto 
+      left: 12px
+      width: 168px
+    .swiper-pagination
+      display: flex
+      justify-content: space-between
+      gap: aCalc(14)
+      +r($sm)
+        gap: 12px
+    .swiper-pagination-bullet
+      width: aCalc(50)
+      border-radius: 0
+      margin: 0
+      +r($sm)
+        width: 44px
+    .swiper-pagination-bullet.swiper-pagination-bullet-active
+      background-color: #ffffff
+  
+.banner-el 
+  position: relative
+  padding: aCalc(60)
+  width: 100%
+  height: aCalc(781)
+  // height: aCalc(1000)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  +r($sm) 
+    padding: 16px 12px 48px 12px
+    min-height: unset 
+    height: 470px
+  img 
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title 
+    font-weight: 700 
+    font-size: aCalc(32)
+    line-height: aCalc(38)
+    color: #282828
+    padding: aCalc(10)
+    background-color: #FFDD66
+    border-radius: aCalc(8)
+    max-width: max-content
+    +r($sm)
+      border-radius: 6px
+      padding: 8px 10px
+      font-size: 20px
+      line-height: 24px
+  &__subtitle 
+    text-transform: uppercase
+    padding: aCalc(2) aCalc(10)
+    display: block 
+    margin-bottom: aCalc(6)
+    border-radius: aCalc(8)
+    max-width: max-content
+    background-color: #ffffff
+    +r($sm)
+      border-radius: 6px
+      margin-bottom: 6px
+  &__top, &__bottom 
+    position: relative
+    z-index: 1
+  &__description 
+    p
+      font-weight: 500 
+      font-size: aCalc(20)
+      line-height: aCalc(26)
+      color: #ffffff
+      max-width: aCalc(424)
+      margin-bottom: aCalc(24)
+      +r($sm)
+        max-width: 300px
+        font-size: 14px
+        line-height: 20px
+        margin-bottom: 16px
+  &__links
+    display: flex
+    gap: aCalc(8)
+    +r($sm)
+      gap: 8px
+  &__link
+    font-weight: 500
+    font-size: aClac(14)
+    line-height: aClac(20)
+    +r($sm)
+      font-size: 14px
+      line-height: 20px
+  &__link.banner-el__anchor
+    padding: aCalc(8) aCalc(16)
+    background-color: #ffffff
+    color: #282828
+    border-radius: aCalc(4)
+    +r($sm)
+      padding: 8px 16px
+      border-radius: 4px
+  &__link.banner-el__apartment
+    padding: aCalc(8) aCalc(16)
+    background-color: #FFDD66
+    border-radius: aCalc(4)
+    +r($sm)
+      padding: 8px 16px
+      border-radius: 4px
+/*! .banner-block style block*/
+

@@ -1,0 +1,88 @@
+
+section.trade 
+  include ../blocks/consultation-modal/_consultation-modal.pug
+  include ../blocks/quiz/_quiz.pug
+  .main-title
+    h1.blog__title.h1.content-hide Home
+  .full-slider.swiper-container 
+    .full-slider__wrapper.swiper-wrapper 
+      .full-slider__item.swiper-slide 
+        .full-item(js-lazy) 
+          img(src="img/full-slider-1.jpg" alt="full element")
+          .full-item__content 
+            .h1 Trade-in in residential complex New City 111
+            .p1
+              |If the apartment from the Developer New City gfromovy buy yours
+              |apartment, other Developers sale through real estate agency, fixing the reservation for 2
+              |months, discount -2% from cost
+      .full-slider__item.swiper-slide 
+        .full-item(js-lazy)
+          img(src="img/full-slider-1.jpg" alt="full element")
+          .full-item__content 
+            .h1 Trade-in in residential complex New City 222
+            .p1
+              |If the apartment from the Developer New City gfromovy buy yours
+              |apartment, other Developers sale through real estate agency, fixing the reservation for 2
+              |months, discount -2% from cost
+      .full-slider__item.swiper-slide 
+        .full-item(js-lazy)
+          img(src="img/full-slider-1.jpg" alt="full element")
+          .full-item__content 
+            .h1 Trade-in in residential complex New City 333
+            .p1
+              |If the apartment from the Developer New City gfromovy buy yours
+              |apartment, other Developers sale through real estate agency, fixing the reservation for 2
+              |months, discount -2% from cost
+    .swiper-pagination
+  .container 
+    .trade
+      .block-page
+        include ../blocks/block-list/_block-list.pug
+      .block-page
+        .h1.block-page__title Trade-in Advantages
+        include ../blocks/trade-mesh/_trade-mesh.pug
+      .block-page
+        .h1.block-page__title Who is Trade-in suitable for?
+        .info-video 
+          .block-text 
+            .block-text__inner
+              .h2 The exchange is suitable for those who want:
+              ol 
+                li.p1 A bigger apartment
+                li.p1 An apartment in a new building
+                li.p1 Exchange an apartment
+                li.p1 Exchange two apartments for one
+          .info-video__video 
+            .block-video(js-lazy)
+              img(src="img/trade-pic.jpg" alt="") 
+      .block-page 
+        .product-form
+          include ../blocks/form-order/_form-order.pug
+      .block-page
+        include ../blocks/block-text/_block-text.pug
+      .block-page
+        .block-question
+          .h1.block-page__title What to do if your apartments are not from the developer Novy Gorod?
+          .p1 We take care of the sale of your old apartment
+          .brief-info
+            .brief-info__top
+              .brief-info__top-el
+                <div>
+                  span
+                    p.h1 1
+                  .p1 Reservation 60 days
+                </div>
+              .brief-info__top-el 
+                <div>
+                  span
+                    p.h1 2
+                  .p1 2% discount on the purchase of a new apartment
+                </div>
+              .brief-info__top-el 
+                <div>
+                  span
+                    p.h1 3
+                  .p1 Selling your apartment through the international agency C21
+                </div>
+      .block-page
+        include ../blocks/map-primary/_map-primary.pug

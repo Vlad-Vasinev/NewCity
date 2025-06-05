@@ -1,0 +1,23 @@
+
+.sliderLf-sm.swiper-container
+  .sliderLf-sm__wrapper.swiper-wrapper(data-fs-ctr)
+    - var k = 0
+    while k < 6
+      .sliderLf-sm__el.swiper-slide(data-fs-full data-fs-all="6")
+        <div js-lazy>
+          img(src="img/living-facility/slider-sm.jpg" alt="")
+        </div>
+        .title-m.sliderLf-sm__badge 2-room
+      - k++
+  .control-inner
+    .swiper-pagination.pag-tab
+    button.slider-navigation-prev.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>
+    button.slider-navigation-next.slide-button.slide-button_horizontal
+      span 
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 15L2 8L9 1" stroke="#0F0F0F" stroke-width="1.5"/>
+        </svg>

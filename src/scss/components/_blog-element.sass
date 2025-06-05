@@ -1,0 +1,326 @@
+/*! .blog-element style page*/
+.blog-element
+  margin-top: aCalc(64)
+  +r($sm)
+    margin-top: 32px
+  &__wrapper 
+    position: relative
+    display: flex
+    +r($sm)
+      display: block
+  .container
+    +r($sm)
+      margin-top: 16px
+      padding: 0 12px
+
+.blog-element__back
+  z-index: 101
+  display: flex
+  cursor: pointer
+  top: aCalc(-22)
+  left: 0
+  color: #737373
+  position: absolute
+  +r($sm)
+    left: 0
+    top: -24px
+
+.blog-element__inner
+  width: aCalc(872)
+  margin: 0 auto aCalc(72) 0
+  +r($sm)
+    max-width: unset
+    margin: 0 auto
+    width: 100%
+
+.blog-element__social
+  margin-top: aCalc(8)
+  display: flex
+  align-items: center
+  +r($sm)
+    margin-top: 8px
+
+.blog-element__title
+  position: relative
+  margin-bottom: aCalc(32)
+  +r($sm)
+    font-size: 22px
+    line-height: 30px
+    margin-bottom: 24px
+
+.blog-element__title.blog__title 
+  +r($sm)
+    margin-bottom: 24px
+
+.blog-element__share 
+  position: relative
+  display: grid
+  justify-content: center
+  align-content: center
+  background-color: #F2F2F2
+  border-radius: aCalc(16)
+  width: aCalc(44)
+  height: aCalc(32)
+  transition: .3s
+  svg 
+    path
+      fill: #ffffff
+  +r($sm)
+    border-radius: 16px
+    width: 44px
+    height: 32px
+  svg
+    width: aCalc(16)
+    height: aCalc(16)
+    +r($sm)
+      width: 16px
+      height: 16px
+
+.social-links
+  z-index: 99
+  position: absolute
+  bottom: aCalc(-63)
+  left: aCalc(17)
+  width: aCalc(244)
+  padding: aCalc(6) aCalc(12)
+  border-radius: aCalc(4)
+  background-color: #282828
+  display: none
+  +r($sm)
+    left: 17px
+    bottom: -63px
+    border-radius: 4px
+    width: 244px
+    padding: 6px 12px
+    
+.social-links__active
+  display: block
+
+.social-links__wrapper
+  display: flex
+
+.social-links__title
+  text-align: left
+  margin-bottom: aCalc(6)
+  +r($sm)
+    margin-bottom: 6px
+
+.social-links__el + .social-links__el 
+  padding-left: aCalc(4)
+  +r($sm)
+    padding-left: 4px
+
+.social-links__item
+  width: aCalc(24)
+  height: aCalc(24)
+  display: grid
+  justify-content: center
+  align-items: center
+  background-color: #ffffff
+  border-radius: aCalc(4)
+  transition: .3s
+  &:hover
+    background-color: #FD6
+  +r($sm)
+    border-radius: 4px
+    width: 24px
+    height: 24px
+  svg 
+    width: aCalc(12)
+    height: aCalc(12)
+    +r($sm)
+      width: 12px
+      height: 12px 
+
+.blog-element__data
+  margin-left: aCalc(16)
+  +r($sm)
+    margin-left: 16px
+
+.blog-element__item + .blog-element__item
+  margin-top: aCalc(8)
+  +r($sm)
+    margin-top: 8px
+
+.blog-element__list
+  margin-bottom: aCalc(32)
+  +r($sm)
+    margin-bottom: 24px
+
+.blog-element__picture
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin-bottom: 16px
+  img 
+    width: 100%
+    height: aCalc(324)
+    object-fit: cover
+    border-radius: aCalc(4)
+    +r($sm)
+      border-radius: 4px
+      max-height: 195px
+      height: 100%
+
+.blog-element__subtitle
+  margin-bottom: aCalc(16)
+  +r($sm)
+    margin-bottom: 8px
+
+.blog-element__text
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin-bottom: 16px
+  a 
+    display: block
+    font-weight: 700
+
+.blog-element__text .h3 
+  font-weight: 400
+
+.blog-element__text .p1 + .p1
+  margin-top: aCalc(20)
+  +r($sm)
+    margin-top: 16px
+
+.video-section
+  cursor: pointer
+  position: relative
+  margin-bottom: aCalc(24)
+  position: relative
+  width: 100%
+  height: aCalc(324)
+  +r($sm)
+    max-height: 195px
+    height: 195px
+  img 
+    width: 100%
+    height: 100%
+    z-index: 10
+    border-radius: aCalc(4)
+    +r($sm)
+      border-radius: 4px
+  &__icon
+    max-width: max-content
+    position: absolute
+    left: 0
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    margin: 0 auto 
+    svg 
+      width: aCalc(64)
+      height: aCalc(45)
+      +r($sm)
+        width: 48px
+        height: 34px
+  +r($sm)
+    margin-bottom: 16px
+    display: grid 
+    justify-content: center
+    align-content: center
+  video
+    width: 100%
+    height: aCalc(324)
+    object-fit: cover
+    border-radius: aCalc(4)
+    +r($sm)
+      border-radius: 4px
+      height: auto
+
+.video-section__play
+  cursor: pointer
+  position: absolute
+  top: 50%
+  display: block
+  width: aCalc(64)
+  height: aCalc(64)
+  left: 50%
+  right: 0
+  margin: 0
+  transform: translateY(-50%) translateX(-50%)
+  +r($sm)
+    display: none
+  +r($sm)
+    width: 48px
+    height: 48px
+  svg
+    width: aCalc(64)
+    height: aCalc(64)
+    +r($sm)
+      width: 48px
+      height: 48px
+
+.play-hide
+  display: none
+
+.is-playing
+
+.company-info
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-bottom: aCalc(24)
+  +r($sm)
+    margin-bottom: 16px
+    align-items: top 
+  +r($sm)
+    align-items: start
+
+.company-info__img
+  flex-shrink: 0
+
+.company-info__img img 
+  width: aCalc(200)
+  height: aCalc(200)
+  object-fit: cover
+  +r($sm)
+    max-width: unset
+    width: 56px
+    height: 56px
+    max-height: unset
+
+.company-info__text 
+  margin-left: aCalc(24)
+  +r($sm)
+    margin-left: 24px
+
+.company-info__text p
+  margin-bottom: aCalc(16)
+  font-weight: 400
+  +r($sm)
+    margin-bottom: 8px
+
+.blog-list__el.posts-hide 
+  display: none
+
+.posts
+  margin-bottom: aCalc(72)
+  .blog-list
+    +r($sm)
+      margin-bottom: 0
+  +r($sm)
+    position: relative
+    margin-bottom: 0
+    margin-bottom: 48px
+    padding-bottom: 48px
+
+.posts__control
+  margin-bottom: aCalc(32)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +r($sm)
+    margin-bottom: 24px
+
+.posts__more
+  cursor: pointer
+  background-color: transparent
+  border: 1px solid #FD6
+  +r($sm)
+    position: absolute
+    bottom: 0
+    width: 100%
+
+.slider__el.swiper-slide
+  max-width: auto
+/*! .blog-element style page*/

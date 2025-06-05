@@ -1,0 +1,37 @@
+/*! .thanks-block style block*/
+.thanks-block
+  +aProp(--footer-p-top, 200)
+  padding-top: var(--footer-p-top)
+  height: calc(100vh - var(--footer-p-top))
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  justify-content: center
+  +aProp(gap, 40)
+  +r($sm)
+    padding-top: 60px
+    height: auto
+    gap: 0
+  img
+    +aProp(width, 132)
+    height: auto
+    +aProp(margin-bottom, 20)
+    +r($sm)
+      width: 96px
+      margin-bottom: 30px
+  h1 + p, p + p
+    +r($sm)
+      margin-top: 16px
+       
+  .thanks-block__buttons
+    display: flex
+    +aProp(gap, 16)
+    +r($sm)
+      width: 100%
+      flex-direction: column
+      gap: 10px
+      margin-top: 30px
+      .slide-button
+        width: 100%
+/*! .thanks-block style block*/

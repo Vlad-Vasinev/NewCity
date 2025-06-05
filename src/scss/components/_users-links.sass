@@ -1,0 +1,30 @@
+/*! .users-links style block*/
+.users-links
+  display: flex
+  gap: aCalc(8)
+  +r($sm)
+    margin-bottom: 24px
+    gap: 10px
+
+.user-link 
+  background-color: #ffffff
+  width: aCalc(44)
+  height: aCalc(32)
+  border-radius: aCalc(8)
+  display: grid
+  justify-content: center
+  align-items: center
+  transition: background .3s
+  &:hover 
+    background-color: $PaleGold
+  +r($sm)
+    border-radius: 8px
+    width: 44px
+    height: 32px
+  svg 
+    width: aCalc(20)
+    height: aCalc(20)
+    +r($sm)
+      width: 20px
+      height: 20px
+/*! .users-links style block*/

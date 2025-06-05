@@ -1,0 +1,81 @@
+.apartment-bg-mesh
+  - var appartmentItem = ["Apartment №510", "Apartment №507", "Apartment №505"]; //Apartment №506
+  - var n = 0;
+  while n < 3
+    .apartment.apartment_free.two-room-el
+      .apartment-state.prom-p2-medium Free
+      .apartment__title.prom-h1= appartmentItem[n]
+      .apartment__descr 
+        .p2 2к
+        .p2 65.2 м²
+        .p2 2 floor
+      .apartment-slider.swiper-container 
+        .apartment-slider__wrapper.swiper-wrapper 
+          - var imagesContent = ["img/filtered-img.png", "img/filtered-img-1.png", "img/filtered-img-2.png", "img/filtered-img-3.png"];
+          - var imagesSrc = ["img/filtered-img.png", "img/filtered-img-1.png", "img/filtered-img-2.png", "img/filtered-img-3.png"];
+          - var k = 0;
+          while k < 4
+            a(href= imagesContent[k] data-fancybox="gallery").apartment-slider__el.swiper-slide 
+              img(src= imagesSrc[k] alt="")
+            - k++
+        .control-inner
+          .swiper-pagination
+      .apartment__user 
+        .apartment__user-price 
+          .h2  10 281 180 ₽ 
+          .prom-p2-medium  161 400 ₽/м² 
+        .apartment__user-send 
+          a(href="#").prom-b1  Submit request
+      .apartment__info
+        .apartment__info-descr 
+          .prom-p2-medium
+            span.prom-p2-small Apartment with finishing
+            |Apartment with finishing
+        .apartment__info-title.prom-p2-medium Characteristics
+        .apartment__info-icon 
+          img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAaVBMVEX///8AAAChoaH39/fx8fEFBQU9PT2dnZ2QkJArKyseHh4wMDDp6ekZGRkLCwvm5uZgYGBYWFhQUFBoaGjFxcW6urpubm6JiYnb29utra16enrT09M1NTUaGhre3t7Ly8smJiZFRUV9fX3DBcb0AAAETklEQVR4nO3c7VbiMBCA4dS2rCD9wC0Koije/0Uuk6SlYmgSkkzSPfP+sno8Z3gsJS1FxiiKoiiKoiiKoiiKoiiKoihKU7PfFrFnsCxvsywr/8Yew6p8kfEWeexJzMuXmWw5m6l75zlZS+flckbW0nlVFNXYOn9530ee7HbS+el8vCtG1s3H+as29nA3Gpxh42K9rvlXL7HHUzZyhnrrQyWflyla/3CGpHU5HE3Ss75yhorhkJ2o9S9nqOj3jMUhRWuFM9Rbr1lTJWetdIYux5AmNesbztDleJ2Y9U1nKFHrCWcoSetJZyhBa40zlJy11hlKzNrAGZLWT0lYGzlD0vqVxbc2dIaEdXVeXke2NnaGCljtlTs2WL8Fnk6dhfO5Bz50A19K613Q6dRZOYuZs5XY6PhvRjhttHQWu0QntvaRpO9xzh7EljiUbAJOp+4u5z9y8x02avRLlHc5P8rNbqyOl5Oz2DkW4aZT5+TMNtlw7EPMyZltfz4EpNycixVsvgebTp2bM2v59jHUdOrcnFlXRljiOTqLX0e+bO3ozF7HL+ZIOTqzY4b/+u3qzPjvV6iv367OcnGHunM4Oxc1+iHa2Vm8ftfrINOpc3Zmn/x7r0GmU+funNfYizt3Z/bNdw7E1293Z3YokRd3HpwZX9x94L1+e3Bmb3znOASYTp0PZ7Fz4F1T8uEsdo4Kbefw4SwXd5/+p1PnxfnIHwraTU1enMXirsTaObw4y+9vvU+nzo+zuN3j2ft06vw441658+MsV/5Ir9+enFGv3HlyllfucBZ3npzlZV2clb8v5/yLP3SUQ7QvZ/bCf4Kyc/hyZjv+E5Qrd+Jv6sE5f+KPHWXnePPkzB7xXr/FabO7s1zc4Vy52/H3g92dUa/cNXwQo3fMppzlD7FW/vx5WBpMPeksrtydPM92M3mLpXbqSWfxLES8ciem0VlPOvfnhcPTsNt8ncIeRzoD62nn81OjHk2dt/wRtkEP2Vuttcb53LEaps5P4hEGPrnVWeucoaafOt9kfWHPuqat9c5Qb91ml8LebzVlbeIMNdVl2mq7impt5gwdh6mrXf8pjDjWps5Qb13BrRLreNbmztCid4aiWds4s/z54gxFsrZzPo2doSjWVs7y5o5qfOtPBGs75+7aGUK3tnOW1/+vb7FCtrZzZjk/Bfr95hCqtaWzGFp1johpbefM+mO0YmWHaW3lzIbZ4lrbOTN5Yh/Pel9bO0NNFdW6actyZX89oIlrfWeRre+MrPEia7z+U2vsu8CN0lpj3q9nnM66TvJfgWisyxgfP9N307q7fH4uvW5Yd3ynxnnj7o6U1uKjDTE+52eYwlo4Z9/RZtL3y1o6J3nAG7qyls5xPm5r3g/rWThDI+uZOEOD9WycIWm9mI8zNH4rZh7OUDP8b6a5OEP8v43Nyhni69Ea+0Orzh33XaprJIqiKIqiKIqiKIqiKIqiKCpI/wD5Dy/RBUt2JAAAAABJRU5ErkJggg==" alt="")
+        - var k = 0;
+        while k < 10
+          .apartment__info-el
+            .p2 Address
+            .p2 Obninsk - floor 2 № 505
+          - k++
+    - n++
+  .apartment.apartment_free.studio-el
+    .apartment-state.prom-p2-medium Free
+    .apartment__title.prom-h1 Apartment №506
+    .apartment__descr 
+      .p2 2к
+      .p2 65.2 м²
+      .p2 2 floor
+    .apartment-slider.swiper-container 
+      .apartment-slider__wrapper.swiper-wrapper 
+        - var imagesContent = ["img/filtered-img.png", "img/filtered-img-1.png", "img/filtered-img-2.png", "img/filtered-img-3.png"];
+        - var imagesSrc = ["img/filtered-img.png", "img/filtered-img-1.png", "img/filtered-img-2.png", "img/filtered-img-3.png"];
+        - var k = 0;
+        while k < 4
+          a(href= imagesContent[k] data-fancybox="gallery").apartment-slider__el.swiper-slide 
+            img(src= imagesSrc[k] alt="")
+          - k++
+      .control-inner
+        .swiper-pagination
+    .apartment__user 
+      .apartment__user-price 
+        .h2  10 281 180 ₽ 
+        .prom-p2-medium  161 400 ₽/м² 
+      .apartment__user-send 
+        a(href="#").prom-b1  Submit request
+    .apartment__info
+      .apartment__info-descr 
+        .prom-p2-medium
+          span.prom-p2-small Apartment with finishing
+          |Apartment with finishing
+      .apartment__info-title.prom-p2-medium Characteristics
+      .apartment__info-icon 
+        img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAAaVBMVEX///8AAAChoaH39/fx8fEFBQU9PT2dnZ2QkJArKyseHh4wMDDp6ekZGRkLCwvm5uZgYGBYWFhQUFBoaGjFxcW6urpubm6JiYnb29utra16enrT09M1NTUaGhre3t7Ly8smJiZFRUV9fX3DBcb0AAAETklEQVR4nO3c7VbiMBCA4dS2rCD9wC0Koije/0Uuk6SlYmgSkkzSPfP+sno8Z3gsJS1FxiiKoiiKoiiKoiiKoiiKoihKU7PfFrFnsCxvsywr/8Yew6p8kfEWeexJzMuXmWw5m6l75zlZS+flckbW0nlVFNXYOn9530ee7HbS+el8vCtG1s3H+as29nA3Gpxh42K9rvlXL7HHUzZyhnrrQyWflyla/3CGpHU5HE3Ss75yhorhkJ2o9S9nqOj3jMUhRWuFM9Rbr1lTJWetdIYux5AmNesbztDleJ2Y9U1nKFHrCWcoSetJZyhBa40zlJy11hlKzNrAGZLWT0lYGzlD0vqVxbc2dIaEdXVeXke2NnaGCljtlTs2WL8Fnk6dhfO5Bz50A19K613Q6dRZOYuZs5XY6PhvRjhttHQWu0QntvaRpO9xzh7EljiUbAJOp+4u5z9y8x02avRLlHc5P8rNbqyOl5Oz2DkW4aZT5+TMNtlw7EPMyZltfz4EpNycixVsvgebTp2bM2v59jHUdOrcnFlXRljiOTqLX0e+bO3ozF7HL+ZIOTqzY4b/+u3qzPjvV6iv367OcnGHunM4Oxc1+iHa2Vm8ftfrINOpc3Zmn/x7r0GmU+funNfYizt3Z/bNdw7E1293Z3YokRd3HpwZX9x94L1+e3Bmb3znOASYTp0PZ7Fz4F1T8uEsdo4Kbefw4SwXd5/+p1PnxfnIHwraTU1enMXirsTaObw4y+9vvU+nzo+zuN3j2ft06vw441658+MsV/5Ir9+enFGv3HlyllfucBZ3npzlZV2clb8v5/yLP3SUQ7QvZ/bCf4Kyc/hyZjv+E5Qrd+Jv6sE5f+KPHWXnePPkzB7xXr/FabO7s1zc4Vy52/H3g92dUa/cNXwQo3fMppzlD7FW/vx5WBpMPeksrtydPM92M3mLpXbqSWfxLES8ciem0VlPOvfnhcPTsNt8ncIeRzoD62nn81OjHk2dt/wRtkEP2Vuttcb53LEaps5P4hEGPrnVWeucoaafOt9kfWHPuqat9c5Qb91ml8LebzVlbeIMNdVl2mq7impt5gwdh6mrXf8pjDjWps5Qb13BrRLreNbmztCid4aiWds4s/z54gxFsrZzPo2doSjWVs7y5o5qfOtPBGs75+7aGUK3tnOW1/+vb7FCtrZzZjk/Bfr95hCqtaWzGFp1johpbefM+mO0YmWHaW3lzIbZ4lrbOTN5Yh/Pel9bO0NNFdW6actyZX89oIlrfWeRre+MrPEia7z+U2vsu8CN0lpj3q9nnM66TvJfgWisyxgfP9N307q7fH4uvW5Yd3ynxnnj7o6U1uKjDTE+52eYwlo4Z9/RZtL3y1o6J3nAG7qyls5xPm5r3g/rWThDI+uZOEOD9WycIWm9mI8zNH4rZh7OUDP8b6a5OEP8v43Nyhni69Ea+0Orzh33XaprJIqiKIqiKIqiKIqiKIqiKCpI/wD5Dy/RBUt2JAAAAABJRU5ErkJggg==" alt="")
+      - var k = 0;
+      while k < 10
+        .apartment__info-el
+          .p2 Address
+          .p2 Obninsk - floor 2 № 505
+        - k++

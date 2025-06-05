@@ -1,0 +1,19 @@
+.block-appCount 
+  display: flex
+  gap: aCalc(32)
+  +r($sm)
+    flex-direction: column
+    gap: 16px
+  &__item 
+    display: flex
+    align-items: center
+    gap: aCalc(12)
+    +r($sm)
+      flex-direction: row
+      gap: 14px
+    svg 
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px

@@ -1,0 +1,135 @@
+/*! .calc style block*/
+.calc 
+  +r($sm)
+    margin-top: 24px
+  .select__wrapper
+    .select__item 
+      border: none
+  &__radio 
+    margin-top: aCalc(8)
+    display: flex
+    +r($sm)
+      margin-top: 8px
+    &-el 
+      display: grid
+      justify-content: center
+      align-items: center
+      max-width: aCalc(40)
+      width: 100%
+      height: aCalc(36)
+      background-color:#FEFAEF
+      +r($sm)
+        max-width: 40px
+        height: 36px
+    &-el + &-el 
+      margin-left: aCalc(8)
+      +r($sm)
+        margin-left: 8px
+  &__titles
+    margin-top: aCalc(16)
+    display: flex
+    justify-content: flex-start
+    +r($sm)
+      margin-top: 16px
+    &-el + &-el 
+      margin-left: aCalc(8)
+      +r($sm)
+        margin-left: 8px
+  &__inner 
+    margin-left: aCalc(8)
+    margin-top: aCalc(16)
+    +r($sm)
+      margin-left: 8px
+      margin-top: 16px
+    display: flex
+    .levels 
+      margin-right: aCalc(8)
+      display: grid
+      grid-template-columns: 1, aCalc(40)
+      grid-gap: aCalc(8)
+      &__el 
+        display: grid
+        justify-content: center
+        align-items: center
+        border: none
+        background-color: transparent !important
+        font-weight: 600
+        width: aCalc(40)
+        height: aCalc(40)
+        +r($sm)
+          width: 40px
+          height: 40px
+        &:hover
+          background-color: transparent !important
+
+.cells
+  display: grid
+  grid-template-columns: repeat(6, aCalc(40))
+  grid-gap: aCalc(8) aCalc(8)
+  +r($sm)
+    grid-template-columns: repeat(6, 40px)
+    grid-gap: 8px 8px
+  &__el 
+    display: grid
+    justify-content: center
+    align-items: center
+    width: aCalc(40)
+    height: aCalc(40)
+    color: #000000
+    border-radius: aCalc(2)
+    border: 1px solid #c8c8c1
+    font-size: aCalc(14)
+    line-height: aCalc(20)
+    transition: .3s
+    +r($sm)
+      width: 40px
+      height: 40px
+      font-size: 14px
+      line-height: 20px
+      border-radius: 2px
+    &:hover 
+      background-color: #FD6 !important
+  &__el:nth-child(odd)
+    background-color: #9933ff
+  &__el:nth-child(even)
+    background-color: #b9b9b6
+  &__el:first-child
+    background-color: #3399ff
+  &__el:last-child
+    background-color: #3399ff
+  &__info 
+    margin-left: aCalc(57)
+    margin-top: aCalc(20)
+    display: grid 
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: aCalc(12)
+    +r($sm)
+      grid-gap: 12px
+      margin-left: 44px
+      margin-top: 20px
+    &-el 
+      display: flex
+      align-items: center
+      .cells__el 
+        svg 
+          width: aCalc(16)
+          height: aCalc(23)
+          +r($sm)
+            width: 16px
+            height: 23px
+      p 
+        margin-left: aCalc(12)
+
+.on-sale
+  background-color: #9933ff !important
+
+.in-observation
+  background-color: #3399ff !important
+
+.reservation
+  background-color: #b9b9b6 !important
+
+.selled
+  opacity: 0.5
+  background-color: #ffffff !important
+/*! .calc style block*/

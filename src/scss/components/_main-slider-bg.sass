@@ -1,0 +1,88 @@
+
+/*! .bg-slider style block*/
+.bg-slider
+  position: relative
+  max-width: aCalc(872)
+  overflow: hidden
+  +r($sm)
+    max-width: 100%
+  &:not(.swiper-initialized)
+    .bg-slider__el:nth-child(n + 2)
+      display: none
+  &__el 
+    img 
+      width: aCalc(872)
+      height: aCalc(550)
+      object-fit: cover
+      border-radius: aCalc(8)
+      +r($sm)
+        width: 100%
+        height: auto
+        border-radius: 8px
+  .control-inner
+    position: absolute
+    width: aCalc(240)
+    bottom: aCalc(16)
+    right: aCalc(24)
+    z-index: 11
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    +r($sm)
+      width: 300px
+      right: 16px
+      bottom: 16px
+    .slider-navigation-next, .slider-navigation-prev
+      border-radius: 0
+      background-color: transparent
+      svg 
+        path
+          transition: all .3s
+          opacity: 1
+      &:hover 
+        background-color: transparent
+        svg 
+          path
+            opacity: 1
+            fill: $White
+    .slide-button span
+      border-radius: aCalc(8)
+      display: grid 
+      justify-content: center
+      align-items: center
+      padding: 0
+      width: aCalc(24)
+      height: aCalc(24)
+      +r($sm)
+        width: 24px
+        height: 24px 
+      svg 
+        width: aCalc(20)
+        height: aCalc(20)
+        +r($sm)
+          width: 20px
+          height: 20px
+  .swiper-pagination
+    margin-right: aCalc(16)
+    height: aCalc(4)
+    border-radius: aCalc(2)
+    position: static
+    +r($sm)
+      height: 4px
+      border-radius: 2px
+      margin-right: 16px
+    &:not(.swiper-pagination-progressbar)
+      background-color: $Gray
+      width: 100%
+      height: aCalc(4)
+      +r($sm)
+        height: 4px
+  .swiper-pagination-progressbar-fill
+    border-radius: aCalc(2)
+    +r($sm)
+      left: 0
+      border-radius: 2px
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background-color: #FD6
+    transition: all .3s
+/*! .bg-slider style block*/

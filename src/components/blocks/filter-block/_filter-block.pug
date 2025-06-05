@@ -1,0 +1,325 @@
+.filter__block
+	.filter__block-moredetail.filter__block-hidden
+		h2.filter__title Filter
+			.close-btn.second-popup
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+				</svg>
+		.filter__block-wrapper
+			.filter__block-el 
+				div.filter__block-title Floors in the house
+				.filter__form-field    
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "50" data-min="0" data-max="500"  data-from="0"  data-to="200" class="js-range-slider-1" name="my_range" value="" />
+			.filter__block-el
+				div.filter__block-title Repair
+				div 
+					include ../select-fields/_select-fields.pug
+			- var n = 0;
+			while n < 10
+				.filter__block-el
+					div.filter__block-title from finishing
+					div 
+						include ../select-fields/_select-fields.pug
+				- n++
+			h2.filter__subtitle Windows
+			- var n = 0;
+			while n < 3
+				.filter__block-el
+					div.filter__block-title Windows
+					div 
+						include ../select-fields/_select-fields.pug
+				- n++
+			h2.filter__subtitle Yard
+			- var n = 0;
+			while n < 3
+				.filter__block-el
+					div.filter__block-title Yard
+					div 
+						include ../select-fields/_select-fields.pug
+				- n++
+			.filter__block-el
+				button.filter__block-count <span>432</span> offers
+				button.filter__block-null Reset filter
+	.close-btn.first-popup
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.7071 7.70711C18.0976 7.31658 18.0976 6.68342 17.7071 6.29289C17.3166 5.90237 16.6834 5.90237 16.2929 6.29289L12 10.5858L7.70711 6.29289C7.31658 5.90237 6.68342 5.90237 6.29289 6.29289C5.90237 6.68342 5.90237 7.31658 6.29289 7.70711L10.5858 12L6.29289 16.2929C5.90237 16.6834 5.90237 17.3166 6.29289 17.7071C6.68342 18.0976 7.31658 18.0976 7.70711 17.7071L12 13.4142L16.2929 17.7071C16.6834 18.0976 17.3166 18.0976 17.7071 17.7071C18.0976 17.3166 18.0976 16.6834 17.7071 16.2929L13.4142 12L17.7071 7.70711Z" fill="#282828"/>
+		</svg>
+	.container 
+		.filter__wrapper 
+			.filter__accordion
+				.accordeon-el(data-accordion = "0") apartments
+				.accordeon-el(data-accordion = "1") Parkings
+				.accordeon-el(data-accordion = "2") Commercial premises
+				.accordeon-el(data-accordion = "3") Storerooms
+			form.filter__form.filter__form_active(name="_form" data-form="0" action="/kvartiry/" method="get")
+				button.filter__form-moredetail(type="button") Detailed filter
+				.filter__form-field 
+					.filter__form-label 
+						|Residential complex
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Peculiarities
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|House
+					include ../select-fields/_select-fields.pug
+				.filter__form-field.filter__form-checkboxes
+					.filter__form-label Roominess
+					include ../checkboxes/_checkboxes.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						| Square
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst 
+							div.from-control 
+							div.to-control 
+						input.input-ion-from(placeholder="0")
+						input.input-ion-to(placeholder="300")
+						<input type="text" data-step = "50" data-min="0" data-max="1000"  data-from="0"  data-to="300" class="js-range-slider-1" name="my_range" value="Square" />    
+				.filter__form-field 
+					.filter__form-label 
+						|Price, ₽ 
+					.filter__form-range 
+						.filter__form-controls.filter__form-rangeFirst 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "200" data-min="0" data-max="100000"  data-from="0"  data-to="30000" class="js-range-slider-1" name="my_range" value="Price, ₽" />  
+				.filter__form-field 
+					.filter__form-label 
+						|Floor 
+					.filter__form-range 
+						.filter__form-controls.filter__form-rangeFirst 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "1" data-min="0" data-max="22"  data-from="0"  data-to="6" class="js-range-slider-1" name="my_range" value="Floor" />
+			form.filter__form(name="_form" data-form="1" action="/parking/" method="get")
+				button.filter__form-moredetail(type="button") Detailed filter
+				.filter__form-field 
+					.filter__form-label 
+						|Price, ₽ 
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "200" data-min="0" data-max="100000"  data-from="0"  data-to="10000" class="js-range-slider-1" name="my_range" value="Price, ₽" />
+				.filter__form-field 
+					.filter__form-label 
+						| Square
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "50" data-min="0" data-max="500"  data-from="0"  data-to="200" class="js-range-slider-1" name="my_range" value="Square" />    
+				.filter__form-field 
+					.filter__form-label 
+						|Infrastructure
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Project ЖК
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Type
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date 
+					include ../select-fields/_select-fields.pug
+			form.filter__form(name="_form" data-form="2" action="/commercial/" method="get")
+				button.filter__form-moredetail(type="button") Detailed filter
+				.filter__form-field 
+					.filter__form-label 
+						|Property type
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Price, ₽ 
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "1000" data-min="0" data-max="100000"  data-from="200"  data-to="50000" class="js-range-slider-1" name="my_range" value="Price, ₽" />
+				.filter__form-field 
+					.filter__form-label 
+						| Square
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "50" data-min="0" data-max="500"  data-from="0"  data-to="200" class="js-range-slider-1" name="my_range" value="Square" />    
+				.filter__form-field 
+					.filter__form-label 
+						|Repair/renovation
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Floor
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Floors in the house
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "1" data-min="0" data-max="22"  data-from="0"  data-to="6" class="js-range-slider-1" name="my_range" value="Floor" />
+				.filter__form-field 
+					.filter__form-label 
+						|Class
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Layout
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Ceiling height
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Input type
+					include ../select-fields/_select-fields.pug
+			form.filter__form(name="_form" data-form="3" action="/storeroom/" method="get")
+				button.filter__form-moredetail(type="button") Detailed filter
+				.filter__form-field 
+					.filter__form-label 
+						|RC project
+					.select-fields
+						<div class="select-fields__wrapper">
+							p.select-fields__wrapper-text Проект ЖК
+							.select-fields__wrapper-list
+								label
+									p RC «Новый город»
+									input(placeholder="RC «New city»" type="checkbox")
+								label
+									p RC «Соседи»
+									input(placeholder=" RC Neighbours" type="checkbox")
+						</div>
+				.filter__form-field 
+					.filter__form-label 
+						|Square
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "50" data-min="0" data-max="500"  data-from="0"  data-to="200" class="js-range-slider-1" name="my_range" value="Square" />    
+				.filter__form-field 
+					.filter__form-label 
+						|Price, ₽ 
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+								input(placeholder="0")
+							div.to-control
+								input(placeholder="100000")
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" data-step = "1000" data-min="0" data-max="100000"  data-from="200"  data-to="50000" class="js-range-slider-1" name="my_range" value="Price, ₽" />
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date
+					.select-fields
+						<div class="select-fields__wrapper">
+							p.select-fields__wrapper-text Completion date
+							.select-fields__wrapper-list
+								label
+									p 2023
+									input(placeholder="2023" type="checkbox")
+								label
+									p 2024
+									input(placeholder=" 2024" type="checkbox")
+						</div>
+		.filter__sort 
+			.filter__sort-label Sorting
+			include ../select-fields/_select-fields.pug
+		.filter__hidden
+			button.filter__more More options
+			form.filter__form(name="_form" data-form="0" action="/commercial/" method="get")
+				.filter__form-field 
+					.filter__form-label 
+						|Commercial complex
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Peculiarities
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|All
+					include ../select-fields/_select-fields.pug
+				.filter__form-field.filter__form-checkboxes
+					.filter__form-label Roominess
+					include ../checkboxes/_checkboxes.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date 
+					include ../select-fields/_select-fields.pug
+				.filter__form-field 
+					.filter__form-label 
+						|Completion date 
+					.filter__form-range  
+						.filter__form-controls.filter__form-rangeFirst
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" class="js-range-slider-1" name="my_range" value="Square" />    
+				.filter__form-field 
+					.filter__form-label 
+						|Price, ₽ 
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" class="js-range-slider-1" name="my_range" value="Price, ₽" />  
+				.filter__form-field 
+					.filter__form-label 
+						|Floor 
+					.filter__form-range 
+						.filter__form-controls 
+							div.from-control
+							div.to-control
+						input.input-ion-from(placeholder="")
+						input.input-ion-to(placeholder="")
+						<input type="text" class="js-range-slider-1" name="my_range" value="Floor" />  
+		.filter__done
+			.filter__done-el.filter__done-text
+				|Suitable apartments:
+				span 288
+			.filter__done-el.filter__done-btn
+				button.btn1.button-secondary.filter__done-null Reset filter

@@ -1,0 +1,28 @@
+.consultation
+  .consultation__btn.btn1 Online consultation
+  .consultation__form 
+    .h2 Contact us online
+    .h3 Choose any convenient way of communication and our sales manager will contact you
+    .consultation__form-close 
+      .modal__close-button
+        svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32')
+          path(fill='#0E0E0E' d='m5.39 25.2 19.8-19.8 1.41 1.4L6.8 26.6z')
+          path(fill='#0E0E0E' d='m6.81 5.4 19.8 19.8-1.41 1.4L5.4 6.8z')
+      //-+svgIcon('svg-close')
+    .form-order
+      .form-order__bottom
+        form.form-order__el
+          .ui-input.required(js-input-focus)
+            label.ui-input__float-label.p1(for="name-gt") Your name
+            input.form-order__input.p1(type="text" name="name" id="name-gt" required placeholder="Arkady")
+          .ui-input(js-input-focus)
+            label.ui-input__float-label.p1(for="phone-gt") phone
+            input.form-order__input.p1(type="tel" name="phone" id="phone-gt" required placeholder="+7")
+          .ui-input(js-input-focus)
+            label.ui-input__float-label.p1(for="phone-gt") Method of communication
+            input.form-order__input.p1(type="tel" name="phone" id="phone-gt" required placeholder="Telegram")
+          .g-recaptcha(id="recaptcha2" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+          .popup__login-wrap-btn
+            button.form__bottom-btn.button-primary.btn1(type="submit")
+              |Contact
+            p.policy.p2 By clicking the button you agree <br>with the terms of the privacy policy

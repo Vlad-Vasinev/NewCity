@@ -1,0 +1,40 @@
+/*! .filter-mesh style block*/
+.filter-mesh.swiper-container  
+  overflow-x: hidden
+  &:not(.swiper-initialized)
+    .filtered.swiper-wrapper
+      display: flex
+      gap: aCalc(24)
+      +r($sm)
+        display: unset 
+        gap: 0
+    .filtered__item
+      width: aCalc(424)
+      +r($sm)
+        width: unset
+    .filtered__item:nth-child(n + 4)
+      display: none
+  .control-inner
+    margin-top: aCalc(12)
+    display: flex 
+    justify-content: center
+    +r($sm)
+      margin-top: 16px
+      justify-content: flex-start
+    .slider-navigation-next, .slider-navigation-prev
+      svg 
+        +r($sm)
+          width: 36px
+          height: 36px
+        path 
+          transition: all .3s
+      & > span:only-child
+        +r($sm)
+          padding: 0 5px
+    .slider-navigation-next, .slider-navigation-prev
+      &:hover 
+        svg 
+          path 
+            opacity: 1
+            fill: $PaleGold
+/*! .filter-mesh style block*/

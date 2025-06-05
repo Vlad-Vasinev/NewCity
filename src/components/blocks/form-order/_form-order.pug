@@ -1,0 +1,19 @@
+.form-order
+  .form-order__top
+    h2.h2.form-order__title
+      |We will tell you everything about the features of our apartments - just call
+      a(href="tel:88005116382") 8 800 511-63-82
+      span.form-order__subtitle.p1 Or leave your contact information and we will call you back.
+  .form-order__bottom
+    form.form-order__el(id="form-modal" action="/local/ajax/forms.php" data-redirect='/thanks.html')
+      .ui-input.required(js-input-focus)
+        label.ui-input__float-label.p1(for="name-gt") Your name
+        input.form-order__input.p1(type="text" name="name" id="name-gt" required placeholder="Arkady")
+      .ui-input(js-input-focus)
+        label.ui-input__float-label.p1(for="phone-gt") Phone
+        input.form-order__input.p1.tel(type="tel" name="phone" id="phone-gt" required placeholder="Phone")
+      .g-recaptcha(id="recaptcha38" data-sitekey="6LfyZ8IdAAAAAAN_WymSJ-lp8YsbZSQHDEZY8ysf" data-size="invisible")
+      .popup__login-wrap-btn
+        button.form__bottom-btn.button-primary.btn1(type="submit")
+          |Request a call
+        p.policy.p2 By clicking the button you agree <br>with the terms of the privacy policy
